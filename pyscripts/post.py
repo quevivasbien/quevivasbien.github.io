@@ -1,4 +1,4 @@
-"""Simple script to add a post teaser to the index page.
+"""Simple script to add a post teaser to the index page & add link to archive.
 Call with name of file in posts folder as argument, e.g.
 > python add_to_index.py example_post.html
 """
@@ -6,6 +6,8 @@ Call with name of file in posts folder as argument, e.g.
 import os
 import re
 import sys
+
+from datetime import datetime
 
 
 def main(filename, front=True):
@@ -22,6 +24,7 @@ def main(filename, front=True):
         to_include = first_p.group(1)
     else:
         to_include = post_content
+    # update index
     to_insert = f"""
     <div class="post">
         <!-- Heading -->
@@ -45,6 +48,17 @@ def main(filename, front=True):
         index_content = index_content.replace(x, '<!-- /post -->\n\n\n\t<!-- Post -->' + to_insert + x)
     with open('../index.html', 'w') as fh:
         fh.write(index_content)
+    # update archive
+    date = datetime.now().strftime('%B %Y')
+    to_insert = f'<li><a href="./posts/{filename}">{title}</a> ({date})</li>'
+    with open('../archive.html', 'r') as fh:
+        archive_content = fh.read()
+    regex = r'<br><br>\s*<ul>\s*'
+    x = re.search(regex, archive_content).group()
+    whitespace = re.search(r'\s*$', x).group()
+    archive_content = archive_content.replace(x, x + to_insert + whitespace)
+    with open('../archive.html', 'w') as fh:
+        fh.write(archive_content)
 
 
 if __name__ == '__main__':

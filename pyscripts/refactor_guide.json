@@ -1,4 +1,4 @@
 {
-  "to_find": "goodness, truth, and summer rainstorms.",
-  "replace_with": "goodness, truth, and summer rainstorms"
+  "to_find": "<li><a href=\"#\">Contact</a></li>",
+  "replace_with": "<!--<li><a href=\"#\">Contact</a></li>-->"
 }

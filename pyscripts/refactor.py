@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """Used to replace code that appears in HTML files in main dir and posts dir
 """
 
@@ -7,7 +8,7 @@ import os
 
 REFACTOR_GUIDE = 'refactor_guide.json'
 
-with open(REFACTOR_GUIDE, 'rb') as fh:
+with open(REFACTOR_GUIDE, 'r') as fh:
     guide = json.load(fh)
 
 find = guide['to_find']
