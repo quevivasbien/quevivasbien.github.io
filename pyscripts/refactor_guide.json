@@ -1,4 +1,4 @@
 {
-  "to_find": "<li><a href=\"#\">Contact</a></li>",
-  "replace_with": "<!--<li><a href=\"#\">Contact</a></li>-->"
+  "to_find": "\\n</body>",
+  "replace_with": "\n</body>"
 }
