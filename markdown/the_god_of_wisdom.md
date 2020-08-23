@@ -2,7 +2,7 @@
 
 ## From one world to another
 
-Earth blazed like brilliant, bluish-white star through the window of Serĉa's compartment. Even at the unfathomable speeds at which he had been traveling, it had still taken several days to make it from the port of the O'Hare Space Elevator to the distant halo orbit of the Farm. Besides himself, his craft carried a half-dozen others -- a motley assembly of tourists, spiritual seekers, and plain-old curious folks like himself -- as well as a hefty cargo of manufactured goods for the Farm's upkeep.
+Earth blazed like a brilliant, bluish-white star through the window of Serĉa's compartment. Even at the unfathomable speeds at which he had been traveling, it had still taken several days to make it from the port of the O'Hare Space Elevator to the distant halo orbit of the Farm. Besides himself, his craft carried a half-dozen others -- a motley assembly of tourists, spiritual seekers, and plain-old curious folks like himself -- as well as a hefty cargo of manufactured goods for the Farm's upkeep.
 
 Serĉa could feel the deceleration forces easing up. The craft must nearly have finished aligning its velocity with the Farm and should be making the rendezvous shortly. Finally. Although there was no shortage of entertainment available for the voyage -- the compartment was equipped with a plentiful collection of gadgetry -- Serĉa was excited to move on to the next stage of his adventure.
 
@@ -39,7 +39,7 @@ This was not the first time that Serĉa had left earth -- field trips to orbitin
 
 ## Arriving at the port
 
-MC arrives, is introduced to the Farm
+MC arrives, checks into and is introduced to the Farm.
 
 
 ## Discovery
