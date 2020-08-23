@@ -29,7 +29,7 @@ def main(filename, front=True):
     <div class="post">
         <!-- Heading -->
         <a href="./posts/{filename}"><h1>{title}</h1></a>
-        <hr>
+        
         <div class="in-content">
             {to_include}
             <a class="read-more" href="./posts/{filename}">Read more</a>
