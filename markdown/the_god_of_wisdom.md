@@ -37,11 +37,115 @@ The Farm was one of the more remote Free Spaces, but was at that time undergoing
 This was not the first time that Serĉa had left earth -- field trips to orbiting stations and other more remote colonies were common -- but it was the first time he had embarked on a trip for his personal "research," and this made him giddy, intoxicated with a mood of adventure.
 
 
-## Arriving at the port
+## The Farm
 
-MC arrives, checks into and is introduced to the Farm.
+The *Blue Elegance of Night* glided slowly to the Farm's side, dwarfed by the subtly curving, shiny metal surface of the Farm's exterior. Its electromagnetic thrusters engaged intermittently to attach correctly at the docking bay.
+
+"We've connected now," the *Blue Elegance* said to Serĉa, "In a few moments I'll be able to unlock one of the exterior doors and allow you to enter the receiving area. You can start heading out with the other passengers."
+
+Serĉa lifted himself from the floor by the window where he was sitting and walked to the door of his room, which slid open as he approached, sensing his intent to pass through. In the hallway outside, the six other passengers who had traveled with him from the O'Hare were also emerging from their rooms. Serĉa recognized them all, as he'd made a point of politeness to at least introduce himself, but he'd spent most of the trip in his own room, reading up on whatever topics caught his fancy, including some details about his destination.
+
+Apparently the Farm was one of the more recent Free Spaces to be established, having been constructed less than half a century before and inhabited mostly by people born into the post-TK reformed United Nations. Unlike the earlier Free Spaces, which were mostly built on Earth or in low Earth orbit, this one was placed in an eccentric trajectory around a Lagrangian point between the Earth and the Sun, held steady by periodic bursts from its stabilizing thrusters. The Farm's engineering was an impressive demonstration of what was possible with the UN's advanced technology and abundant resources, although in a cutely paradoxical way, the purpose of this particular technological feat was to provide a place where people could live in relatively archaic conditions.
+
+This train of thought was interrupted as the main door at the opposite end of the corridor hissed open. The door opened into a rather small room where a plainly dressed woman sat at an equally austere desk. Serĉa waited for the other passengers to file into the room, standing around the woman, and then walked out himself, the *Blue Elegance*'s door skating shut behind him.
+
+"Welcome to the Farm," the woman said with an unusual, antique-sounding, accent. Turning her face up to speak toward the top of the *Blue Elegance*'s door, she continued, "Ship, you may go unload the cargo at the support bay before picking up the outgoing passengers."
+
+"It has been a pleasure traveling with you all," the ship said, "I hope you have enjoyed the trip as much as I enjoyed having you aboard." Then, a thin, metal cover slid over the door, and everyone's attention turned once again to the woman.
+
+"I've received some information about each of you from the Farm's TK interface. Since you're all here for different reasons, after checking in you all, you will be getting a personal guide for the duration of your stay on the Farm." She seemed to speak with her tongue much more than was common in the standard UN dialect. "Please one at a time tell me your names and your purpose of visiting the farm, so I can check you off the list, then go through the door to meet with your guide."
+
+Serĉa and his companions formed a bunched-up line as the first of them stepped forward to the woman.
+
+"Teresa Williams," the passenger said, "I'm here for spiritual retreat."
+
+"Ah, yes... let's see. Your guide will be Phuam Ngo. She should recognize you from the information we gave her, but if not, she'll be the one with the shaved head and the red clothing. Hard to miss."
+
+Serĉa waited at the end of the line as each of the others was crossed off the woman's list. Finally, the last of them left the room through the handled door on the back wall.
+
+"And you would be Serĉa?" the woman asked.
+
+"Yes, that's me. Serĉa Desaĝo. Here for some personal research on the Free Worlds."
+
+"Very good. Your guide is called Ben Abn. He'll be the only one left without a pair," she said with a smile.
+
+Serĉa returned the smile and headed through the door, handling with curiosity the strange and primitive contraption of its handle. The new room was a larger but still boxy space that looked like it had been furnished as generously as possible by someone working with the barest of materials, which, of course, was probably exactly how it had been furnished. The walls were lined with polished wooden benches, and there was a stout wooden cylinder standing in the center of the floor with what appeared to be a map carved artistically onto its exterior. The other passengers stood or sat, exchanging introductions with their guides. Serĉa scanned around the room for his own guide and quickly spotted a messily dressed man with a receding hairline and uneven beard who sat reclined against the wall on the right. The man -- who Serĉa presumed must be Ben Abn -- had his eyes closed and almost seemed to be sleeping. Serĉa approached him, hoping to get his attention without making a substandard first impression. As Serĉa made his way over, the man lazily opened one of his eyes and flicked it in Serĉa's direction. He then opened the other eye and lurched to his feet, holding out his hand.
+
+"Ben Abn the wise. Pleased to meet you," the man said.
+
+"Er, Serĉa Desaĝo. Pleased to meet you too." He was a bit disconcerted by Ben's extended hand and gave a perfunctory bow in greeting.
+
+Ben made what looked like a mildly disappointed face before returning the bow. "Ah I was hoping you'd return the hand gesture. You're supposed to shake it, I believe. Used to be the way to say hello. Went out of fashion though a while back... something about sanitary concerns. I heard you were a bit of a student of the pre-transition culture and thought you might've heard of it."
+
+"Ah... I see..." Serĉa was in fact mildly intrigued by this tidbit of information but a bit flustered from the odd introduction. "Is, er, 'the wise' part of your formal name? I don't mean to pry, but I've just never heard that sort of..."
+
+"Nah," Ben said, making a face that was a strange mixture of a smile, a frown, and a wink, "I've just been trying to get people to call me that. Thought it'd be kinda fun, y'know. You can just call me Ben, though. Unless you want to go along with the charade; I wouldn't be disappointed."
+
+Serĉa was a bit at a loss. This Ben Abn 'the wise' was certainly an unusual character.
+
+"Well," Ben continued, "No use standing around here looking like a fleeced melon." (Serĉa had trouble imagining what a fleeced melon looked like.) "We'd better get going before someone breaks the lift and we have to climb a ladder to get out of here." This last statement was accompanied with a ghoulish smile.
+
+---
+
+There was no need to climb a ladder. Ben escorted Serĉa out of the room and down a hallway to a modern but minimally-designed elevator which, after a smooth ten second ride, deposited them on the inner surface of the farm.
+
+It was really a spectacular sight. The opposite side of the tube was clearly visible and was decorated with patches of fields, streams, and hills. It made his head spin to have a sky populated with dirt and vegetation. This was quite different from the other rotating space stations Serĉa had seen before (mainly in virtual reality tours); while most of them resembled giant rotating rings, the tube of the Farm was slightly longer than its diameter, having been built that way to facilitate the day-night cycle by using the Farm's walls to block the sun's light at night. Serĉa could see the stars on either end rotating as the Farm made a complete turn around its circular axis every five minutes to provide a sensation of gravity equal to that of the Earth. Although the 'ceiling' was just a few kilometers above the surface (to limit the strength of winds due to Coriolis forces), there was a thin layer of low clouds visible in the sky.
+
+Ben had remained mostly quiet since leaving the welcome room and allowed Serĉa a few moments of silence to soak in the view before he began talking again.
+
+"Pretty neat, eh? The pictures don't do it justice, and the TK agreed not to make any VR tours of it so we could keep it just in person."
+
+They had come out from the subsurface into a garden square in the center of a quaint congregation of wooden hovels. The square was filled with concentric layers of flowerbeds and walkways, with the elevator in the center alongside another of the cylindrical carved maps. It definitely was a map: Ben walked over and began examining it.
+
+"Yeah, so we're right here; you can see that the map covers the whole Farm -- it's flipped inside out so you don't have to crawl inside to see, you know. I've built myself a little Shangri-La not too far from here, which is good cause you pretty much have to walk everywhere you want to go around here." Gesturing around at the buildings bordering the square, he continued, "This here's our effort at a little town to welcome the visitors, a bit of a hobby project, really. Not too many people live here right now; I think it's mostly for show, to be honest. That and to have a place for the tourists that're to too lazy to walk anywhere."
+
+Ben started walking away from the center of the plaza in the direction that Serĉa decided to call "north" -- it was currently the direction from which he could see the sun shining through the opening in the distance.
+
+"As you get farther from here, you start finding people who're more serious about living simply and all that. On the other side of the Farm there's people that're basically hermits or whatever. Over here, though, we've got a bit more connection with the outside if we want it."
+
+"Do you work as a guide for visitors often?" Serĉa asked, to try to keep a bit of conversation.
+
+"Nah," Ben answered, "This is my first time, actually. Was starting to get a bit bored, honestly, and figured this might shake things up."
+
+"Oh, okay. How long have you been on the Farm?"
+
+"Me? Just about six years now, I think. I actually came on a visiting trip like you -- was getting tired of thrill-seeking back on Earth and figured I'd give this a try. Got here and kind of liked the slowness of it and figured to hell with it all, you know, why not stay."
+
+"Oh... okay," Serĉa repeated. He was not planning on making his presence a permanent feature on the Farm.
+
+"Yeah it's been good for me I think, being here. You probably know this, but there aren't any drugs on the Farm, nothing recreational anyway. The council in charge doesn't want anything interfering with our 'unblemished experience,' or something like that. Well, actually, there's some ways to get some psychedelics but meditation and all that's supposed to be preferable. I was big into the TK's enhancers back on Earth. Like I said, I was all into that-thrill seeking. But not constantly being hopped-up on Vite has kind of been a good thing for me out here; you realize there's some things that are best enjoyed slowly, you know."
+
+---
+
+Ben's bantering continued with few pauses as the two made their way out of the dilapidated village and through the picturesque countryside. The subject of Ben's monologue shifted from drugs, to sex (there wasn't much of it happening on the farm, except for a faddish fascination with something called "neotantra," apparently), to farming (Ben Abn was self-proclaimedly horrible at it), to the pre-transition way of life ("Can you believe it? They would take all these animals and cram them into little cages so they could turn them into food as cheap as they could? Animals! As food!"), before they finally arrived at Ben's "Shangri-La."
+
+"Not much compared to the lofts in Chicago, eh?" Ben remarked as they stood in the entrance to his ovular, thatched-roof hut, "But it's where I call home, so I've developed a liking for it. Got to sleep in a hammock though, or the bugs'll crawl all over you." Serĉa couldn't tell if he was kidding about that last part.
+
+"Do you have anything I could drink?" Serĉa asked. They'd stopped for a break at a well on the side of the path a few kilometers back, which Ben had explained was connected to a holding tank in the Farm's subsurface, but Serĉa wasn't used to walking so far and was fancying some cold refreshment.
+
+"Huh? Oh yeah, just water. The stream at the bottom of the hill is clean. You can just scoop it up with that thing over there," Ben said, pointing to a dented metal pot by the hut's entrance.
+
+Somewhat disappointed that there wasn't even anything fizzy to drink, Serĉa went to retrieve the water while Ben set about preparing a fire to make what he called "vegetable massacre." When Serĉa returned, Ben plopped a couple of large, gnarled root vegetables into the pot and set it on the fire. As the water heated to boiling and the roots slowly cooked, the two men sat watching the curling and leaping fire against the backdrop of the alien evening.
+
+"I made some code to simulate this once," Serĉa said, somewhat out of the blue.
+
+"Eh? What?" Ben asked.
+
+"Fire. I was interested in it because it was such a chaotic system, and it managed to produce such interesting and beautiful behavior. It's hard to simulate because of all the convection and reactions and phase changes, plus fluids are difficult in the first place, but the TK showed me some tricks that made it easier."
+
+"Oh, oh yeah," Ben said, clearly not fully understanding what Serĉa was talking about, "I never really wanted to look too much into that complicated stuff. I always just kind of appreciated it for being warm, and bright, and, I don't know, artful."
+
+"Well, yeah, I guess there's that."
+
+The vegetable massacre was literally nothing more than just the boiled roots, smashed to a mushy consistency. Ben claimed that it was quite nutritious, and seeing Serĉa's face when he tried it, added with a chuckle, "Tastes nearly as good as it looks, eh? You'll get used to it. Amazing what you can enjoy with a bit of mindfulness."
+
+After stomaching the meal, which was admittedly quite filling, Ben and Serĉa extinguished the fire and sat back against the outside wall of the hut, watching the sun set. It was quite a view to see the sun slinking behind the wall of the Farm, its light forming a burning orange crescent along the edge. When the sun finally disappeared, the only lights left were the sea of stars visible through each opening, with the Earth glowing brightly from the south.
+
+"Beautiful," Serĉa said.
+
+"Yeah, that's right," Ben laughed, "Well we better be getting some rest now. I built a hammock for you. I was thinking for tomorrow -- have you ever climbed a mountain before?"
 
 
 ## Discovery
 
-MC journeys into the "woods." Medidates on ethics.
+MC journeys into the "woods." Meditates on ethics.
