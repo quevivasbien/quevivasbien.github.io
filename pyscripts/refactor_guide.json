@@ -1,4 +1,4 @@
 {
-  "to_find": "<hr>",
-  "replace_with": ""
+  "to_find": "<img class=\"aligncenter\" src=\"img/logo.png\">",
+  "replace_with": "<img class=\"aligncenter\" src=\"../img/logo.png\">"
 }

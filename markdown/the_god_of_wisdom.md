@@ -83,7 +83,7 @@ Ben made what looked like a mildly disappointed face before returning the bow. "
 
 Serĉa was a bit at a loss. This Ben Abn 'the wise' was certainly an unusual character.
 
-"Well," Ben continued, "No use standing around here looking like a fleeced melon." (Serĉa had trouble imagining what a fleeced melon looked like.) "We'd better get going before someone breaks the lift and we have to climb a ladder to get out of here." This last statement was accompanied with a ghoulish smile.
+"Well," Ben continued, "No use standing around here looking melon-like." (Serĉa had trouble imagining what it meant to be melon-like.) "We'd better get going before someone breaks the lift and we have to climb a ladder to get out of here." This last statement was accompanied with a ghoulish smile.
 
 ---
 
@@ -97,7 +97,7 @@ Ben had remained mostly quiet since leaving the welcome room and allowed Serĉa 
 
 They had come out from the subsurface into a garden square in the center of a quaint congregation of wooden hovels. The square was filled with concentric layers of flowerbeds and walkways, with the elevator in the center alongside another of the cylindrical carved maps. It definitely was a map: Ben walked over and began examining it.
 
-"Yeah, so we're right here; you can see that the map covers the whole Farm -- it's flipped inside out so you don't have to crawl inside to see, you know. I've built myself a little Shangri-La not too far from here, which is good cause you pretty much have to walk everywhere you want to go around here." Gesturing around at the buildings bordering the square, he continued, "This here's our effort at a little town to welcome the visitors, a bit of a hobby project, really. Not too many people live here right now; I think it's mostly for show, to be honest. That and to have a place for the tourists that're to too lazy to walk anywhere."
+"Yeah, so we're right here; you can see that the map covers the whole Farm -- it's flipped inside out so you don't have to crawl inside to see, you know. I've built myself a little Shangri-La not too far from here, which is good 'cause you pretty much have to walk everywhere you want to go around here." Gesturing around at the buildings bordering the square, he continued, "This here's our effort at a little town to welcome the visitors, a bit of a hobby project, really. Not too many people live here right now; I think it's mostly for show, to be honest. That and to have a place for the tourists that're to too lazy to walk anywhere."
 
 Ben started walking away from the center of the plaza in the direction that Serĉa decided to call "north" -- it was currently the direction from which he could see the sun shining through the opening in the distance.
 
@@ -119,7 +119,7 @@ Ben started walking away from the center of the plaza in the direction that Ser�
 
 Ben's bantering continued with few pauses as the two made their way out of the dilapidated village and through the picturesque countryside. The subject of Ben's monologue shifted from drugs, to sex (there wasn't much of it happening on the farm, except for a faddish fascination with something called "neotantra," apparently), to farming (Ben Abn was self-proclaimedly horrible at it), to the pre-transition way of life ("Can you believe it? They would take all these animals and cram them into little cages so they could turn them into food as cheap as they could? Animals! As food!"), before they finally arrived at Ben's "Shangri-La."
 
-"Not much compared to the lofts in Chicago, eh?" Ben remarked as they stood in the entrance to his ovular, thatched-roof hut, "But it's where I call home, so I've developed a liking for it. Got to sleep in a hammock though, or the bugs'll crawl all over you." Serĉa couldn't tell if he was kidding about that last part.
+"Not much compared to the lofts you're used to, eh?" Ben remarked as they stood in the entrance to his ovular, thatched-roof hut, "But it's where I call home, so I've developed a liking for it. Got to sleep in a hammock though, or the bugs'll crawl all over you." Serĉa couldn't tell if he was kidding about that last part.
 
 "Do you have anything I could drink?" Serĉa asked. They'd stopped for a break at a well on the side of the path a few kilometers back, which Ben had explained was connected to a holding tank in the Farm's subsurface, but Serĉa wasn't used to walking so far and was fancying some cold refreshment.
 
@@ -133,7 +133,7 @@ Somewhat disappointed that there wasn't even anything fizzy to drink, Serĉa wen
 
 "Fire. I was interested in it because it was such a chaotic system, and it managed to produce such interesting and beautiful behavior. It's hard to simulate because of all the convection and reactions and phase changes, plus fluids are difficult in the first place, but the TK showed me some tricks that made it easier."
 
-"Oh, oh yeah," Ben said, clearly not fully understanding what Serĉa was talking about, "I never really wanted to look too much into that complicated stuff. I always just kind of appreciated it for being warm, and bright, and, I don't know, artful."
+"Oh, oh yeah," Ben said, clearly not fully understanding what Serĉa was talking about, "I never really wanted to look too much into that math-y stuff. I always just kind of appreciated it for being warm, and bright, and, I don't know, artful."
 
 "Well, yeah, I guess there's that."
 
@@ -146,6 +146,108 @@ After stomaching the meal, which was admittedly quite filling, Ben and Serĉa ex
 "Yeah, that's right," Ben laughed, "Well we better be getting some rest now. I built a hammock for you. I was thinking for tomorrow -- have you ever climbed a mountain before?"
 
 
-## Discovery
+## Toward Sinai
 
-MC journeys into the "woods." Meditates on ethics.
+The sunrise disturbed Serĉa's sleep as it peeked over the rim of the Farm's southern opening. Serĉa had opted to sleep outside, telling Ben Abn that he wanted to appreciate the view, but really just feeling suspicious of the general mustiness of Ben's hut.
+
+After failing to get back to sleep (he didn't have any Tranquille to help him with this and wanted to be alert for the day's trip in any case), he decided to get up and explore the area around the hut while he waited for Ben to wake up. Ben had built his camp at the top of a rocky hill, shielded on the east by a sizable boulder and looking out over the softly rolling, green landscape on the west. The stream Serĉa had retrieved water from the previous evening trickled along cheerfully at the base of the hill, celebrated by a parade of tall reeds and grasses and a fanfare of winged insects.
+
+The temperature had been pleasant all night and remained comfortably warm and breezy with the sun out. Evidently the Farm was currently passing through its "autumn" season; although the Farm could easily regulate its climate to provide comfortable weather all the time, the average temperature was allowed to fluctuate a bit with the changing light intensities on the Farm's elliptical orbit -- Ben claimed this was all for the sake of "variety," and that winter on the Farm was really quite nice if you were ready for it. The Farm's wide girth and short period of rotation meant that, in the morning and evening, the sun cast long shadows that stretched and twisted around themselves every few minutes; Serĉa found this to be an interesting, if slightly headache-inducing, effect.
+
+Ben didn't wake up until more than an hour later, by which time Serĉa was beginning to worry he might have to settle with spending the day cataloging the various species of rodents that made their homes in the hilly landscape.
+
+Ben emerged groggily from his shelter, stretching his arms. "Time to get up and going! We've got a long day of walking," he said, looking then a bit embarrassed as he realized Serĉa was already up, going, and even looking a bit impatient.
+
+Serĉa watched as Ben retrieved a woven pack from his hut and filled it with the lumpy roots they'd eaten the day before. "We won't be needing any water since there's so many streams around," he explained, "so we'll just need some food for the way. We can pick some fruit along the path if you're hankering for a snack."
+
+"How long is this going to take again?" Serĉa asked.
+
+"A day if we're fast. But probably longer; I'm guessing your muscles aren't really trained for mountain-climbing."
+
+The sun was well into the Farm's southern opening when the two left Ben Abn's camp.
+
+---
+
+Although the Farm's landscape was mostly quite flat, there were a few mountain spines thrown in among the fields and rolling hills. Because the Farm was not crafted by natural forces, the geography did not need to follow any realistic geological conventions: the mountains that Serĉa and Ben Abn were heading for -- a string of three peaks called *les prêtres du vent* -- rose suddenly from the plains below, decorating the region with their terrifyingly rugged, rocky slopes that reached two kilometers into the air, nearly to the level of the transparent boundary between the Farm's sky and the empty space beyond.
+
+Serĉa quickly realized that this trip would definitely take more than a day. He and Ben walked for several hours through a landscape much like the area around Ben's camp before the hills and streams gave way to a terrain of marshy brambles and then later to a flat expanse of fields with the *prêtres* visible upon the upward-curving land in the distance. By the time they stopped for a midday meal (mainly a bready fruit Ben picked from a field on the side of the path), they must have walked at least ten kilometers, and there was still at least that far to go before reaching the feet of the mountains.
+
+The path they walked on was lined with fields like the one where they had picked the bread-fruit; a few times they saw people out among the crops, harvesting or simply surveying their bounty.
+
+As they walked, Ben bombarded Serĉa with thoughts and ideas he had obviously been building up for quite some time and was now happy to have someone with whom to share them: "The TK's ethics aren't universal; they *can't* be universal!" (He evidently considered himself something of a philosopher.) "Everyone gets taught to seek Fulfillment, but the TK was designed for the Fulfillment of humanity, not of the folks that make up humanity -- you and me, you know -- maybe what I'm after isn't what the TK has in mind for everyone, right? And then what's gonna happen with me? Maybe I get sent off to live on the Farm," he said with a chuckle, "Or maybe I just get pushed under, lost for the sake of humanity or something like that."
+
+This was no new ground for Serĉa, who'd encountered arguments like this before in his study at the University. "It's the impossibility theorems," he said.
+
+"Eh?"
+
+"Oh, basically just it's very difficult or impossible -- depending on what exactly you're looking for -- to find a way to add up what everyone wants into a sort of coherent way where you can say, 'This is what society wants.' There's a lot of math behind it, but the basic idea is just what you've been saying."
+
+"Ah now you're making me wish I'd spent more time with the books," Ben said, slightly downcast that he hadn't had an idea that no one else had come up with before.
+
+"I like the way you've put it, though," Serĉa went on, "It makes me think of it in a different way than what I'd thought before: what happens to the individual person who's Fulfillment is out of line with what the TK is after in the big picture?"
+
+"Yeah, that's the thing!" Ben continued, once again assuming his philosopher role as he had something to contribute, "I mean I don't think I'm personally much of a menace to society -- more of a weirdo, to be honest -- but let's say I was really into, I don't know... let's say I just really wanted to screw everybody else up, like I thought it was fun to make things hard for everybody.
+
+"What would the TK do with me then? I guess it might have to just separate me from everybody else, but then maybe I wouldn't be happy because there was nobody around for me to screw around with... so maybe the TK would stick me in a VR where I was free to do whatever the hell I wanted, you know. But I guess even then maybe I'd not be happy with that, and I'd want the real thing, 'cause I'd know that the folks I was screwing up weren't conscious and didn't really care..."
+
+Serĉa interjected: "Well, this is what would happen all the time with criminals and the like back before the TK. They'd end up getting locked up or punished because they wouldn't follow the rules that'd been set up to keep everything running how most people wanted it to be. It's a lot less of an issue now because the TK's more able to manage everyone's preferences to satisfy someone without sacrificing too much on the part of everybody else, but I guess it's a problem that's never going to go away completely."
+
+"Ah here's an idea, though: what if everybody just wanted the same thing?" Ben asked, "Like everyone just wanted the exact same thing as the TK? The Fulfillment of humanity, you know. Wouldn't that just make the problem go away?"
+
+Serĉa thought about this for a moment before answering, "I suppose so, but I don't think the TK would be willing to change everyone's desires to make that happen. Humanity's diversity is one of the principles that the TK's designers made sure it would respect.... Everyone knows that the TK doesn't lightly manipulate what someone wants."
+
+"Eh so I guess until we all decide to like the same things, some of us are just gonna have to deal with being dissatisfied," Ben concluded.
+
+---
+
+Serĉa and Ben arrived at the base of the *prêtres* late that evening. Serĉa's muscles were aching awfully -- he had never walked that far in a single day and was not at all looking forward to the mountain climb he still had to look forward to. After a miserable dinner of vegetable massacre, they settled down for sleep (Ben had, luckily, brought the hammocks along).
+
+Serĉa slept soundly all night and was again woken up by the rising sun, this time emerging from the Farm's north opening. He didn't feel any better than he had the previous evening; if anything, his muscles protested even more as he stood up and began preparing for the day's trek.
+
+Ben Abn was ready to go much earlier this time, seeming excited for the climb to come. The peaks of the *prêtres* could be reached along rocky paths chiseled in spirals up each of the three mountains, and the two men began to climb one of these paths to begin ascending the middle, tallest one.
+
+"I was thinking about what we were saying yesterday," Ben remarked.
+
+"What?" Serĉa asked, already out of breath. Ben had rambled about a lot of things the day before.
+
+"About how not everyone can get Fulfillment."
+
+"Oh, okay, yeah."
+
+"There's a lot of Buddhists here on the Farm -- well, they call themselves that, anyway, I don't know how authentic you'd think they were compared to a pre-TKer -- but anyway, there's a lot of them here, and I've spent some time talking to them and learned a thing or two about what they think.
+
+"They're always going on about how we've got to get rid of our desires, how that's what brings us suffering -- it's our wanting things that makes us unhappy -- and if we bring all that under control, that's how we get their *nirvana*. It's pretty different from what they teach at the University -- I guess that's why they're here instead of Earth, you know -- but I was thinking maybe it isn't really all that different.
+
+"Maybe they've just found another answer to the problem we were talking about -- that if we just get rid of all of our desires, there's no push-and-pull between us anymore, no, you know, conflict. I guess it's really not too different from the TK just stepping in and saying, 'This is what you're going to want now, because what you were wanting before just wasn't working out,' you know, but maybe it's not quite the same because now we're saying, if you're dissatisfied, if your Fulfillment is going against humanity's, then there's this path you can take -- you can just get rid of your desires...."
+
+Ben Abn trailed off at this point, clearly entrenched in thought. Serĉa, sweating furiously and breathing heavily, was having trouble mustering up the brainpower to respond.
+
+After a few minutes, Ben resumed his monologue: "You know, I guess that's kind of what happened to me -- a sort of Buddhist conversion, course I wouldn't call myself one; they've just kind of rubbed off on me. I used to be so tied up in looking for satisfaction, spending all my time on the Vite, and the wild sex, and the *constant* action, and I mean the TK's was pretty good at making sure I got all that... of course, it would put me through the rigmarole on the way there -- 'enjoy the struggle' and all that... but then I came here, and there wasn't any of that anymore: just me, and my thoughts, and all this!" (He gestured around him at the landscape.) "And I had to slow down and just take it in and realize, you know what, this is really kind of neat, too. And I guess I realized that this was enough to satisfy me. You know what, I honestly think I'm happier now than I was back on Earth -- I mean, must have stayed here for a reason, right?
+
+"And I don't think everyone's gonna be the same way -- like me, you know -- and find that they really just want to take it slow, and spend their time making things with their hands, and walking, and watching the sun set, just soaking it in, you know. Maybe some people want it fast. They want to lose themselves in those pleasures... and the TK lets them have it. And of course there's people that are not wanting any of that at all around here, and the TK lets them have it too, I suppose.
+
+"But I just can't help thinking, maybe we've got it all wrong; maybe the folks that made the TK really screwed things up, and it's not about this perpetual growth, this looking for fulfillment; maybe we already had everything we needed."
+
+Serĉa's strength was flagging. "Can we take a break here?" he asked.
+
+Ben nodded in assent and Serĉa sat down on a rock on the side of the trail, placing his elbows on his knees and looking out over the plain below. They had made it a couple hundred meters up the mountain, having made nearly a full circle around the spiraling path.
+
+When he had caught his breath, Serĉa shifted to look at Ben and said, "What you were saying just now? Getting rid of our desires? I don't think that's right. If we all did that, what would make us different from rocks? Wanting things is part of what makes us human."
+
+"Maybe the rocks have got the right idea, then," Ben laughed, "But I'm not saying we should all go all the way and drop everything we care about... just that, maybe we should just be more content with what we've got."
+
+"Ah, well, I don't think that's an unusual thought," Serĉa responded, "That's a big part of Fulfillment after all. But if we were all *perfectly* content, if we didn't want anything, where would the progress come from? How would we achieve greater and greater things? We'd be stuck."
+
+"That's what I'm saying, that who says there needs to be progress? Who decided we had to keep getting better and better? Whatever 'better' is supposed to mean in the first place... why don't we just stop where we're at and realize how neat it is?"
+
+Serĉa chewed on his lower lip as he thought for a moment. "Just think about the pre-transition, though. Do you really think it would be better to live back then? Don't you think that the progress we've made since then is worthwhile, or that we *have* made progress at all?"
+
+"I don't know," Ben mused, "Just maybe those people back then were capable of Fulfillment even with what they had, and we're just making things more complicated than they need to be now."
+
+"Maybe... but I just... I just have a hard time seeing it."
+
+Two two sat in silence for a few minutes, before Ben asked, "You ready to start walking again?"
+
+Serĉa was still wanting to rest, but he was afraid he would seize up if he didn't keep moving. "Yeah, let's get on it."
+
+There was still a very long way to go.
