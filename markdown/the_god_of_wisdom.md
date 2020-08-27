@@ -168,9 +168,9 @@ The sun was well into the Farm's southern opening when the two left Ben Abn's ca
 
 ---
 
-Although the Farm's landscape was mostly quite flat, there were a few mountain spines thrown in among the fields and rolling hills. Because the Farm was not crafted by natural forces, the geography did not need to follow any realistic geological conventions: the mountains that Serĉa and Ben Abn were heading for -- a string of three peaks called *les prêtres du vent* -- rose suddenly from the plains below, decorating the region with their terrifyingly rugged, rocky slopes that reached two kilometers into the air, nearly to the level of the transparent boundary between the Farm's sky and the empty space beyond.
+Although the Farm's landscape was mostly quite flat, there were a few mountain spines thrown in among the fields and rolling hills. Because the Farm was not crafted by natural forces, the geography did not need to follow any realistic geological conventions: the mountains that Serĉa and Ben Abn were heading for -- a string of three peaks called *les Prêtres du Vent* -- rose suddenly from the plains below, decorating the region with their terrifyingly rugged, rocky slopes that reached two kilometers into the air, nearly to the level of the transparent boundary between the Farm's sky and the empty space beyond.
 
-Serĉa quickly realized that this trip would definitely take more than a day. He and Ben walked for several hours through a landscape much like the area around Ben's camp before the hills and streams gave way to a terrain of marshy brambles and then later to a flat expanse of fields with the *prêtres* visible upon the upward-curving land in the distance. By the time they stopped for a midday meal (mainly a bready fruit Ben picked from a field on the side of the path), they must have walked at least ten kilometers, and there was still at least that far to go before reaching the feet of the mountains.
+Serĉa quickly realized that this trip would definitely take more than a day. He and Ben walked for several hours through a landscape much like the area around Ben's camp before the hills and streams gave way to a terrain of marshy brambles and then later to a flat expanse of fields with the *Prêtres* visible upon the upward-curving land in the distance. By the time they stopped for a midday meal (mainly a bready fruit Ben picked from a field on the side of the path), they must have walked at least ten kilometers, and there was still at least that far to go before reaching the feet of the mountains.
 
 The path they walked on was lined with fields like the one where they had picked the bread-fruit; a few times they saw people out among the crops, harvesting or simply surveying their bounty.
 
@@ -200,11 +200,11 @@ Serĉa thought about this for a moment before answering, "I suppose so, but I do
 
 ---
 
-Serĉa and Ben arrived at the base of the *prêtres* late that evening. Serĉa's muscles were aching awfully -- he had never walked that far in a single day and was not at all looking forward to the mountain climb he still had to look forward to. After a miserable dinner of vegetable massacre, they settled down for sleep (Ben had, luckily, brought the hammocks along).
+Serĉa and Ben arrived at the base of the *Prêtres* late that evening. Serĉa's muscles were aching awfully -- he had never walked that far in a single day and was not at all looking forward to the mountain climb he still had to look forward to. After a miserable dinner of vegetable massacre, they settled down for sleep (Ben had, luckily, brought the hammocks along).
 
 Serĉa slept soundly all night and was again woken up by the rising sun, this time emerging from the Farm's north opening. He didn't feel any better than he had the previous evening; if anything, his muscles protested even more as he stood up and began preparing for the day's trek.
 
-Ben Abn was ready to go much earlier this time, seeming excited for the climb to come. The peaks of the *prêtres* could be reached along rocky paths chiseled in spirals up each of the three mountains, and the two men began to climb one of these paths to begin ascending the middle, tallest one.
+Ben Abn was ready to go much earlier this time, seeming excited for the climb to come. The peaks of the *Prêtres* could be reached along rocky paths chiseled in spirals up each of the three mountains, and the two men began to climb one of these paths to begin ascending the middle, tallest one.
 
 "I was thinking about what we were saying yesterday," Ben remarked.
 
@@ -251,3 +251,78 @@ Two two sat in silence for a few minutes, before Ben asked, "You ready to start 
 Serĉa was still wanting to rest, but he was afraid he would seize up if he didn't keep moving. "Yeah, let's get on it."
 
 There was still a very long way to go.
+
+
+## *La vie, la mort, et le prêtre*
+
+The winding path up the mountain was grueling, and Serĉa's diminishing strength meant that his and Ben's progress was increasingly slow as they continued ascending. Serĉa thought it was ridiculous that Ben had suggested that the entire trip was doable in a single day; at the rate they were moving it looked like they wouldn't even reach the summit before the end of this, their second, day. The climb was made no easier by the winds that buffeted them from every direction as they walked. The Farm's spin to maintain an Earth-like "gravity" meant that any air rising from the lower layers of the atmosphere would have the momentum of its rotation converted into a ferocious wind in the direction the Farm was spinning (and any air falling from above would be blown in the opposite direction); the difference in temperature between the lower and upper layers of sky was kept as small as possible to mitigate this effect, but the steep slopes of the *Prêtres* acted as rudders that guided the prevailing air currents up and down, hence the name of the mountains: *les Prêtres du Vent*,  the priests of the wind.
+
+There was a waterfall that tumbled down one side of the mountain. The water provided a refreshing spot to rehydrate and take a short break every time they came around to it, but it also provided a challenging obstacle since they had to wade through the water as it flowed over the path, and the wind dispersed some of the water as a mist that drenched their skin and made the rocks slippery and the dirt muddy.
+
+Serĉa began to wonder why had signed up for this ridiculous adventure. His goal had been to observe the ways of life on the Free Spaces, not to participate in the silly asceticism of the people who lived there. Although he'd judged Ben Abn as peculiar and entertaining at first, the pain that was constantly arriving from his feet and legs was starting to convince him that Ben was at his core a sadistic rot who ought to have been locked away like in the scenario they had discussed the evening before.
+
+The only thing keeping him sane was this excerpt from a book he had read at the University, which he repeated over and over in his head:
+
+> You look aloft when you long for exaltation, and I look downward because I am exalted. Who among you can at the same time laugh and be exalted? He who climbs on the highest mountains laughs at all tragic plays and tragic realities....
+
+> And whatever may still overtake me as fate and experience -- a wandering will be therein, and a mountain-climbing: in the end, one experiences only oneself.
+
+Of course, that really wasn't too much solace, seeing as the author -- an eccentric, pre-TK philosopher called Nietzsche -- had eventually gone insane himself. Apparently the act of experiencing "only oneself" was something of a risky endeavor.
+
+---
+
+Serĉa and Ben made it nearly to the summit by the time the light began fading that evening. Ben stated that they could have made it all the way up, but he wanted to be able to see the sunrise from the peak, and it was too windy to camp on top. Instead, they set up a makeshift campsite by the source of waterfall (it looked like the water was pumped up and emerged from a fissure near the peak) and bedded down until morning.
+
+The wind rushed incessantly over Serĉa's hammock all night, and he slept dismally. Finally, while the mountainside was still shrouded in shadows, Ben rolled out of his bed and grunted to Serĉa that it was time to go.
+
+They packed up their camp quickly and resumed trudging up the trail, leaving the water's roaring and burbling behind. The last section of the climb was a steep scramble that run through a ravine at the waterfall's head and then turned and extended up along a rocky ridge to the summit. The final hundred meters or so were covered with loose rocks that slid out from under their feet as they climbed and made jarring, clattering noises while tumbling toward the precipice below. The sun was only just starting to show itself in the south, so it was difficult to see their footing, and they had to test each step carefully.
+
+Finally, Ben clambered over a jumble of rocks ahead of Serĉa and exclaimed, "Hey! We've made it! You've got it! And in time for the sunrise, too."
+
+Serĉa put the last of his energy into the remaining stretch and took it at double-speed. At the top, he found Ben Abn standing, looking toward the south where the sliver of sun was progressively illuminating the land.
+
+Nearly every part of the Farm's varied quilt of hills, streams, fields, and mountains was visible from this vantage point, all veiled in a swirling cloak of morning mists. The two other *Prêtres* stood in companionship on the east and on the west, each half-illuminated by the growing crescent of sun as it touched on them with glowing, milky spears through the mist. The shadows danced in slow circles as the Farm turned, each turn bringing the sun farther into view. Within a few turns, it had fully emerged, announcing the arrival of day on the alien landscape.
+
+Serĉa and Ben stood for quite some time, absorbing the view, before Ben spoke.
+
+"Amazing, huh? You feel alive here, you know. The wind and the view and the... I don't know, you just feel alive." The wind picked up in that moment, rushing up and over the peak as if to add an amen to Ben's statement.
+
+Serĉa nodded slowly and sat down, wanting to give his legs a rest before heading back down. "How many times have you been up here before?" he asked.
+
+"Oh, this'll be my third," Ben answered, "After I got to the Farm, I spent some time touring around the place for a few months, climbed some mountains along the way -- seemed like a familiar thing 'cause I was real into that sort of thing back on Earth, except there I'd usually jump off or something afterward; can't do that here -- anyway, I thought this was one of the better ones, climbed it right after I got here and then again after I'd set up my house. It's real dramatic how it rises out of the fields, you know. The *Anaranjados* are pretty good, too though," he pointed up toward somewhere on the opposite side of the Farm, "but these three guys are my favorite."
+
+"I suppose you'll be wanting to head down soon?" Serĉa asked.
+
+Ben laughed, "Oh, take your time. Enjoy the view. Get some meditating in or whatever it was you wanted to do on the Farm. Just don't get blown off the edge," he added with a grin, "It'd be quite the tumble to the bottom."
+
+They both sat in silence for some time before Serĉa spoke again, "Are you planning on ever leaving the Farm?"
+
+"Oh I don't know," Ben said, "Probably, eventually. There's still a lot I'd like to do here. I've found I like working with my hands, doing things from the ground up, so I'd kind of like to at least get decent at doing it before giving up on this place. You know, I'd like to figure out how to grow things, and build myself a house better than that shack I've got right now. Maybe learn to draw or something. I guess I could do all that back on Earth, but it all seems a bit more meaningful here, maybe 'cause there's not much to distract me. It's like a studio for me I guess.
+
+"But yeah, I guess I'll eventually get bored and want to go and find Fulfillment someplace else. There's people here that want to just die here, but I don't think I'm one of them. Maybe I'll raise a kid or two -- it's a bit hard to do that on the Farm; the TK's strict about making sure they're brought up good, which is hard work for the parents here -- I never had any kids on Earth, seemed like too much of an ordeal, too much attachment involved... but not so much anymore, after I've been here for a while..."
+
+After a brief pause, he turned toward Serĉa and asked with a quizzical smile, "What? You planning on staying here like I did?"
+
+"Not if my legs have anything to say about it," Serĉa replied with a chuckle, "I was just curious.
+
+"Speaking of my legs," Serĉa added, "We better start down now, or I'm afraid I'll shortly be turning completely stiff."
+
+---
+
+Serĉa and Ben began descending the side of the mountain, carefully choosing their footing on the treacherous slope. Serĉa had hoped it would be easier going down since the sun was fully out to light the way, but he hadn't counted on the difficulty of making sure his momentum didn't get out of control. Every step down would dislodge a rock or two, occasionally sending one tumbling chaotically downward and sparking a miniature avalanche of pebbles and stones. Ben had made Serĉa go down first so that debris wouldn't fall on him, but Ben's footing wasn't excellent either, and Serĉa would periodically be nailed in the ankle by a stray rock ejected by Ben's shoes.
+
+"It's trickier going down than up," Serĉa commented.
+
+"Just be glad we're not doing it in the winter when there's snow and ice everywhere," Ben answered, "I tried to climb one of the other peaks too late in the season and had to turn back when I was nearly at the top 'cause it was too slippery."
+
+Just a few seconds later, Serĉa heard Ben swear along with a loud clattering of rocks. He looked up to see Ben falling on his back on the uneven ground, a wave of rubble bouncing down the slope toward Serĉa. Serĉa tried to move out of the way, but this only made things worse as he was then off-balance as the barrage of earth swept his feet out from under him.
+
+The landslide picked Serĉa up with it, cutting into his skin as it did so. He tried to slow himself, but it seemed as if the entire mountainside was collapsing under him. He stretched his arms out to find something to hold onto but only succeeding in scratching and battering his hands and wrists. Frantically, he looked down at the cliff below. If he couldn't find a way to slow himself or redirect his movement toward the ravine they had come up, he would slide right off the edge.
+
+Something rammed into the top of his head.
+
+*He who climbs on the highest mountains laughs at all tragic plays and tragic realities.*
+
+Through his flickering vision, he saw the cliff approaching.
+
+*In the end, one experiences only oneself.*
