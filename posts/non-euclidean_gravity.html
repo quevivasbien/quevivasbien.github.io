@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Que vivas bien</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="goodness, truth, and summer rainstorms">
+    <meta name="author" content="Mckay D Jensen">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../css/kube.min.css" />
+    <link rel="stylesheet" href="../css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../css/custom.css" />
+    <link rel="shortcut icon" href="../img/favicon.png" />
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
+    <style>
+      .gif {
+        width: 50%;
+        height: auto;
+      }
+      figcaption {
+        text-align: center;
+      }
+    </style>
+</head>
+<body>
+	<!-- Navigation -->
+	<div class="main-nav">
+		<div class="container">
+			<header class="group top-nav">
+				<nav class="navbar logo-w navbar-left" >
+					<a class="logo" href="../index.html">Que vivas bien</a>
+				</nav>
+				<div class="navigation-toggle" data-tools="navigation-toggle" data-target="#navbar-1">
+				    <span class="logo">Que vivas bien</span>
+				</div>
+			    <nav id="navbar-1" class="navbar item-nav navbar-right">
+				    <ul>
+				        <li><a href="../index.html">Home</a></li>
+				        <li><a href="../about.html">About</a></li>
+				        <li><a href="../archive.html">Archive</a></li>
+				        <!--<li><a href="#">Contact</a></li>-->
+				    </ul>
+				</nav>
+			</header>
+		</div>
+	</div>
+
+	<!-- Introduction -->
+	<div class="intro">
+		<div class="container">
+			<div class="units-row">
+			    <div class="unit-100">
+			    	<p id="tagline" class="p-intro">goodness, truth, and summer rainstorms</p>
+			    </div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Content -->
+	<div class="content">
+		<div class="container">
+			<!-- Post -->
+			<div class="post">
+				<!-- Heading -->
+				<h1>Non-Euclidean gravity</h1>
+
+				<div class="in-content">
+
+          <p>So I was reviewing linear algebra today and found myself asking the question, "How would gravity work in a space with a different notion of distance?"</p>
+
+          <p>In normal (Euclidean) space, distance is measured with the Euclidean norm</p>
+          <a href="https://www.codecogs.com/eqnedit.php?latex=\|&space;x&space;\|&space;=&space;\left(&space;\sum&space;x_i^2&space;\right)^{1/2}" target="_blank"><img class="aligncenter" src="https://latex.codecogs.com/gif.latex?\|&space;x&space;\|&space;=&space;\left(&space;\sum&space;x_i^2&space;\right)^{1/2}" title="\| x \| = \left( \sum x_i^2 \right)^{1/2}" /></a>
+          <p>so the distance between vectors <i>x</i> and <i>y</i> is</p>
+          <a href="https://www.codecogs.com/eqnedit.php?latex=d(x,&space;y)&space;=&space;\|&space;x&space;-&space;y&space;\|&space;=&space;\left(&space;\sum&space;(x_i&space;-&space;y_i)^2&space;\right)^{1/2}" target="_blank"><img class="aligncenter" src="https://latex.codecogs.com/gif.latex?d(x,&space;y)&space;=&space;\|&space;x&space;-&space;y&space;\|&space;=&space;\left(&space;\sum&space;(x_i&space;-&space;y_i)^2&space;\right)^{1/2}" title="d(x, y)) = \| x - y \| = \left( \sum (x_i - y_i)^2 \right)^{1/2}" /></a>
+          <p>If the points at <i>x</i> and <i>y</i> have mass <i>m<sub>x</sub></i> and <i>m<sub>y</sub></i>, respectively, then Newton's law of gravity tells us that the gravitational force with which <i>x</i> pulls on <i>y</i> is</p>
+          <a href="https://www.codecogs.com/eqnedit.php?latex=\frac{G(x-y)m_x&space;m_y}{\|x-y\|^3}" target="_blank"><img class="aligncenter" src="https://latex.codecogs.com/gif.latex?\frac{G(x-y)m_x&space;m_y}{\|x-y\|^3}" title="\frac{G(x-y)m_x m_y}{\|x-y\|^3}" /></a>
+          <p>where <i>G</i> is a special "gravitational constant."</p>
+          <p>I programmed in Python a basic simulation that calculated the force acting on a particle moving near a much larger mass and then experimented with changing the norm used to calculate the gravitational force.</p>
+          <p>You can see the normal case below. The particle orbits the central mass in an ellipse with the central mass at one of the foci just like we see in the real world (hats off to Kepler). I've added in the background a gradient that indicates where the central mass's gravitational force is strongest (keep in mind that all force vectors point toward the center). I've also added coloration to the path that the orbiting particle traces, so it is more yellowish when it is moving quickly.</p>
+          <img class="aligncenter gif" src="../img/l2.gif">
+          <p>The first thing I tried was to use a different norm from the class of p-norms. A p-norm has the form</p>
+          <a href="https://www.codecogs.com/eqnedit.php?latex=\|x\|_p&space;=&space;\left(&space;\sum&space;x_i^p&space;\right)^{1/p}" target="_blank"><img class="aligncenter" src="https://latex.codecogs.com/gif.latex?\|x\|_p&space;=&space;\left(&space;\sum&space;x_i^p&space;\right)^{1/p}" title="\|x\|_p = \left( \sum x_i^p \right)^{1/p}" /></a>
+          for a given <i>p</i>. (You technically only get a proper norm for <i>p &ge; 1</i>.) Notice that that euclidean norm is just the p-norm when <i>p = 2</i>. Below I've shown the same simulation with various other values of <i>p</i>.</p>
+          <figure>
+            <img class="aligncenter gif" src="../img/l05.gif">
+            <figcaption>p = 0.5</figcaption>
+          </figure>
+          <figure>
+            <img class="aligncenter gif" src="../img/l1.gif">
+            <figcaption>p = 1</figcaption>
+          </figure>
+          <figure>
+            <img class="aligncenter gif" src="../img/linf.gif">
+            <figcaption>p = &infin;</figcaption>
+          </figure>
+          You can see that each of these behave strangely, since the gravitational forces are concentrated in a sort of X-shaped pattern in each. This can lead to some unstable behavior like the chaos that's going on in the last image (I don't think that this was particular to <i>p = &infin;</i>; I probably could get something similar to happen in the first two by changing the particle's initial position and velocity and the central mass.)</p>
+          <hr>
+          <p>The next thing I tried was to experiment with norms induced by inner products. The norm induced by an inner product is</p>
+          <a href="https://www.codecogs.com/eqnedit.php?latex=\|x\|_{\langle&space;\rangle}&space;=&space;\sqrt{\langle&space;x,&space;x&space;\rangle}" target="_blank"><img class="aligncenter" src="https://latex.codecogs.com/gif.latex?\|x\|_{\langle&space;\rangle}&space;=&space;\sqrt{\langle&space;x,&space;x&space;\rangle}" title="\|x\|_{\langle \rangle} = \sqrt{\langle x, x \rangle}" /></a>
+          <p>and the Euclidean norm is induced by the Euclidean inner product, or "dot product,"</p>
+          <a href="https://www.codecogs.com/eqnedit.php?latex=\langle&space;x,&space;y&space;\rangle&space;=&space;x&space;\cdot&space;y&space;=&space;\sum&space;x_i&space;y_i" target="_blank"><img class="aligncenter" src="https://latex.codecogs.com/gif.latex?\langle&space;x,&space;y&space;\rangle&space;=&space;x&space;\cdot&space;y&space;=&space;\sum&space;x_i&space;y_i" title="\langle x, y \rangle = x \cdot y = \sum x_i y_i" /></a>
+          For any positive-definite matrix <i>M</i>,</p>
+          <a href="https://www.codecogs.com/eqnedit.php?latex=\langle&space;x,&space;y&space;\rangle_M&space;=&space;x^T&space;M^T&space;M&space;y" target="_blank"><img class="aligncenter" src="https://latex.codecogs.com/gif.latex?\langle&space;x,&space;y&space;\rangle_M&space;=&space;x^T&space;M^T&space;M&space;y" title="\langle x, y \rangle_M = x^T M^T M y" /></a>
+          <p>is a valid inner product. With this in mind, I was able to run my simulation with norms induced by inner products generated from various positive definite matrices. You can see the results below.</p>
+          <figure>
+            <img class="aligncenter gif" src="../img/1-110.gif">
+            <figcaption><a href="https://www.codecogs.com/eqnedit.php?latex=M=\begin{pmatrix}&space;2&space;&&space;-1&space;\\&space;-1&space;&&space;1&space;\end{pmatrix}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?M=\begin{pmatrix}&space;2&space;&&space;-1&space;\\&space;-1&space;&&space;1&space;\end{pmatrix}" title="\begin{pmatrix} 2 & -1 \\ -1 & 1 \end{pmatrix}" /></a></figcaption>
+          </figure>
+          <figure>
+            <img class="aligncenter gif" src="../img/1110.gif">
+            <figcaption><a href="https://www.codecogs.com/eqnedit.php?latex=M=\begin{pmatrix}&space;2&space;&&space;1&space;\\&space;1&space;&&space;1&space;\end{pmatrix}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?M=\begin{pmatrix}&space;2&space;&&space;1&space;\\&space;1&space;&&space;1&space;\end{pmatrix}" title="\begin{pmatrix} 2 & 1 \\ 1 & 1 \end{pmatrix}" /></a></figcaption>
+          </figure>
+          <figure>
+            <img class="aligncenter gif" src="../img/2001.gif">
+            <figcaption><a href="https://www.codecogs.com/eqnedit.php?latex=M&space;=&space;\begin{pmatrix}&space;4&space;&&space;0&space;\\&space;0&space;&&space;1&space;\end{pmatrix}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?M&space;=&space;\begin{pmatrix}&space;4&space;&&space;0&space;\\&space;0&space;&&space;1&space;\end{pmatrix}" title="M = \begin{pmatrix} 4 & 0 \\ 0 & 1 \end{pmatrix}" /></a></figcaption>
+          </figure>
+          <p>These didn't turn out to be quite as exciting as I thought they might be, although they are still reasonably interesting: it looks like the force field is simply transformed linearly, with the given transformation having something to do with the matrix used to generate the norm. The particles' orbits still appear to be ellipses, although the center mass is no longer positioned at a focus of the ellipse. I can see myself spending a lot of time figuring out what exactly is going on here, but I've already spent way too much time on this for now, so that will have to wait for another time.
+				</div>
+				<div class="foot-post">
+					<!-- place footer here -->
+				</div>
+			</div>
+			<!-- /post -->
+
+		</div>
+	</div>
+
+  <footer>
+		<div class="container">
+			<img class="aligncenter" src="../img/logo.png">
+			<p class="text-centered foot-cp">
+	    		<a href="../about.html">created by mckay jensen</a>
+	    </p>
+      <p class="text-centered" style="font-size: 24px;">
+        <a href="mailto:jensenm@uchicago.edu"><i class="fa fa-send"></i></a>
+        <a href="https://github.com/quevivasbien"><i class="fa fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/mckaydjensen/"><i class="fa fa-linkedin"></i></a>
+      </p>
+		</div>
+	</footer>
+
+	<!-- Javascript -->
+	<script src="../js/jquery.min.js"></script>
+    <script src="../js/kube.min.js"></script>
+	<script src="../js/beautiful.js"></script>
+</body>
+</html>
