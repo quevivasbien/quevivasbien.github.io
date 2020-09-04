@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Que vivas bien</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="goodness, truth, and summer rainstorms">
+    <meta name="author" content="Mckay D Jensen">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../css/kube.min.css" />
+    <link rel="stylesheet" href="../css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../css/custom.css" />
+    <link rel="shortcut icon" href="../img/favicon.png" />
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<!-- Navigation -->
+	<div class="main-nav">
+		<div class="container">
+			<header class="group top-nav">
+				<nav class="navbar logo-w navbar-left" >
+					<a class="logo" href="../index.html">Que vivas bien</a>
+				</nav>
+				<div class="navigation-toggle" data-tools="navigation-toggle" data-target="#navbar-1">
+				    <span class="logo">Que vivas bien</span>
+				</div>
+			    <nav id="navbar-1" class="navbar item-nav navbar-right">
+				    <ul>
+				        <li><a href="../index.html">Home</a></li>
+				        <li><a href="../about.html">About</a></li>
+				        <li><a href="../archive.html">Archive</a></li>
+				        <!--<li><a href="#">Contact</a></li>-->
+				    </ul>
+				</nav>
+			</header>
+		</div>
+	</div>
+
+	<!-- Introduction -->
+	<div class="intro">
+		<div class="container">
+			<div class="units-row">
+			    <div class="unit-100">
+			    	<p id="tagline" class="p-intro">goodness, truth, and summer rainstorms</p>
+			    </div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Content -->
+	<div class="content">
+		<div class="container">
+			<!-- Post -->
+			<div class="post">
+				<!-- Heading -->
+				<h1>Hyde Park crime map</h1>
+
+				<div class="in-content">
+
+  				<p>The University of Chicago Police Department has <a href="https://incidentreports.uchicago.edu/incidentReportArchive.php">a site</a> where you can see the various incidents reported to the department each day. I wanted to be able to visualize where these incidents were concentrated, and since each event is labeled with an address, I figured I could create a map to do that.</p>
+          <figure>
+            <a href="../img/ucpd_map2.png"><img class="aligncenter" src="../img/ucpd_map2.png" width=80% heigh=auto>
+            <figcaption style="text-align: center">Click to see the full-size image</figcaption></a>
+          </figure>
+          <p>To create this, I used Python's Requests and Beautiful Soup libraries to scrape the incident report archives, gathering all incidents from 1 September 2019 to 1 September 2020. I then cleaned up the data and used the <a href="https://pypi.org/project/geocoder/">Geocoder</a> Python library to get GPS coordinates for each incident address. (I wasn't able to get coordinates for some events that didn't occur at proper numeric addresses.) The final product is just a Matplotlib scatterplot of those coordinates overlaid on an <a href="openstreetmap.org">OpenStreetMap</a> view of Hyde Park.</p>
+          <hr>
+          <p>The incidents also have information about when they were reported, so I generated plots of the days and times of day that they were generally reported:</p>
+          <a href="../img/hyde_park_daily_incidents.png"><img class="aligncenter" src="../img/hyde_park_daily_incidents.png" width=90% heigh=auto></a>
+          <a href="../img/hyde_park_hourly_incidents.png"><img class="aligncenter" src="../img/hyde_park_hourly_incidents.png" width=90% heigh=auto></a>
+          <p>The daily counts are interesting -- you can clearly see a sizable decrease in crimes during the holidays, and the July unrest shows up as well. The hourly counts are not quite what I expected; I found it odd that most crimes were committed in the middle of the day, although I guess that is when most people are out and about.</p>
+          <p>I also broke down the hourly counts by type of crime, as you can see below.</p>
+          <a href="../img/thefts_robberies_by_hour.png"><img class="aligncenter" src="../img/thefts_robberies_by_hour.png" width=90% heigh=auto></a>
+          <a href="../img/hyde_park_daily_incidents.png"><img class="aligncenter" src="../img/violent_crimes_hourly.png" width=90% heigh=auto></a>
+          <p>Overall, the data are interesting and worth perusing for anyone who lives in Hyde Park, although I didn't come across anything too surprising.</p>
+				</div>
+				<div class="foot-post">
+					<!-- place footer here -->
+				</div>
+			</div>
+			<!-- /post -->
+
+		</div>
+	</div>
+
+  <footer>
+		<div class="container">
+			<img class="aligncenter" src="../img/logo.png">
+			<p class="text-centered foot-cp">
+	    		<a href="../about.html">created by mckay jensen</a>
+	    </p>
+      <p class="text-centered" style="font-size: 24px;">
+        <a href="mailto:jensenm@uchicago.edu"><i class="fa fa-send"></i></a>
+        <a href="https://github.com/quevivasbien"><i class="fa fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/mckaydjensen/"><i class="fa fa-linkedin"></i></a>
+      </p>
+		</div>
+	</footer>
+
+	<!-- Javascript -->
+	<script src="../js/jquery.min.js"></script>
+    <script src="../js/kube.min.js"></script>
+	<script src="../js/beautiful.js"></script>
+</body>
+</html>

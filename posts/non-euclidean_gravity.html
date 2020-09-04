@@ -81,7 +81,7 @@
           <img class="aligncenter gif" src="../img/l2.gif">
           <p>The first thing I tried was to use a different norm from the class of p-norms. A p-norm has the form</p>
           <a href="https://www.codecogs.com/eqnedit.php?latex=\|x\|_p&space;=&space;\left(&space;\sum&space;x_i^p&space;\right)^{1/p}" target="_blank"><img class="aligncenter" src="https://latex.codecogs.com/gif.latex?\|x\|_p&space;=&space;\left(&space;\sum&space;x_i^p&space;\right)^{1/p}" title="\|x\|_p = \left( \sum x_i^p \right)^{1/p}" /></a>
-          for a given <i>p</i>. (You technically only get a proper norm for <i>p &ge; 1</i>.) Notice that that euclidean norm is just the p-norm when <i>p = 2</i>. Below I've shown the same simulation with various other values of <i>p</i>.</p>
+          for a given <i>p</i>. (You technically only get a proper norm for <i>p &ge; 1</i>.) Notice that that Euclidean norm is just the p-norm when <i>p = 2</i>. Below I've shown the same simulation with various other values of <i>p</i>.</p>
           <figure>
             <img class="aligncenter gif" src="../img/l05.gif">
             <figcaption>p = 0.5</figcaption>
@@ -101,8 +101,8 @@
           <p>and the Euclidean norm is induced by the Euclidean inner product, or "dot product,"</p>
           <a href="https://www.codecogs.com/eqnedit.php?latex=\langle&space;x,&space;y&space;\rangle&space;=&space;x&space;\cdot&space;y&space;=&space;\sum&space;x_i&space;y_i" target="_blank"><img class="aligncenter" src="https://latex.codecogs.com/gif.latex?\langle&space;x,&space;y&space;\rangle&space;=&space;x&space;\cdot&space;y&space;=&space;\sum&space;x_i&space;y_i" title="\langle x, y \rangle = x \cdot y = \sum x_i y_i" /></a>
           For any positive-definite matrix <i>M</i>,</p>
-          <a href="https://www.codecogs.com/eqnedit.php?latex=\langle&space;x,&space;y&space;\rangle_M&space;=&space;x^T&space;M^T&space;M&space;y" target="_blank"><img class="aligncenter" src="https://latex.codecogs.com/gif.latex?\langle&space;x,&space;y&space;\rangle_M&space;=&space;x^T&space;M^T&space;M&space;y" title="\langle x, y \rangle_M = x^T M^T M y" /></a>
-          <p>is a valid inner product. With this in mind, I was able to run my simulation with norms induced by inner products generated from various positive definite matrices. You can see the results below.</p>
+          <a href="https://www.codecogs.com/eqnedit.php?latex=\langle&space;x,&space;y&space;\rangle_M&space;=&space;x^T&space;M&space;y" target="_blank"><img class="aligncenter" src="https://latex.codecogs.com/gif.latex?\langle&space;x,&space;y&space;\rangle_M&space;=&space;x^T&space;M&space;y" title="\langle x, y \rangle_M = x^T M y" /></a>
+          <p>is a valid inner product. With this in mind, I was able to run my simulation with norms induced by inner products generated from various positive-definite matrices. You can see the results below.</p>
           <figure>
             <img class="aligncenter gif" src="../img/1-110.gif">
             <figcaption><a href="https://www.codecogs.com/eqnedit.php?latex=M=\begin{pmatrix}&space;2&space;&&space;-1&space;\\&space;-1&space;&&space;1&space;\end{pmatrix}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?M=\begin{pmatrix}&space;2&space;&&space;-1&space;\\&space;-1&space;&&space;1&space;\end{pmatrix}" title="\begin{pmatrix} 2 & -1 \\ -1 & 1 \end{pmatrix}" /></a></figcaption>
