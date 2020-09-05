@@ -23,7 +23,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 
-The actual content on the site -- blog posts, and otherwise -- are NOT covered
+The actual content on the site -- blog posts, graphics, and otherwise -- are NOT covered
 under the same license and are the property of the author, Mckay Jensen.
 
 Note also that I have substantially modified the original Saturn theme.
