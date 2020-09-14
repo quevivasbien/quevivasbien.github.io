@@ -1,4 +1,4 @@
 {
-  "to_find": "<img class=\"aligncenter\" src=\"../img/logo.png\">",
-  "replace_with": "<a href=\"../index.html\"><img class=\"aligncenter\" src=\"../img/logo.png\"></a>"
+  "to_find": "./img/logo.png\">",
+  "replace_with": "./img/logo.png\" title=\"Back to home page\">"
 }
