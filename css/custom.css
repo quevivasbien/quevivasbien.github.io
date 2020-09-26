@@ -18,6 +18,43 @@ li img.aligncenter {
   margin-left: auto;
   margin-right: auto;
 }
+.expand-button {
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  background-color: #FFF;
+  border: 1px solid #349c30;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  color: #349c30;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+.expand-button:hover {
+	background-color: #5db14f;
+	color: #fff;
+	-webkit-transition: all .25s ease-in-out;
+	   -moz-transition: all .25s ease-in-out;
+	    -ms-transition: all .25s ease-in-out;
+	     -o-transition: all .25s ease-in-out;
+	        transition: all .25s ease-in-out;
+}
+.expandable {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+.expandable label {
+  padding-right: 20px;
+  white-space: nowrap;
+}
+.expandable [type="checkbox"] {
+  vertical-align:middle;
+}
 .container {
     margin: auto;
     max-width: 662px;
