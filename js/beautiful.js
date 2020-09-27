@@ -17,8 +17,10 @@ const beautifulThings = [
   "humankind",
   "galaxies",
   "desert skies at night",
-  "Natalia Lafourcade songs",
-  "mountain vistas"
+  "mountain vistas",
+  "quiet, snowy mornings",
+  "la lengua hispana",
+  "math on a whiteboard"
 ];
 var randomIndex = Math.floor(Math.random() * beautifulThings.length);
 var tagline = document.getElementById("tagline");
