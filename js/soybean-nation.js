@@ -94,6 +94,15 @@ function getSoyPrice(update_visual=false) {
     else {
       elem.innerHTML = 'Soy sell price: ${0}'.format(price.toFixed(2));
     }
+    // also update slider status output
+    if (document.getElementById('slidecontainer').style.display != 'none') {
+      slider_output = document.getElementById('partial-sale-status');
+      slider = document.getElementById('partial-sale-slider');
+      slider_output.innerHTML = 'Selling {0}% of stockpile, revenue will be ${1}'.format(
+        slider.value,
+        ((slider.value / 100) * stockpile * price).toFixed(2)
+      );
+    }
   }
   return price;
 }
@@ -346,11 +355,14 @@ function activatePartialSale() {
     slidecontainer.style.display = 'block';
     var slider = document.getElementById("partial-sale-slider");
     var slider_output = document.getElementById("partial-sale-status");
-    slider_output.innerHTML = 'Selling {0}% of stockpile'.format(slider.value);
+    slider_output.innerHTML = 'Selling {0}% of stockpile, revenue will be ${1}'.format(
+      slider.value,
+      ((slider.value / 100) * stockpile * getSoyPrice()).toFixed(2)
+    );
     slider.oninput = function() {
-      slider_output.innerHTML = 'Selling {0}% of stockpile ~ Revenue will be ${1}'.format(
+      slider_output.innerHTML = 'Selling {0}% of stockpile, revenue will be ${1}'.format(
         this.value,
-        (this.value / 100) * stockpile * getSoyPrice()
+        ((this.value / 100) * stockpile * getSoyPrice()).toFixed(2)
       );
       sell_frac = slider.value / 100;
       // need to include price update here since it depends on sell frac
