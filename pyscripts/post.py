@@ -29,7 +29,7 @@ def main(filename, front=True):
     <div class="post">
         <!-- Heading -->
         <a href="./posts/{filename}"><h1>{title}</h1></a>
-        
+
         <div class="in-content">
             {to_include}
             <a class="read-more" href="./posts/{filename}">Read more</a>
@@ -53,7 +53,7 @@ def main(filename, front=True):
     to_insert = f'<li><a href="./posts/{filename}">{title}</a> ({date})</li>'
     with open('../archive.html', 'r') as fh:
         archive_content = fh.read()
-    regex = r'<br><br>\s*<ul>\s*'
+    regex = r'<ul id="post-list">\s*'
     x = re.search(regex, archive_content).group()
     whitespace = re.search(r'\s*$', x).group()
     archive_content = archive_content.replace(x, x + to_insert + whitespace)

@@ -18,6 +18,61 @@ li img.aligncenter {
   margin-left: auto;
   margin-right: auto;
 }
+
+.btn-group button {
+  font-family: "Open Sans", sans-serif;
+  border: 1px solid green; /* Green border */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  width: 100%; /* Set a width if needed */
+  display: block; /* Make the buttons appear below each other */
+}
+.btn-group button:not(:last-child) {
+  border-bottom: none; /* Prevent double borders */
+}
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+/* Add a background color on hover */
+.btn-group button.unpressed:hover {
+  background-color: #3e8e41;
+  color: #FFFFFF;
+}
+.btn-group button.unpressed {
+  background-color: #FFFFFF;
+}
+.btn-group button.pressed {
+  background-color: #3fa644; // light green
+  color: #FFFFFF;
+}
+
+.fancy-button {
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  background-color: #FFF;
+  border: 1px solid #349c30;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  color: #349c30;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+.fancy-button:hover {
+	background-color: #5db14f;
+	color: #fff;
+	-webkit-transition: all .25s ease-in-out;
+	   -moz-transition: all .25s ease-in-out;
+	    -ms-transition: all .25s ease-in-out;
+	     -o-transition: all .25s ease-in-out;
+	        transition: all .25s ease-in-out;
+}
 .expand-button {
   padding: 5px 10px;
   margin-bottom: 10px;
@@ -55,6 +110,51 @@ li img.aligncenter {
 .expandable [type="checkbox"] {
   vertical-align:middle;
 }
+
+@keyframes flash-green {
+  from {color: #535353;}
+  to {color: green;}
+}
+
+@keyframes flash-red {
+  from {color: #535353;}
+  to {color: red;}
+}
+
+.slidecontainer {
+  width: 100%;
+}
+.slider {
+  -webkit-appearance: none;
+  width: 50%;
+  height: 10px;
+  border-radius: 4px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+.slider:hover {
+  opacity: 1;
+}
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #4CAF50;
+  cursor: pointer;
+}
+.slider::-moz-range-thumb {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #4CAF50;
+  cursor: pointer;
+}
+
 .container {
     margin: auto;
     max-width: 662px;
@@ -217,8 +317,7 @@ a.read-more:hover {
     font-weight: 700;
     text-transform: uppercase;
 }
-.foot-post
-
+.foot-post {
     font-weight: 400;
     text-decoration: none;
     color: #535353;
