@@ -10,6 +10,7 @@ var interest_rate = 0.05;
 var land_supply_var = 1.0;
 var land_demand_var = 1.0;
 var soy_demand_var = 30.0;
+var soy_demand_const = 15.0;
 var recent_sells = 10.0;
 var ad_budget = 0;
 var research_budget = 0;
@@ -58,7 +59,8 @@ function runGame() {
 
 
 function getFarmValue() {
-  return num_acres * land_prod * sum(harvest_times) * getSoyPrice() / (1 - interest_rate) + getLandPrice();
+  // present value of future revenue plus land value
+  return num_acres * land_prod * sum(harvest_times) * getSoyPrice(false, frac=1) * (1 + interest_rate) / interest_rate + num_acres * getLandPrice();
 }
 
 
@@ -73,14 +75,14 @@ function getLandPrice() {
 }
 
 
-function getSoyPrice(update_visual=false) {
+function getSoyPrice(update_visual=false, frac=sell_frac) {
   let multiplier;
   if (price_descrim && stockpile != 0) {
     // integrate 1/x demand from 0 to stockiled amount
-    multiplier = (Math.log(recent_sells + stockpile*sell_frac) - Math.log(recent_sells)) / (stockpile*sell_frac);
+    multiplier = (Math.log(recent_sells + stockpile*frac) - Math.log(recent_sells)) / (stockpile*frac);
   }
   else {
-    multiplier = 1 / (recent_sells + stockpile*sell_frac);
+    multiplier = 1 / (recent_sells + stockpile*frac);
   }
   let price = soy_demand_var * multiplier * Math.log10(ad_budget+11);
   if (price < 0) {
@@ -182,10 +184,31 @@ function updateBudgets() {
   else {
     research_budget = research_val;
   }
-  // roll dice for research
-  let proba = Math.log10(research_budget/10+1) / (1 + Math.log10(research_budget/10+1));
-  if (Math.random() < proba) {
-    land_prod += 0.01 * Math.random() * Math.log10(research_budget + 11);
+  if (research_budget > 0) {
+    // roll dice for research
+    let proba = Math.log10(research_budget/10+1) / (1 + Math.log10(research_budget/10+1));
+    if (Math.random() < proba) {
+      land_prod += 0.05 * Math.random() * Math.log2(research_budget + 1);
+      let prod_elem = document.getElementById('land-prod');
+      prod_elem.style.animation = null;
+      void prod_elem.offsetWidth;
+      prod_elem.style.animation = 'flash-green 1s 2';
+    }
+  }
+  if (ad_budget > 0) {
+    // roll dice for advertising
+    let proba = Math.log2(ad_budget/10+1) / (1 + Math.log2(ad_budget/10+1));
+    if (Math.random() < proba) {
+      soy_demand_const += Math.random() * Math.log2(ad_budget + 1);
+      soy_demand_var = soy_demand_const + 0.5 * soy_demand_var;
+      getSoyPrice(true);
+    }
+  }
+  if (soy_demand_const > 15.0) {
+    // soy demand slowly reverts to baseline
+    soy_demand_const = 15 + 0.99 * (soy_demand_const - 15);
+    soy_demand_var = soy_demand_const + 0.5 * soy_demand_var;
+    getSoyPrice(true);
   }
   if (ad_budget > 0 || research_budget > 0) {
     money -= (ad_budget + research_budget);
@@ -205,7 +228,7 @@ function nextSeason() {
   }
   land_supply_var = 0.5 + 0.5 * land_supply_var + (Math.random()*0.05 - 0.025);  // AR1
   land_demand_var = 0.5 + 0.5 * land_demand_var + (Math.random()*0.1 - 0.05); // AR1, more volatile
-  soy_demand_var = 15 + 0.5 * soy_demand_var + (Math.random() - 0.5);
+  soy_demand_var = soy_demand_const + 0.5 * soy_demand_var + (2*Math.random() - 1);
   recent_sells *= 0.5; // decay rate for demand
   updateBudgets();
   updateVisuals();
@@ -214,9 +237,9 @@ function nextSeason() {
     stockpile += 2 * num_acres * land_prod * Math.random();
     updateStockpile('green');
   }
-  // subtract debt payment, continuously compounded
+  // subtract debt payment, compounded quarterly
   if (money < 0) {
-    money *= Math.exp(-interest_rate * money / 4);
+    money -= (-interest_rate * money / 4);
     updateMoney('red');
   }
   // check game over
