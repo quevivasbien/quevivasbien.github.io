@@ -20,7 +20,8 @@ const beautifulThings = [
   "mountain vistas",
   "quiet, snowy mornings",
   "la lengua hispana",
-  "math on a whiteboard"
+  "math on a whiteboard",
+  "mi amorcita"
 ];
 var randomIndex = Math.floor(Math.random() * beautifulThings.length);
 var tagline = document.getElementById("tagline");
