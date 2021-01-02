@@ -1,4 +1,4 @@
 {
-  "to_find": "./img/logo.png\">",
-  "replace_with": "./img/logo.png\" title=\"Back to home page\">"
+  "to_find": " sagesse",
+  "replace_with": " <em>sagesse</em>"
 }
