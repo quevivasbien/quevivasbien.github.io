@@ -26,7 +26,7 @@ Serĉa was fascinated by how the cultural characteristics and beliefs of the tim
 
 It was Serĉa's fascination with the pre-transition way of life and its lingering echoes in the Free Spaces that had led him to arrange a visit to the Farm. It hadn't been hard to schedule passage on the *Blue Elegance of Night*, the shuttle that took him from Earth and was now preparing its docking with the Farm. The TK was, after all, highly encouraging of the various interests of the UN citizens and was happy to facilitate any projects or adventures they might wish to take on; the only difficulty had been choosing a Free Space from those that were willing and able to entertain visitors on short notice. After deciding on the Farm, Serĉa had only to travel on the eTrain to the O'Hare elevator, take the long ride to geosynchronous orbit, and meet the *Blue Elegance* in one of the elevator's thousands of upper bays.
 
-The Farm was one of the more remote Free Spaces, but was at that time undergoing maintenance and renovation that required frequent shipments of equipment from Earth, allowing curious travelers to tag along for vacations (or pilgrimages) to such an unusual place. Although there were a number of Free Spaces on Earth, Serĉa was in the mood for something a bit more exotic, so he had taken advantage of the opportunity to visit. Unlike most Free Spaces, the inhabitants of the Farm were not united by any rigidly defined doctrine but were simply a diverse group of individuals who refused the TK's meddling in their lives and wanted to lead what they saw as a more authentic existence. The physical structure of the Farm was itself a large, rotating tube about 50 kilometers long and nearly that much in diameter. The inner surface of the tube was transparent, giving the illusion of being open to space and allowing the people on the surface to see across to the other side and into the sparkling abyss at either end. Much of the surface was covered with fields of manually-tended crops (giving the Farm its name) and pastoral communities. Although growing crops with one's own labor was not unusual -- the TK often encouraged those inclined to do so as part of their Fulfillment -- the Farm was unusual in that *all* of its food came from these manual farms, in contrast to the Earth and other colonies, where most products came from more efficient automated labor.
+The Farm was one of the more remote Free Spaces, but was at that time undergoing maintenance and renovation that required frequent shipments of equipment from Earth, allowing curious travelers to tag along for vacations (or pilgrimages) to such an unusual place. Although there were a number of Free Spaces on Earth, Serĉa was in the mood for something a bit more exotic, so he had taken advantage of the opportunity to visit. Unlike most Free Spaces, the inhabitants of the Farm were not united by any rigidly defined doctrine but were simply a diverse group of individuals who refused the TK's meddling in their lives and wanted to lead what they saw as a more authentic existence. The physical structure of the Farm was itself a large, rotating tube about 50 kilometers long and nearly that much in diameter. The inner surface of the tube was transparent, giving the illusion of being open to space and allowing the people on the surface to see across to the other side and into the sparkling abyss at either end. Much of the surface was covered with fields of manually-tended crops (giving the Farm its name) and pastoral communities. Although growing crops with one's own labor was not unusual -- the TK often encouraged those inclined to do so as part of their fulfillment -- the Farm was unusual in that *all* of its food came from these manual farms, in contrast to the Earth and other colonies, where most products came from more efficient automated labor.
 
 "We're approaching the Farm, and should be docking within ten minutes," said a pleasant, female voice, the voice that the *Blue Elegance* used to talk with Serĉa. "Upon boarding, you and the other passengers will be greeted by the Farm's welcoming committee. They require a check-in process for their visitors so they can keep track of them during their visit."
 
@@ -174,7 +174,7 @@ Serĉa quickly realized that this trip would definitely take more than a day. He
 
 The path they walked on was lined with fields like the one where they had picked the bread-fruit; a few times they saw people out among the crops, harvesting or simply surveying their bounty.
 
-As they walked, Ben bombarded Serĉa with thoughts and ideas he had obviously been building up for quite some time and was now happy to have someone with whom to share them: "The TK's ethics aren't universal; they *can't* be universal!" (He evidently considered himself something of a philosopher.) "Everyone gets taught to seek Fulfillment, but the TK was designed for the Fulfillment of humanity, not of the folks that make up humanity -- you and me, you know -- maybe what I'm after isn't what the TK has in mind for everyone, right? And then what's gonna happen with me? Maybe I get sent off to live on the Farm," he said with a chuckle, "Or maybe I just get pushed under, lost for the sake of humanity or something like that."
+As they walked, Ben bombarded Serĉa with thoughts and ideas he had obviously been building up for quite some time and was now happy to have someone with whom to share them: "The TK's ethics aren't universal; they *can't* be universal!" (He evidently considered himself something of a philosopher.) "Everyone gets taught to seek fulfillment, but the TK was designed for the fulfillment of humanity, not of the folks that make up humanity -- you and me, you know -- maybe what I'm after isn't what the TK has in mind for everyone, right? And then what's gonna happen with me? Maybe I get sent off to live on the Farm," he said with a chuckle, "Or maybe I just get pushed under, lost for the sake of humanity or something like that."
 
 This was no new ground for Serĉa, who'd encountered arguments like this before in his study at the University. "It's the impossibility theorems," he said.
 
@@ -184,7 +184,7 @@ This was no new ground for Serĉa, who'd encountered arguments like this before 
 
 "Ah now you're making me wish I'd spent more time with the books," Ben said, slightly downcast that he hadn't had an idea that no one else had come up with before.
 
-"I like the way you've put it, though," Serĉa went on, "It makes me think of it in a different way than what I'd thought before: what happens to the individual person who's Fulfillment is out of line with what the TK is after in the big picture?"
+"I like the way you've put it, though," Serĉa went on, "It makes me think of it in a different way than what I'd thought before: what happens to the individual person who's fulfillment is out of line with what the TK is after in the big picture?"
 
 "Yeah, that's the thing!" Ben continued, once again assuming his philosopher role as he had something to contribute, "I mean I don't think I'm personally much of a menace to society -- more of a weirdo, to be honest -- but let's say I was really into, I don't know... let's say I just really wanted to screw everybody else up, like I thought it was fun to make things hard for everybody.
 
@@ -192,7 +192,7 @@ This was no new ground for Serĉa, who'd encountered arguments like this before 
 
 Serĉa interjected: "Well, this is what would happen all the time with criminals and the like back before the TK. They'd end up getting locked up or punished because they wouldn't follow the rules that'd been set up to keep everything running how most people wanted it to be. It's a lot less of an issue now because the TK's more able to manage everyone's preferences to satisfy someone without sacrificing too much on the part of everybody else, but I guess it's a problem that's never going to go away completely."
 
-"Ah here's an idea, though: what if everybody just wanted the same thing?" Ben asked, "Like everyone just wanted the exact same thing as the TK? The Fulfillment of humanity, you know. Wouldn't that just make the problem go away?"
+"Ah here's an idea, though: what if everybody just wanted the same thing?" Ben asked, "Like everyone just wanted the exact same thing as the TK? The fulfillment of humanity, you know. Wouldn't that just make the problem go away?"
 
 Serĉa thought about this for a moment before answering, "I suppose so, but I don't think the TK would be willing to change everyone's desires to make that happen. Humanity's diversity is one of the principles that the TK's designers made sure it would respect.... Everyone knows that the TK doesn't lightly manipulate what someone wants."
 
@@ -210,7 +210,7 @@ Ben Abn was ready to go much earlier this time, seeming excited for the climb to
 
 "What?" Serĉa asked, already out of breath. Ben had rambled about a lot of things the day before.
 
-"About how not everyone can get Fulfillment."
+"About how not everyone can get fulfillment."
 
 "Oh, okay, yeah."
 
@@ -218,7 +218,7 @@ Ben Abn was ready to go much earlier this time, seeming excited for the climb to
 
 "They're always going on about how we've got to get rid of our desires, how that's what brings us suffering -- it's our wanting things that makes us unhappy -- and if we bring all that under control, that's how we get their *nirvana*. It's pretty different from what they teach at the University -- I guess that's why they're here instead of Earth, you know -- but I was thinking maybe it isn't really all that different.
 
-"Maybe they've just found another answer to the problem we were talking about -- that if we just get rid of all of our desires, there's no push-and-pull between us anymore, no, you know, conflict. I guess it's really not too different from the TK just stepping in and saying, 'This is what you're going to want now, because what you were wanting before just wasn't working out,' you know, but maybe it's not quite the same because now we're saying, if you're dissatisfied, if your Fulfillment is going against humanity's, then there's this path you can take -- you can just get rid of your desires...."
+"Maybe they've just found another answer to the problem we were talking about -- that if we just get rid of all of our desires, there's no push-and-pull between us anymore, no, you know, conflict. I guess it's really not too different from the TK just stepping in and saying, 'This is what you're going to want now, because what you were wanting before just wasn't working out,' you know, but maybe it's not quite the same because now we're saying, if you're dissatisfied, if your fulfillment is going against humanity's, then there's this path you can take -- you can just get rid of your desires...."
 
 Ben Abn trailed off at this point, clearly entrenched in thought. Serĉa, sweating furiously and breathing heavily, was having trouble mustering up the brainpower to respond.
 
@@ -236,13 +236,13 @@ When he had caught his breath, Serĉa shifted to look at Ben and said, "What you
 
 "Maybe the rocks have got the right idea, then," Ben laughed, "But I'm not saying we should all go all the way and drop everything we care about... just that, maybe we should just be more content with what we've got."
 
-"Ah, well, I don't think that's an unusual thought," Serĉa responded, "That's a big part of Fulfillment after all. But if we were all *perfectly* content, if we didn't want anything, where would the progress come from? How would we achieve greater and greater things? We'd be stuck."
+"Ah, well, I don't think that's an unusual thought," Serĉa responded, "That's a big part of fulfillment after all. But if we were all *perfectly* content, if we didn't want anything, where would the progress come from? How would we achieve greater and greater things? We'd be stuck."
 
 "That's what I'm saying, that who says there needs to be progress? Who decided we had to keep getting better and better? Whatever 'better' is supposed to mean in the first place... why don't we just stop where we're at and realize how neat it is?"
 
 Serĉa chewed on his lower lip as he thought for a moment. "Just think about the pre-transition, though. Do you really think it would be better to live back then? Don't you think that the progress we've made since then is worthwhile, or that we *have* made progress at all?"
 
-"I don't know," Ben mused, "Just maybe those people back then were capable of Fulfillment even with what they had, and we're just making things more complicated than they need to be now."
+"I don't know," Ben mused, "Just maybe those people back then were capable of fulfillment even with what they had, and we're just making things more complicated than they need to be now."
 
 "Maybe... but I just... I just have a hard time seeing it."
 
@@ -299,7 +299,7 @@ They both sat in silence for some time before Serĉa spoke again, "Are you plann
 
 "Oh I don't know," Ben said, "Probably, eventually. There's still a lot I'd like to do here. I've found I like working with my hands, doing things from the ground up, so I'd kind of like to at least get decent at doing it before giving up on this place. You know, I'd like to figure out how to grow things, and build myself a house better than that shack I've got right now. Maybe learn to draw or something. I guess I could do all that back on Earth, but it all seems a bit more meaningful here, maybe 'cause there's not much to distract me. It's like a studio for me I guess.
 
-"But yeah, I guess I'll eventually get bored and want to go and find Fulfillment someplace else. There's people here that want to just die here, but I don't think I'm one of them. Maybe I'll raise a kid or two -- it's a bit hard to do that on the Farm; the TK's strict about making sure they're brought up good, which is hard work for the parents here -- I never had any kids on Earth, seemed like too much of an ordeal, too much attachment involved... but not so much anymore, after I've been here for a while..."
+"But yeah, I guess I'll eventually get bored and want to go and find fulfillment someplace else. There's people here that want to just die here, but I don't think I'm one of them. Maybe I'll raise a kid or two -- it's a bit hard to do that on the Farm; the TK's strict about making sure they're brought up good, which is hard work for the parents here -- I never had any kids on Earth, seemed like too much of an ordeal, too much attachment involved... but not so much anymore, after I've been here for a while..."
 
 After a brief pause, he turned toward Serĉa and asked with a quizzical smile, "What? You planning on staying here like I did?"
 
