@@ -23,15 +23,14 @@ double mandel_iter(double real, double imag) {
     while (i > 0) {
         absz = std::abs(z);
         if (absz > 2) {
-        break;
+            break;
         }
-        std::complex<double> last_z = z;
         z = std::pow(z, 2) + c;
-        if ((absz < BREAK_LIM) || ((std::abs(std::abs(z) - absz) / absz) < BREAK_LIM)) {
-        i = 0;
+        if (absz < BREAK_LIM) {
+            i = 0;
         }
         else {
-        i--;
+            i--;
         }
     }
     if (i == 0) {
@@ -111,9 +110,4 @@ extern "C" {
         auto arrayPtr = &img[0];
         return arrayPtr;
     }
-}
-
-
-int main() {
-    return 0;
 }

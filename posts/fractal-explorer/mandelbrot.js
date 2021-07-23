@@ -285,7 +285,7 @@ function setSize() {
 // start web workers
 for (let i = 0; i < nproc; i++) {
     // note we have to use the path relative to the parent page here
-    let worker = new Worker('./fractal-explorer/worker.js');
+    let worker = new Worker('./worker.js');
     worker.addEventListener('message', onmessage);
     workers.push(worker);
 }

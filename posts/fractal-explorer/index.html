@@ -1,16 +1,26 @@
 <!doctype html>
 <html lang="en-us">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Fractal Explorer</title>
-    
+    <meta charset="utf-8" />
+    <meta name="description" content="fractal explorer">
+    <meta name="author" content="Mckay D Jensen">
+    <style>
+        body {
+            font-family: Helvetica, sans-serif;
+            color: white;
+            background-color: black;
+            text-align: center;
+        }
+    </style>
   </head>
   <body>
-  
-    <div id="resize-tool" style="text-align:center">
-        Width: <input type="text" id="width" placeholder=256>
-        Height: <input type="text" id="height" placeholder=256>
+    
+    <h1>Fractal Explorer</h1>
+    
+    <div id="resize-tool">
+        Width: <input type="text" id="width" placeholder=256 maxlength=5 size=5>
+        Height: <input type="text" id="height" placeholder=256 maxlength=5 size=5>
         <button id="set-size" onclick="setSize()">Set size</button>
     </div>
     <br>
@@ -20,7 +30,7 @@
     </canvas>
     
     <br>
-    <div id="buttons" style="text-align:center">
+    <div id="buttons">
         <p id="status">Canvas is updating...</p>
         <button id="up" onclick="moveUp()">Up</button>
         <br>
@@ -32,6 +42,6 @@
         <button id="zoom-in" onclick="zoomIn()">+</button>
     </div>
     
-    <script type="text/javascript" src="./fractal-explorer/mandelbrot.js"></script>
+    <script type="text/javascript" src="./mandelbrot.js"></script>
   </body>
 </html>
