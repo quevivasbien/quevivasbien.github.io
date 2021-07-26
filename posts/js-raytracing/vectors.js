@@ -1,4 +1,4 @@
-// Functions for working with 3d vectors (expressed as js lists of len 3) 
+// Functions for working with 3d vectors (expressed as js lists of len 3)
 
 var Vec = {};
 
@@ -56,8 +56,8 @@ Vec.subtract = function(a, b) {
 
 Vec.reflect = function(a, normal) {
     // reflect a over a normal vector
-    let d = Vec.scale(normal, Vec.dot(a, normal));
-    return Vec.subtract(Vec.scale(d, 2), a);
+    let d = Vec.scale(normal, 2 * Vec.dot(a, normal));
+    return Vec.subtract(d, a);
 }
 
 Vec.proj = function(a, b) {

@@ -27,6 +27,10 @@ var scene = {
             position: [-30, -10, 20],
             intensity: 1.0
         },
+        {
+            position: [30, 10, -20],
+            intensity: 1.0
+        }
     ],
     objects: [
         {
@@ -35,8 +39,8 @@ var scene = {
             velocity: [0, -0.05, 0],
             color: [20, 100, 120],
             specular: 0.8,
-            lambert: 0.2,
-            ambient: 0.1,
+            lambert: 0,
+            ambient: 0,
             radius: 2,
             mass: 1
         },
@@ -45,7 +49,7 @@ var scene = {
             position: [-4, 2, -12],
             velocity: [0, 0.5, 0],
             color: [155, 155, 155],
-            specular: 0.3,
+            specular: 0,
             lambert: 0.9,
             ambient: 0,
             radius: 1,
@@ -56,7 +60,7 @@ var scene = {
             position: [24, 24, -20],
             velocity: [0.1, -0.1, 0],
             color: [155, 100, 100],
-            specular: 0.1,
+            specular: 0,
             lambert: 0.9,
             ambient: 0.1,
             radius: 0.5,
@@ -120,8 +124,7 @@ function isLightVisible(position, light_position) {
 
 // get light at a particular intersection point
 function interactWithSurface(ray, object, position, normal, depth) {
-    let b = object.color;
-    let c = Vec.ZERO;
+    let specular_color = Vec.ZERO;
     let lambert_shading = 0;
     if (object.lambert) {
         for (let i = 0; i < scene.lights.length; i++) {
@@ -135,48 +138,59 @@ function interactWithSurface(ray, object, position, normal, depth) {
                 lambert_shading += contribution;
             }
         }
+        lambert_shading = Math.min(1, lambert_shading);
     }
     if (object.specular) {
+        let offset_position = Vec.subtract(
+          position,
+          Vec.scale(ray.direction, 0.1 / Math.sqrt(Vec.normsq(ray.direction)))
+        );
         let reflected_ray = {
-            position: position,
+            position: offset_position,
             direction: Vec.reflect(ray.direction, normal)
         };
         let reflected_color = trace(reflected_ray, depth+1);
-        if (reflected_color) {
-            c = Vec.scale(reflected_color, object.specular);
-        }
+        let specular_color = Vec.scale(reflected_color, object.specular);
+        return Vec.add3(
+          specular_color,
+          Vec.scale(object.color, lambert_shading * object.lambert),
+          Vec.scale(object.color, object.ambient)
+        )
     }
-    lambert_shading = Math.min(1, lambert_shading);
-    return Vec.add3(
-        c,
-        Vec.scale(b, lambert_shading * object.lambert),
-        Vec.scale(b, object.ambient)
-    );
+    else {
+      return Vec.add(
+        Vec.scale(object.color, lambert_shading * object.lambert),
+        Vec.scale(object.color, object.ambient)
+      )
+    }
 }
 
 // if a light source is close enough to the path of the ray, display light
+// allows light sources to be visible to the camera
 function checkForLight(ray) {
+    let out = Vec.ZERO;
     for (let i  = 0; i < scene.lights.length; i++) {
         let light = scene.lights[i];
         // get scalar projection of ray between camera and light onto ray
         let camera_to_light = Vec.subtract(light.position, ray.position);
         let scalar_prod = Vec.dot(camera_to_light, ray.direction);
-        if (scalar_prod < 0) return Vec.ZERO;  // facing the wrong way
+        if (scalar_prod < 0) continue;  // facing the wrong way
         // get distance between projected ray and light, then calculate light intensity
         let distance = Math.sqrt(Vec.normsq(camera_to_light) - scalar_prod**2);
         if (distance > light.threshold) {
-            return Vec.ZERO;
+            continue;
         }
         else {
             let intensity = light.intensity * Math.exp(-HALO_DROPOFF * distance);
-            return Vec.scale(Vec.WHITE, intensity);
+            out = Vec.add(out, Vec.scale(Vec.WHITE, intensity));
         }
     }
+    return out;
 }
 
 // define the function to trace a single ray
 function trace(ray, depth) {
-    if (depth > MAX_DEPTH) return;
+    if (depth > MAX_DEPTH) return Vec.ZERO;
     let intersection = intersectWithScene(ray);
     if (intersection[0] === Infinity) {
         // check if light sources are themselves visible
@@ -184,6 +198,7 @@ function trace(ray, depth) {
     }
     let distance = intersection[0];
     let object = intersection[1];
+    if (depth > 0 && object.lambert != 0) console.log(object.lambert);
     let position = Vec.add(ray.position, Vec.scale(ray.direction, distance));
     return interactWithSurface(
         ray,
