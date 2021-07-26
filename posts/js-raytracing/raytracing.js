@@ -27,10 +27,6 @@ var scene = {
             position: [-30, -10, 20],
             intensity: 1.0
         },
-        {
-            position: [30, 10, -20],
-            intensity: 1.0
-        }
     ],
     objects: [
         {
@@ -38,9 +34,9 @@ var scene = {
             position: [0, 0, -15],
             velocity: [0, -0.05, 0],
             color: [20, 100, 120],
-            specular: 0.8,
-            lambert: 0,
-            ambient: 0,
+            specular: 0.1,
+            lambert: 0.7,
+            ambient: 0.1,
             radius: 2,
             mass: 1
         },
@@ -49,8 +45,8 @@ var scene = {
             position: [-4, 2, -12],
             velocity: [0, 0.5, 0],
             color: [155, 155, 155],
-            specular: 0,
-            lambert: 0.9,
+            specular: 0.8,
+            lambert: 0.5,
             ambient: 0,
             radius: 1,
             mass: 0.1
@@ -88,6 +84,9 @@ function getNormal(object, position) {
 function objectIntersection(object, ray) {
     // for now we have only spheres, so we'll just implement that
     // see https://www.scratchapixel.com/lessons/3d-basic-rendering/minimal-ray-tracer-rendering-simple-shapes/ray-sphere-intersection
+    // check that the object is not the object emitting the ray
+    if (object == ray.origin) return;
+    // now do some vector math
     let eye_to_center = Vec.subtract(object.position, ray.position);
     let scalar_prod = Vec.dot(eye_to_center, ray.direction);
     if (scalar_prod < 0) return;  // wrong direction
@@ -141,13 +140,14 @@ function interactWithSurface(ray, object, position, normal, depth) {
         lambert_shading = Math.min(1, lambert_shading);
     }
     if (object.specular) {
-        let offset_position = Vec.subtract(
+        let offset_position = Vec.add(
           position,
-          Vec.scale(ray.direction, 0.1 / Math.sqrt(Vec.normsq(ray.direction)))
+          Vec.scale(normal, 0.1)
         );
         let reflected_ray = {
-            position: offset_position,
-            direction: Vec.reflect(ray.direction, normal)
+            position: position,
+            direction: Vec.reflect(ray.direction, normal),
+            origin: object
         };
         let reflected_color = trace(reflected_ray, depth+1);
         let specular_color = Vec.scale(reflected_color, object.specular);
@@ -198,7 +198,6 @@ function trace(ray, depth) {
     }
     let distance = intersection[0];
     let object = intersection[1];
-    if (depth > 0 && object.lambert != 0) console.log(object.lambert);
     let position = Vec.add(ray.position, Vec.scale(ray.direction, distance));
     return interactWithSurface(
         ray,
@@ -242,34 +241,6 @@ function render() {
         }
     }
     context.putImageData(img_data, 0, 0);
-}
-
-// have some simple gravity physics move the objects around
-function timeStep() {
-    for (let i = 0; i < scene.objects.length - 1; i++) {
-        for (let j = i+1; j < scene.objects.length; j++) {
-            let object1 = scene.objects[i];
-            let object2 = scene.objects[j];
-            let delta = Vec.subtract(object1.position, object2.position);
-            let distance_cubed = Vec.normsq(delta) ** 1.5;
-            let force = Vec.scale(delta, object1.mass * object2.mass / distance_cubed);
-            object1.velocity = Vec.subtract(object1.velocity, Vec.scale(force, 1 / object1.mass));
-            object2.velocity = Vec.add(object2.velocity, Vec.scale(force, 1 / object2.mass));
-        }
-    }
-    for (let i = 0; i < scene.objects.length; i++) {
-        let object = scene.objects[i];
-        object.position = Vec.add(object.position, object.velocity);
-    }
-}
-
-function makeNextFrame() {
-    render();
-    timeStep();
-    if (go) {
-        // maximum possible fps is 1000 / REFRESH_WAIT
-        setTimeout(makeNextFrame, REFRESH_WAIT);
-    }
 }
 
 // function flashButton(button_id) {
@@ -349,6 +320,33 @@ function zoomOut() {
     scene.camera.position = Vec.subtract(camera.position, camera.forward);
 }
 
+// have some simple gravity physics move the objects around
+function timeStep() {
+    for (let i = 0; i < scene.objects.length - 1; i++) {
+        for (let j = i+1; j < scene.objects.length; j++) {
+            let object1 = scene.objects[i];
+            let object2 = scene.objects[j];
+            let delta = Vec.subtract(object1.position, object2.position);
+            let distance_cubed = Vec.normsq(delta) ** 1.5;
+            let force = Vec.scale(delta, object1.mass * object2.mass / distance_cubed);
+            object1.velocity = Vec.subtract(object1.velocity, Vec.scale(force, 1 / object1.mass));
+            object2.velocity = Vec.add(object2.velocity, Vec.scale(force, 1 / object2.mass));
+        }
+    }
+    for (let i = 0; i < scene.objects.length; i++) {
+        let object = scene.objects[i];
+        object.position = Vec.add(object.position, object.velocity);
+    }
+}
+
+function makeNextFrame() {
+    render();
+    timeStep();
+    if (go) {
+        window.requestAnimationFrame(makeNextFrame);
+    }
+}
+
 /*
 // rendering is handled by a webworker
 var worker = new Worker('./render_scene.js');
@@ -363,4 +361,4 @@ function startRendering() {
 }
 
 startRendering();*/
-makeNextFrame();
+window.requestAnimationFrame(makeNextFrame);

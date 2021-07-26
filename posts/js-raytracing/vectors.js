@@ -57,7 +57,7 @@ Vec.subtract = function(a, b) {
 Vec.reflect = function(a, normal) {
     // reflect a over a normal vector
     let d = Vec.scale(normal, 2 * Vec.dot(a, normal));
-    return Vec.subtract(d, a);
+    return Vec.scale(Vec.subtract(d, a), -1);
 }
 
 Vec.proj = function(a, b) {
