@@ -299,14 +299,14 @@ function rotateRight() {
 function rotateUp() {
     let camera = scene.camera;
     // rotate forward and up vectors about right vector
-    camera.forward = Vec.rotate(camera.forward, camera.right, ROTATE_ANGLE);
+    camera.forward = Vec.rotate(camera.forward, camera.right, -ROTATE_ANGLE);
     camera.up = Vec.cross(camera.right, camera.forward);
 }
 
 function rotateDown() {
     let camera = scene.camera;
     // rotate forward and up vectors about right vector
-    camera.forward = Vec.rotate(camera.forward, camera.right, -ROTATE_ANGLE);
+    camera.forward = Vec.rotate(camera.forward, camera.right, ROTATE_ANGLE);
     camera.up = Vec.cross(camera.right, camera.forward);
 }
 
