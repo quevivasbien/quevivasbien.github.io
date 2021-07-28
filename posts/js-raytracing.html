@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Que vivas bien</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="goodness, truth, and summer rainstorms">
+    <meta name="author" content="Mckay D Jensen">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../css/kube.min.css" />
+    <link rel="stylesheet" href="../css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../css/custom.css" />
+    <link rel="shortcut icon" href="../img/favicon.png" />
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<!-- Navigation -->
+	<div class="main-nav">
+		<div class="container">
+			<header class="group top-nav">
+				<nav class="navbar logo-w navbar-left" >
+					<a class="logo" href="../index.html">Que vivas bien</a>
+				</nav>
+				<div class="navigation-toggle" data-tools="navigation-toggle" data-target="#navbar-1">
+				    <span class="logo">Que vivas bien</span>
+				</div>
+			    <nav id="navbar-1" class="navbar item-nav navbar-right">
+				    <ul>
+				        <li><a href="../index.html">Home</a></li>
+				        <li><a href="../about.html">About</a></li>
+				        <li><a href="../archive.html">Archive</a></li>
+				        <!--<li><a href="#">Contact</a></li>-->
+				    </ul>
+				</nav>
+			</header>
+		</div>
+	</div>
+
+	<!-- Introduction -->
+	<div class="intro">
+		<div class="container">
+			<div class="units-row">
+			    <div class="unit-100">
+			    	<p id="tagline" class="p-intro">goodness, truth, and summer rainstorms</p>
+			    </div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Content -->
+	<div class="content">
+		<div class="container">
+			<!-- Post -->
+			<div class="post">
+				<!-- Heading -->
+				<h1>Raytracing in JavaScript</h1>
+
+				<div class="in-content">
+
+				      <p>While working on my <a href="./fractal-explorer.html">fractal explorer</a>, I became interested in the capabilities of code run in-browser. At the same time, I also developed some interest in computer graphics, so I decided to combine those two interests and try creating a simple ray tracing engine using JavaScript.</p>
+
+				      <p>I found <a href="https://tmcw.github.io/literate-raytracer/">this helpful walkthrough</a> that explains how to do pretty much exactly what I wanted. I used this tutorial as a framework for my own code, then made some changes to the details of the calculations and added a few features to make things more exciting, including the ability to move about the scene and a basic gravity simulation so the objects in the scene would orbit each other. You can try it out <a target="_blank" href="./js-raytracing/">here</a>.</p>
+				      <p>The idea of raytracing is not especially complicated and should be implementable by anyone with some coding experience and understanding of basic vector math. I think this is the draw of raytracing in general: compared to methods like rasterization, it is easy to implement and yields realistic-looking scenes. Of course, the downside is that it is very computationally intense. As of now, only the latest-generation, top-of-the-line, graphics cards are capable of using ray tracing to render modern video games in real time. As graphics hardware gets better, I imagine that ray tracing will become the norm for rendering in video games, but up to now it has mostly been used for things like rendering animated movies or static scenes that don't need to be done in real time. All that said, I was quite pleased by how well JavaScript is able to run a simple ray-traced scene. Granted, the scenes I'm creating are very minimal, but then again, JavaScript is not particularly fast, and this is all running on a single CPU thread.</p>
+
+                      <p>Wanting to experiment a bit more with WebAssembly compilation, I proceeded to make a version of the ray tracing engine in C++, which you can see <a target="_blank" href="./js-raytracing/raytracing-cpp">here</a>. Unfortunately, this actually runs slower than the pure JavaScript version (at least on Chrome; I got different results on Firefox). I think that is probably due to some C++ feature I used that is not well-supported by Emscripten, or just because executing things in WebAssembly requires a bit of a fixed cost per call that becomes cumbersome when you're trying to push out many frames per second. If the latter scenario is the case, then I'd need to shift more of the code pipeline to C++ so there is less passing of memory between JavaScript and WebAssembly/C++. I may go back and work on optimizing things, but for now I'm satisfied with watching my little simulated planets in motion, enjoying their lambert shading and specular reflections.</p>
+
+				</div>
+				<div class="foot-post">
+					<!-- place footer here -->
+				</div>
+			</div>
+			<!-- /post -->
+
+		</div>
+	</div>
+
+  <footer>
+		<div class="container">
+			<a href="../index.html"><img class="aligncenter" src="../img/logo.png" title="Back to home page"></a>
+			<p class="text-centered foot-cp">
+	    		<a href="../about.html">created by mckay jensen</a>
+	    </p>
+      <p class="text-centered" style="font-size: 24px;">
+        <a href="mailto:jensenm@uchicago.edu"><i class="fa fa-send"></i></a>
+        <a href="https://github.com/quevivasbien"><i class="fa fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/mckaydjensen/"><i class="fa fa-linkedin"></i></a>
+      </p>
+		</div>
+	</footer>
+
+	<!-- Javascript -->
+	<script src="../js/jquery.min.js"></script>
+  <script src="../js/kube.min.js"></script>
+	<script src="../js/beautiful.js"></script>
+</body>
+</html>
