@@ -1,22 +1,36 @@
+const canvas = document.getElementById('canvas');
+const context = canvas.getContext('2d');  // too bad if your browser doesn't support this
+const status = document.getElementById('status');
+
 let nproc = window.navigator.hardwareConcurrency;
 
 const pan_factor = 10;
 const zoom_factor = 2;
 
-var xstart = -2.0;
-var xstop = 1.0;
-var ystart = -1.5;
-var ystop = 1.5;
+let width = 1280;
+let height = 720;
+let xstart = -1.0 - (width / height);
+let xstop = width / height;
+let ystart = -1.5;
+let ystop = 1.5;
 
-var workers_ready = 0;
-var workers_running = 0;
+let workers_ready = 0;
+let workers_running = 0;
 const workers = [];
-var data = {}
+let data = {}
 
-const canvas = document.getElementById('canvas');
-const context = canvas.getContext('2d');  // too bad if your browser doesn't support this
-const status = document.getElementById('status');
+canvas.width = width;
+canvas.height = height;
+document.getElementById('width').placeholder = width;
+document.getElementById('height').placeholder = height;
 
+const defaultColors = [
+    [178, 182, 183],  // GRAY
+    [84, 147, 146],  // TEAL
+    [195, 155, 114],  // TAN
+    [212, 135, 40],  // ORANGE
+    [190, 67, 66],  // RED
+]
 
 function combine_data() {
     // get cumulative lengths for index offsets
@@ -40,7 +54,7 @@ function onmessage(e) {
     else if (e.data.type == 'all_compute') {
         // recieved compute data message
         workers_running--;
-        console.log("got data from " + e.data.id);
+        // console.log("got data from " + e.data.id);
         data[e.data.id] = e.data.array;
         if (workers_running == 0) {
             // compile and update image
@@ -53,7 +67,7 @@ function onmessage(e) {
     else if (e.data.type == 'left') {
         // recieved shift left message
         workers_running--;
-        console.log("got shift left from " + e.data.id);
+        // console.log("got shift left from " + e.data.id);
         data[e.data.id] = e.data.array;
         if (workers_running == 0) {
             let new_data = context.createImageData(Math.floor(canvas.width / pan_factor), canvas.height);
@@ -65,7 +79,7 @@ function onmessage(e) {
     else if (e.data.type == 'right') {
         // recieved shift right message
         workers_running--;
-        console.log("got shift right from " + e.data.id);
+        // console.log("got shift right from " + e.data.id);
         data[e.data.id] = e.data.array;
         if (workers_running == 0) {
             let split_x = Math.floor(canvas.width / pan_factor);
@@ -78,7 +92,7 @@ function onmessage(e) {
     else if (e.data.type == 'up') {
         // recieved shift up message
         workers_running--;
-        console.log("got shift up from " + e.data.id);
+        // console.log("got shift up from " + e.data.id);
         data[e.data.id] = e.data.array;
         if (workers_running == 0) {
             let new_data = context.createImageData(canvas.width, Math.floor(canvas.height / pan_factor));
@@ -90,7 +104,7 @@ function onmessage(e) {
     else if (e.data.type == 'down') {
         // recieved shift down message
         workers_running--;
-        console.log("got shift down from " + e.data.id);
+        // console.log("got shift down from " + e.data.id);
         data[e.data.id] = e.data.array;
         if (workers_running == 0) {
             let split_y = Math.floor(canvas.height / pan_factor);
@@ -237,8 +251,8 @@ function zoomOut() {
                       canvas.width / zoom_factor,
                       canvas.height / zoom_factor);
     // update image coordinates and call draw()
-    let new_xradius = (xstop - xstart) / (zoom_factor*2);
-    let new_yradius = (ystop - ystart) / (zoom_factor*2);
+    let new_xradius = (xstop - xstart) * (zoom_factor*2);
+    let new_yradius = (ystop - ystart) * (zoom_factor*2);
     let x_center = (xstart + xstop) / 2;
     let y_center = (ystart + ystop) / 2;
     xstart = x_center - new_xradius;
@@ -276,13 +290,91 @@ function setSize() {
 }
 
 
-
 // start web workers
 for (let i = 0; i < nproc; i++) {
     // note we have to use the path relative to the parent page here
     let worker = new Worker('./worker.js');
     worker.addEventListener('message', onmessage);
     workers.push(worker);
+}
+
+// toggle visibility of color set menu
+function toggleColorSet() {
+    div = document.getElementById('color-set');
+    button = document.getElementById('show-color-set');
+    if (div.style.display == 'none') {
+        div.style.display = 'block';
+        button.innerHTML = 'Hide color selector';
+    }
+    else {
+        div.style.display = 'none';
+        button.innerHTML = 'Edit colors';
+    }
+}
+
+function parseUint8(col) {
+    col = parseInt(col);
+    if (isNaN(col) || col < 0) {
+        return 0;
+    }
+    else if (col > 255) {
+        return 255;
+    }
+    else {
+        return col;
+    }
+}
+
+// read the ith color from the page
+function getColor(i) {
+    let redDom = document.getElementById('red' + i);
+    let red = parseUint8(redDom.value);
+    if (parseInt(redDom.value) != red && redDom.value != '') {
+        redDom.value = red;
+    }
+    let greenDom = document.getElementById('green' + i);
+    let green = parseUint8(greenDom.value);
+    if (parseInt(greenDom.value) != green && greenDom.value != '') {
+        greenDom.value = green;
+    }
+    let blueDom = document.getElementById('blue' + i);
+    let blue = parseUint8(blueDom.value);
+    if (parseInt(blueDom.value) != blue && blueDom.value != '') {
+        blueDom.value = blue;
+    }
+    return [red, green, blue];
+}
+
+function updateColorNames() {
+    if (document.getElementById('color-set').style.display != 'none') {
+        for (let i = 1; i <= 5; i++) {
+            document.getElementById('color' + i).style.color = 'rgb(' + getColor(i).join() + ')';
+        }
+    }
+}
+
+// sets all the colors, then draws
+function setColors() {
+    messageData = {
+        type: 'change_colors',
+        color1: getColor("1"),
+        color2: getColor("2"),
+        color3: getColor("3"),
+        color4: getColor("4"),
+        color5: getColor("5"),
+    };
+    for (let i = 0; i < nproc; i++) {
+        workers[i].postMessage(messageData);
+    }
+    setTimeout(draw, 100);
+}
+
+function initColors() {
+    for (let i = 0; i < 5; i++) {
+        document.getElementById('red' + (i+1)).value = defaultColors[i][0];
+        document.getElementById('green' + (i+1)).value = defaultColors[i][1];
+        document.getElementById('blue' + (i+1)).value = defaultColors[i][2];
+    }
 }
 
 // wait for all workers ready before drawing for the first time
@@ -292,8 +384,10 @@ function awaitWorkersReady() {
         setTimeout(awaitWorkersReady, 250);
     }
     else {
-        draw();
+        setColors();  // sets colors, then draws
     }
 }
 
+initColors();
+setInterval(updateColorNames, 500);
 awaitWorkersReady();

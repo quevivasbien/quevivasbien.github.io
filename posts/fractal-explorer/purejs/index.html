@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <title>Fractal Explorer</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="fractal explorer">
+    <meta name="author" content="Mckay D Jensen">
+    <style>
+        body {
+            font-family: Helvetica, sans-serif;
+            color: white;
+            background-color: black;
+            text-align: center;
+        }
+        canvas {
+            padding: 0;
+            margin: auto;
+            display: block;
+        }
+        .colorlabel {
+            font-weight: bold;
+        }
+    </style>
+  </head>
+  <body>
+
+    <h1>Fractal Explorer</h1>
+
+    <div id="resize-tool">
+        Width: <input type="text" id="width" maxlength=5 size=5>
+        Height: <input type="text" id="height" maxlength=5 size=5>
+        <button id="set-size" onclick="setSize()">Set size</button>
+    </div>
+    <br>
+
+    <canvas id="canvas" style="padding: 0; margin: auto; display: block;">
+        You need to use a modern browser to run this.
+    </canvas>
+
+    <div id="buttons">
+        <p id="status">Canvas is updating...</p>
+        <button id="up" onclick="moveUp()">Up</button>
+        <br>
+        <button id="left" onclick="moveLeft()">Left</button>
+        <button id="down" onclick="moveDown()">Down</button>
+        <button id="left" onclick="moveRight()">Right</button>
+        <br><br>
+        <button id="zoom-out" onclick="zoomOut()">-</button>
+        <button id="zoom-in" onclick="zoomIn()">+</button>
+    </div>
+
+    <br><br>
+    <button id="show-color-set" onclick="toggleColorSet()">Edit colors</button>
+    <div id="color-set" style="display:none">
+        <p id="color1" class="colorlabel">Color 1</p>
+        <label for="red1">Red:</label> <input type="text" id="red1" maxlength=5 size=5>&emsp;
+        <label for="green1">Green:</label> <input type="text" id="green1" maxlength=5 size=5>&emsp;
+        <label for="blue1">Blue:</label> <input type="text" id="blue1" maxlength=5 size=5>
+        <br>
+        <p id="color2" class="colorlabel">Color 2</p>
+        <label for="red2">Red:</label> <input type="text" id="red2" maxlength=5 size=5>&emsp;
+        <label for="green2">Green:</label> <input type="text" id="green2" maxlength=5 size=5>&emsp;
+        <label for="blue2">Blue:</label> <input type="text" id="blue2" maxlength=5 size=5>
+        <br>
+        <p id="color3" class="colorlabel">Color 3</p>
+        <label for="red3">Red:</label> <input type="text" id="red3" maxlength=5 size=5>&emsp;
+        <label for="green3">Green:</label> <input type="text" id="green3" maxlength=5 size=5>&emsp;
+        <label for="blue3">Blue:</label> <input type="text" id="blue3" maxlength=5 size=5>
+        <br>
+        <p id="color4" class="colorlabel">Color 4</p>
+        <label for="red4">Red:</label> <input type="text" id="red4" maxlength=5 size=5>&emsp;
+        <label for="green4">Green:</label> <input type="text" id="green4" maxlength=5 size=5>&emsp;
+        <label for="blue4">Blue:</label> <input type="text" id="blue4" maxlength=5 size=5>
+        <br>
+        <p id="color5" class="colorlabel">Color 5</p>
+        <label for="red5">Red:</label> <input type="text" id="red5" maxlength=5 size=5>&emsp;
+        <label for="green5">Green:</label> <input type="text" id="green5" maxlength=5 size=5>&emsp;
+        <label for="blue5">Blue:</label> <input type="text" id="blue5" maxlength=5 size=5>
+        <br><br>
+        <button id="submit-color-change" onclick="setColors()">Update colors</button>
+    </div>
+
+    <script type="text/javascript" src="./mandelbrot.js"></script>
+  </body>
+</html>
