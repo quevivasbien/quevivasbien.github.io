@@ -251,8 +251,8 @@ function zoomOut() {
                       canvas.width / zoom_factor,
                       canvas.height / zoom_factor);
     // update image coordinates and call draw()
-    let new_xradius = (xstop - xstart) * (zoom_factor*2);
-    let new_yradius = (ystop - ystart) * (zoom_factor*2);
+    let new_xradius = (xstop - xstart) * zoom_factor / 2;
+    let new_yradius = (ystop - ystart) * zoom_factor / 2;
     let x_center = (xstart + xstop) / 2;
     let y_center = (ystart + ystop) / 2;
     xstart = x_center - new_xradius;
