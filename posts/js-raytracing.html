@@ -65,6 +65,8 @@
 
                       <p>Wanting to experiment a bit more with WebAssembly compilation, I proceeded to make a version of the ray tracing engine in C++, which you can see <a target="_blank" href="./js-raytracing/raytracing-cpp">here</a>. Unfortunately, this actually runs slower than the pure JavaScript version (at least on Chrome; I got different results on Firefox). I think that is probably due to some C++ feature I used that is not well-supported by Emscripten, or just because executing things in WebAssembly requires a bit of a fixed cost per call that becomes cumbersome when you're trying to push out many frames per second. If the latter scenario is the case, then I'd need to shift more of the code pipeline to C++ so there is less passing of memory between JavaScript and WebAssembly/C++. I may go back and work on optimizing things, but for now I'm satisfied with watching my little simulated planets in motion, enjoying their lambert shading and specular reflections.</p>
 
+                      <p style="font-style: italic">Note: See my <a href="./fractal-explorer.html#update">update</a> about WebAssembly vs. pure JavaScript.</p>
+
 				</div>
 				<div class="foot-post">
 					<!-- place footer here -->
