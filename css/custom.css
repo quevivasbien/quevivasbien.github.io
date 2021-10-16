@@ -3,8 +3,14 @@
  *  License (MIT License)
  */
 
-body { margin-bottom: 50px }
-a { color: green }
+body {
+    margin-bottom: 50px;
+    background-color: #1a1110;
+}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    color: #f0f0f0;
+}
+a { color: #ff9e00 }
 a .fa {
   padding-left: 10px;
   padding-right: 10px;
@@ -21,7 +27,7 @@ li img.aligncenter {
 
 .btn-group button {
   font-family: "Open Sans", sans-serif;
-  border: 1px solid green; /* Green border */
+  border: 1px solid #ff9e00; /* Yellow border */
   padding: 10px 24px; /* Some padding */
   cursor: pointer; /* Pointer/hand icon */
   width: 100%; /* Set a width if needed */
@@ -38,26 +44,30 @@ li img.aligncenter {
 }
 /* Add a background color on hover */
 .btn-group button.unpressed:hover {
-  background-color: #3e8e41;
-  color: #FFFFFF;
+  background-color: #915a00;
+  color: #1a1110FFF;
 }
 .btn-group button.unpressed {
-  background-color: #FFFFFF;
+  background-color: #1a1110FFF;
 }
 .btn-group button.pressed {
-  background-color: #3fa644; // light green
-  color: #FFFFFF;
+  background-color: #3fa644; // light #ff9e00
+  color: #1a1110FFF;
+}
+
+.navbar li.active a, .navbar span {
+    color: rgba(230, 230, 230, 0.4);
 }
 
 .fancy-button {
   padding: 5px 10px;
   margin-bottom: 10px;
-  background-color: #FFF;
-  border: 1px solid #349c30;
+  background-color: #1a1110;
+  border: 1px solid #ff9e00;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
-  color: #349c30;
+  color: #ff9e00;
   font-size: 13px;
   font-weight: 700;
   text-transform: uppercase;
@@ -65,8 +75,8 @@ li img.aligncenter {
   letter-spacing: 2px;
 }
 .fancy-button:hover {
-	background-color: #5db14f;
-	color: #fff;
+	background-color: #915a00;
+	color: #911d03;
 	-webkit-transition: all .25s ease-in-out;
 	   -moz-transition: all .25s ease-in-out;
 	    -ms-transition: all .25s ease-in-out;
@@ -76,12 +86,12 @@ li img.aligncenter {
 .expand-button {
   padding: 5px 10px;
   margin-bottom: 10px;
-  background-color: #FFF;
-  border: 1px solid #349c30;
+  background-color: #1a1110;
+  border: 1px solid #ff9e00;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
-  color: #349c30;
+  color: #ff9e00;
   font-size: 13px;
   font-weight: 700;
   text-transform: uppercase;
@@ -89,8 +99,8 @@ li img.aligncenter {
   letter-spacing: 2px;
 }
 .expand-button:hover {
-	background-color: #5db14f;
-	color: #fff;
+	background-color: #915a00;
+	color: #1a1110;
 	-webkit-transition: all .25s ease-in-out;
 	   -moz-transition: all .25s ease-in-out;
 	    -ms-transition: all .25s ease-in-out;
@@ -112,12 +122,12 @@ li img.aligncenter {
 }
 
 @keyframes flash-green {
-  from {color: #535353;}
-  to {color: green;}
+  from {color: #adadad;}
+  to {color: #ff9e00;}
 }
 
 @keyframes flash-red {
-  from {color: #535353;}
+  from {color: #adadad;}
   to {color: red;}
 }
 
@@ -164,10 +174,10 @@ li img.aligncenter {
 .main-nav {
     padding-top: 60px;
     padding-bottom: 5px;
-    background-color: #FFF;
-    -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
-    -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    background-color: #1a1110;
+    -moz-box-shadow: 0 1px 5px rgba(255, 255, 255, 0.1);
+    -webkit-box-shadow: 0 1px 5px rgba(255, 255, 255, 0.1);
+    box-shadow: 0 1px 5px rgba(255, 255, 255, 0.1);
     position: sticky;
     top: 0;
     width: 100%;
@@ -176,7 +186,7 @@ li img.aligncenter {
 .group.top-nav { margin-bottom: -20px }
 .group.top-nav nav a { text-decoration: none }
 .group.top-nav nav a:hover {
-	color: #349c30; -webkit-transition: all .25s ease-in-out;
+	color: #911d03; -webkit-transition: all .25s ease-in-out;
    -moz-transition: all .2s ease-in-out;
     -ms-transition: all .2s ease-in-out;
      -o-transition: all .2s ease-in-out;
@@ -188,8 +198,12 @@ li img.aligncenter {
     font-family: 'Open Sans', sans-serif;
     font-weight: 700;
     font-size: 27px;
-    color: #000;
+    color: #f0f0f0;
     letter-spacing: -2px;
+}
+.navigation-toggle {
+    color: white;
+    background-color: #1a1110;
 }
 .navigation-toggle .logo {
     font-size: 20px;
@@ -216,7 +230,7 @@ p.p-intro {
     font-weight: 700;
     padding: 10px 25px;
     text-align: center;
-    background-color: #FFF;
+    background-color: #f0f0f0;
     border: 1px solid #DC5227;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
@@ -238,17 +252,20 @@ img.img-intro {
 	-moz-animation: smooth-entry-btn 1s;
 	animation: smooth-entry-btn 1s;
 }
-.content { padding-top: 75px }
+.content {
+    padding-top: 75px;
+    background-color: #1a1110;
+}
 .post { margin-bottom: 80px }
 .content .post {
-    color: #535353;
+    color: #adadad;
     font-family: "Open Sans", sans-serif;
     font-size: 15px;
     font-weight: 400;
 }
 .content .post a { text-decoration: none }
 .content .post h1 {
-    color: #000;
+    color: #f0f0f0;
     font-family: "Lato", sans-serif;
     font-size: 22px;
     font-weight: 400;
@@ -257,7 +274,7 @@ img.img-intro {
 
 /* Created by @flamekaizar */
 .content .post a h1:hover{
-	color: #269f21;
+	color: #911d03;
 -webkit-transition: all .2s ease-in-out;
    -moz-transition: all .2s ease-in-out;
     -ms-transition: all .2s ease-in-out;
@@ -286,12 +303,12 @@ img.img-intro {
 .in-content { margin-top: 55px }
 a.read-more {
     padding: 5px 10px;
-    background-color: #FFF;
-    border: 1px solid #349c30;
+    background-color: #1a1110;
+    border: 1px solid #ff9e00;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     border-radius: 5px;
-    color: #349c30;
+    color: #ff9e00;
     font-size: 13px; /* Created by @flamekaizar */
     font-weight: 700;
     text-transform: uppercase;
@@ -300,8 +317,8 @@ a.read-more {
 }
 
 a.read-more:hover {
-	background-color: #5db14f;
-	color: #fff;
+	background-color: #915a00;
+	color: #1a1110;
 	-webkit-transition: all .25s ease-in-out;
 	   -moz-transition: all .25s ease-in-out;
 	    -ms-transition: all .25s ease-in-out;
@@ -311,7 +328,7 @@ a.read-more:hover {
 .foot-post {
     position: relative;
     margin-top: 60px;
-    color: #535353;
+    color: #adadad;
     font-family: "Open Sans", sans-serif;
     font-size: 12px;
     font-weight: 700;
@@ -320,7 +337,7 @@ a.read-more:hover {
 .foot-post {
     font-weight: 400;
     text-decoration: none;
-    color: #535353;
+    color: #adadad;
 }
 .foot-post a:hover {
 	border-bottom: 1px dotted #ccc
@@ -333,7 +350,7 @@ a.read-more:hover {
 }
 /* Footer */
 footer .btn {
-    color: #FFF;
+    color: #1a1110;
     font-size: 13px;
     font-family: "Open Sans";
     font-weight: 700;
@@ -346,7 +363,7 @@ footer .social li {
 }
 footer .social li a { color: #a5a5a5 }
 footer .social li a:hover {
-	color: #349c30;
+	color: #ff9e00;
 }
 .foot-cp { padding-top: 40px }
 .foot-cp a {
@@ -381,4 +398,11 @@ footer .social li a:hover {
     }
     footer .social { text-align: center }
     .foot-cp { padding-top: 10px }
+}
+
+img.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
 }

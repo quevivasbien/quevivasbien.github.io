@@ -66,21 +66,25 @@ However, if improvements are instead exponential, meaning that each improvement 
 
 The assumption that improvements follow a Poisson process might be objectionable; why should we think that the gap between the last two improvements is unrelated to the gap between this improvement and the next? We could reasonably argue that an AI that has made lots of improvements recently may have exhausted its stock of innovation, so it may need more time for the next improvement. We could also argue that an AI that has made lots of recent improvements may be "on a roll" and therefore will likely need less than the usual time for its next improvement. The former would indicate that the distribution of improvements would have lower variance, while the latter would indicate higher variance. It's not clear which of these (if either) is more likely, so for now we'll just stick with the assumption of Poisson-distributed improvements. However, this is an assumption that would merit more examination.
 
-### The probability of errancy
+### Priors over the model parameters
 
-What should we expect about the probability $p(x)$? It seems at first glance more likely that $p$ would be increasing rather than decreasing, since more advanced AI would probably have more complicated motivations that resist alignment. That is something of a wild guess, though, so it may be best to assume $p$ is constant in order to keep the model simpler for now. And, of course, the value of a [constant] $p$ is still very much up for debate.
+#### The probability of errancy
 
-### The collaboration cost
+What should we expect about the probability $p(x)$? It seems at first glance more likely that $p$ would be increasing rather than decreasing, since more advanced AI would probably have more complicated motivations that resist alignment. That is something of a wild guess, though, so it may be best to assume $p$ is constant in order to keep the model simpler for now. And, of course, the value of a [constant] $p$ is still very much up for debate. Below, we'll use a $B(1,19)$ distribution as a prior, which corresponds to an average probability of $p=0.05$ but potentially significantly more.
+
+#### The collaboration cost
 
 What are likely values for the collaboration cost $c$? There probably are some benefits to collaboration, but at the same time it seems naive to expect AIs to be able to cooperate seamlessly. As a starting point, I propose a uniform prior on the interval (0, 1).
 
-### The asymmetry coefficient
+#### The asymmetry coefficient
 
-What do we expect about the asymmetry of the problem? It seems reasonable to expect the problem to be biased in favor of the errant AI, since, at the very least, an AI wanting to escape will likely be able to conceal its intent until it's optimal to make a real attempt. Given this, a prior including both positive and negative values of $\log a$, but with more weight on negative values, seems appropriate.
+What do we expect about the asymmetry of the problem? It seems reasonable to expect the problem to be biased in favor of the errant AI, since, at the very least, an AI wanting to escape will likely be able to conceal its intent until it's optimal to make a real attempt. Given this, a prior including both positive and negative values of $\log a$, but with more weight on negative values, seems appropriate (i.e. suppose $\log a \sim N(-1,1)$).
 
-## Mapping our priors
+## Mapping priors, constraining uncertainty
 
 There are, admittedly, a lot of question marks in the preceding discussion. However, we can still do some calculations over various parameter values to determine a likely range of outcomes. Based on these likely outcomes, we can draw some preliminary conclusions about the efficacy of redundancy as an AI alignment precaution.
+
+Let's plug the priors proposed above into the model to get an idea of the level of risk we are dealing with.
 
 
 ## Complications
