@@ -1,6 +1,6 @@
 const canvas = document.getElementById('canvas');
 const context = canvas.getContext('2d');  // too bad if your browser doesn't support this
-const status = document.getElementById('status');
+const status_display = document.getElementById('status');
 
 let nproc = window.navigator.hardwareConcurrency;
 
@@ -25,11 +25,11 @@ document.getElementById('width').placeholder = width;
 document.getElementById('height').placeholder = height;
 
 const defaultColors = [
-    [178, 182, 183],  // GRAY
+    [0, 0, 0],  // BLACK
     [84, 147, 146],  // TEAL
-    [195, 155, 114],  // TAN
+    [15, 15, 114],  // BLUE
     [212, 135, 40],  // ORANGE
-    [190, 67, 66],  // RED
+    [140, 10, 66],  // BURGUNDY
 ]
 
 function combine_data() {
@@ -61,7 +61,7 @@ function onmessage(e) {
             let image_data = context.createImageData(canvas.width, canvas.height);
             image_data.data.set(combine_data());
             context.putImageData(image_data, 0, 0);
-            status.style.visibility = 'hidden';
+            status_display.style.visibility = 'hidden';
         }
     }
     else if (e.data.type == 'left') {
@@ -73,7 +73,7 @@ function onmessage(e) {
             let new_data = context.createImageData(Math.floor(canvas.width / pan_factor), canvas.height);
             new_data.data.set(combine_data());
             context.putImageData(new_data, 0, 0);
-            status.style.visibility = 'hidden';
+            status_display.style.visibility = 'hidden';
         }
     }
     else if (e.data.type == 'right') {
@@ -86,7 +86,7 @@ function onmessage(e) {
             let new_data = context.createImageData(split_x, canvas.height);
             new_data.data.set(combine_data());
             context.putImageData(new_data, canvas.width - split_x, 0);
-            status.style.visibility = 'hidden';
+            status_display.style.visibility = 'hidden';
         }
     }
     else if (e.data.type == 'up') {
@@ -98,7 +98,7 @@ function onmessage(e) {
             let new_data = context.createImageData(canvas.width, Math.floor(canvas.height / pan_factor));
             new_data.data.set(combine_data());
             context.putImageData(new_data, 0, 0);
-            status.style.visibility = 'hidden';
+            status_display.style.visibility = 'hidden';
         }
     }
     else if (e.data.type == 'down') {
@@ -112,7 +112,7 @@ function onmessage(e) {
             let combined = combine_data();
             new_data.data.set(combined);
             context.putImageData(new_data, 0, canvas.height - split_y);
-            status.style.visibility = 'hidden';
+            status_display.style.visibility = 'hidden';
         }
     }
 }
@@ -120,7 +120,7 @@ function onmessage(e) {
 // use web workers to generate new image data
 function draw(pixelwidth=canvas.width, pixelheight=canvas.height,
               xstart_=xstart, xstop_=xstop, ystart_=ystart, ystop_=ystop, type='all_compute') {
-    status.style.visibility = 'visible';
+    status_display.style.visibility = 'visible';
     let default_chunk_pixelheight = Math.floor(pixelheight / nproc);
     let chunk_remainder = pixelheight % default_chunk_pixelheight;
     let default_chunk_height = (ystop_ - ystart_) * (1 - chunk_remainder / pixelheight) / nproc;
@@ -287,6 +287,28 @@ function setSize() {
     xstart = x_center - xradius;
     xstop = x_center + xradius;
     draw();
+}
+
+// also allow keyboard control
+document.onkeydown = function(event) {
+    if (event.key == 'ArrowUp') {
+        moveUp();
+    }
+    else if (event.key == 'ArrowRight') {
+        moveRight();
+    }
+    else if (event.key == 'ArrowDown') {
+        moveDown();
+    }
+    else if (event.key == 'ArrowLeft') {
+        moveLeft();
+    }
+    else if (event.key == 'z') {
+        zoomOut();
+    }
+    else if (event.key == 'x') {
+        zoomIn();
+    }
 }
 
 
