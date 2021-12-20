@@ -291,22 +291,22 @@ function setSize() {
 
 // also allow keyboard control
 document.onkeydown = function(event) {
-    if (event.key == 'ArrowUp') {
+    if (event.key == 'w') {
         moveUp();
     }
-    else if (event.key == 'ArrowRight') {
+    else if (event.key == 'd') {
         moveRight();
     }
-    else if (event.key == 'ArrowDown') {
+    else if (event.key == 's') {
         moveDown();
     }
-    else if (event.key == 'ArrowLeft') {
+    else if (event.key == 'a') {
         moveLeft();
     }
-    else if (event.key == 'z') {
+    else if (event.key == ',') {
         zoomOut();
     }
-    else if (event.key == 'x') {
+    else if (event.key == '.') {
         zoomIn();
     }
 }

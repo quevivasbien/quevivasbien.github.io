@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Que vivas bien</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="goodness, truth, and summer rainstorms">
+    <meta name="author" content="Mckay D Jensen">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../css/kube.min.css" />
+    <link rel="stylesheet" href="../css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../css/custom.css" />
+    <link rel="shortcut icon" href="../img/favicon.png" />
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<!-- Navigation -->
+	<div class="main-nav">
+		<div class="container">
+			<header class="group top-nav">
+				<nav class="navbar logo-w navbar-left" >
+					<a class="logo" href="../index.html">Que vivas bien</a>
+				</nav>
+				<div class="navigation-toggle" data-tools="navigation-toggle" data-target="#navbar-1">
+				    <span class="logo">Que vivas bien</span>
+				</div>
+			    <nav id="navbar-1" class="navbar item-nav navbar-right">
+				    <ul>
+				        <li><a href="../index.html">Home</a></li>
+				        <li><a href="../about.html">About</a></li>
+				        <li><a href="../archive.html">Archive</a></li>
+				        <!--<li><a href="#">Contact</a></li>-->
+				    </ul>
+				</nav>
+			</header>
+		</div>
+	</div>
+
+	<!-- Introduction -->
+	<div class="intro">
+		<div class="container">
+			<div class="units-row">
+			    <div class="unit-100">
+			    	<p id="tagline" class="p-intro">goodness, truth, and summer rainstorms</p>
+			    </div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Content -->
+	<div class="content">
+		<div class="container">
+			<!-- Post -->
+			<div class="post">
+				<!-- Heading -->
+				<h1>Information theory for machine learning</h1>
+
+				<div class="in-content">
+
+          <p>Why is it that courses on machine learning tend to start by covering some basic concepts from information theory? This post is a short explainer of why information theory is relevant to the formal study of machine learning.</p>
+          <h2 id="machine-learning-as-model-fitting">Machine learning as model-fitting</h2>
+          <p>If we want to get anywhere, we need to start with a solid concept of what “machine learning” actually means. Basically, we want a computer to be able to process and utilize complicated patterns in data. This is, of course, what we do whenever we fit a statistical model to data, and it turns out that the sorts of algorithms used for machine learning are really just complicated statistical models: neural networks, for example, are in their simplest form a set of linear regressions stacked on top of each other.</p>
+          <p>Let’s make this more explicit: a machine learning model is a highly flexible statistical model – it has many parameters, which allow it to fit a variety of statistical distributions. When we train a machine learning model, we are finding the parameters of the model that make the model approximate the training data as closely as possible. (Note that by statistical model, we mean a description of a probability distribution, e.g., a specification of a probability density function.)</p>
+          <p>In a typical case, we have a data distribution <span class="math inline">\(X\)</span> with labels <span class="math inline">\(Y\)</span>, related with a conditional distribution <span class="math inline">\(P_{Y|X}\)</span>. If we want to create a model that predicts labels from data, we introduce a model <span class="math inline">\(\hat P_{Y|X; \theta}\)</span>, and choose the parameters <span class="math inline">\(\theta\)</span> to make <span class="math inline">\(\hat P_{Y|X; \theta}\)</span> as close as possible to <span class="math inline">\(P_{Y|X}\)</span>.</p>
+          <h2 id="entropy">Entropy</h2>
+          <p>The natural question, of course, is what it means for one distribution to be “as close as possible” to another distribution. This is where information theory starts showing its usefulness. Intuitively, two distributions are “close” if they convey similar information, i.e., if sampling from one allows us to learn more or less the same thing as sampling from the other. This suggests that the metric we can use to measure distributional “closeness” should be something related to information content.</p>
+          <p>And now the concept of <em>entropy</em> enters the stage. The entropy of a distribution is a measure of how much information the distribution contains – high-entropy distributions contain little information, and low-entropy distributions contain lots of information. Formally, the entropy of a random variable <span class="math inline">\(X\)</span> with p.d.f. <span class="math inline">\(p_X\)</span> is <span class="math display">\[H(X) = - \mathbb E[\log p_X(X)].\]</span> We don’t typically talk about the information content of statistical distributions, so this concept can seem a bit mysterious at first, and it’s worth thinking about what entropy really means in a statistical context. It may be helpful to think in terms of how “predictable” a distribution is: highly “predictable” distributions have low entropy, while “unpredictable” distributions have high entropy. A distribution that takes only a few values with regular probabilities is “predictable” and therefore will have low entropy, while a distribution that can take many values with non-neglible probabilties is “unpredictable” and will have relatively high entropy.</p>
+          <h2 id="conditional-entropy">Conditional entropy</h2>
+          <p>What if we want to describe how much one distribution gives about another? Here there are a few different concepts that we can make use of. First, we have <em>conditional entropy</em>. Formally, conditional entropy is defined as <span class="math display">\[H(Y|X) = -\mathbb E[\log p_{Y|X}(Y|X)].\]</span> Since <span class="math display">\[p_{Y|X}(y|x) = \frac{p_{X,Y}(x, y)}{p_X(x)},\]</span> we can decompose conditional entropy of <span class="math inline">\(Y|X\)</span> into the difference of the entropies of the joint distribution of <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> and of <span class="math inline">\(X\)</span> alone: <span class="math display">\[H(Y|X) = H([X, Y]) - H(X)\]</span> Intutively, conditional entropy tells us how predictable <span class="math inline">\(Y\)</span> is, given that we already know <span class="math inline">\(X\)</span>. As an example, suppose that <span class="math inline">\(X\)</span> describes the outcome of the roll of a die, and <span class="math inline">\(Y\)</span> describes whether the same die roll is even or odd. If we know <span class="math inline">\(X\)</span>, then we also know <span class="math inline">\(Y\)</span>, i.e., <span class="math inline">\(Y\)</span> is completely predictable given <span class="math inline">\(X\)</span>; therefore, <span class="math inline">\(H(Y|X)\)</span> is as low as possible. On the other hand, if <span class="math inline">\(X\)</span> gives us no information about <span class="math inline">\(Y\)</span>, then <span class="math inline">\(H(Y|X) = H(Y)\)</span>.</p>
+          <p>Conditional entropy is useful for thinking about the relationship between distributions, but only in situations where we know the joint distribution of the random variables involved. That is, if we have some model <span class="math inline">\(p_{X, Y}\)</span> for the joint distribution of <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>, then we can use conditional entropy to think about how much information <span class="math inline">\(X\)</span> gives about <span class="math inline">\(Y\)</span> and vice versa. However, if the goal is instead to compare alternative models for the same data, we need a different tool. This is where <em>cross-entropy</em> comes in, which is a key concept in machine learning.</p>
+          <h2 id="cross-entropy">Cross-entropy</h2>
+          <p>Here we return to the canonical example presented in the first section: we have data <span class="math inline">\(X\)</span> with labels <span class="math inline">\(Y\)</span>, with a conditional distribution described by <span class="math inline">\(P_{Y|X}\)</span>, and we want to find parameters <span class="math inline">\(\theta\)</span> so that our model <span class="math inline">\(\hat P_{X|Y;\theta}\)</span> is “as close as possible” to <span class="math inline">\(P_{X|Y}\)</span>. The typical way we describe this is with the cross-entropy <span class="math display">\[H(P, \hat P) := -\mathbb E_{Y|X \sim P} [\hat P_{Y|X; \theta}(Y|X)].\]</span> Notice that this is similar to the definition of entropy, but here we are sampling from the population distribution but using our model distribution inside the expectation.</p>
+          <p>(Also note that this is different from joint entropy, which I denoted by <span class="math inline">\(H([X, Y])\)</span> earlier. Sometimes people use the same notation for both, which can be confusing.)</p>
+          <p>Why is this useful? When we are doing machine learning, we don’t actually know the form of the population distribution <span class="math inline">\(P\)</span> – that’s what we’re trying to figure out – so we can’t plug anything into its p.d.f.; however, we can sample from it by sampling from our training data. In training the model <span class="math inline">\(\hat P\)</span>, we want to make <span class="math inline">\(\hat P\)</span> as informative as possible over the data, so we choose <span class="math inline">\(\theta\)</span> to minimize <span class="math inline">\(H(P, \hat P)\)</span>.</p>
+          <p>You can check that <span class="math inline">\(H(P, \hat P)\)</span> is bounded below by <span class="math inline">\(H(P)\)</span> – therefore, we often normalize cross-entropy by the entropy of the target distribution to get a value called the Kullback-Leibler (KL) divergence: <span class="math display">\[D_{KL}(P, \hat P) := H(P, \hat P) - H(P)\]</span> A KL divergence of zero indicates minimum cross entropy; intuitively, our model fits the population distribution as well as possible.</p>
+          <h2 id="conclusion">Conclusion</h2>
+          <p>In machine learning, our goal is typically to find a parameterized distribution that fits the data as well as possible. We don’t know the ideal distribution of the data, but using an information-theoretic value like cross-entropy we can compare candidate models and say which is closest to the ideal distribution (as reflected in training data). The process of training is the process of exploring the parameter space to find the best (closest to the population distribution) model.</p>
+
+        </div>
+
+				<div class="foot-post">
+					<!-- place footer here -->
+				</div>
+			</div>
+			<!-- /post -->
+
+		</div>
+	</div>
+
+  <footer>
+		<div class="container">
+			<a href="../index.html"><img class="aligncenter" src="../img/logo.png" title="Back to home page"></a>
+			<p class="text-centered foot-cp">
+	    		<a href="../about.html">created by mckay jensen</a>
+	    </p>
+      <p class="text-centered" style="font-size: 24px;">
+        <a href="mailto:jensenm@uchicago.edu"><i class="fa fa-send"></i></a>
+        <a href="https://github.com/quevivasbien"><i class="fa fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/mckaydjensen/"><i class="fa fa-linkedin"></i></a>
+      </p>
+		</div>
+	</footer>
+
+	<!-- Javascript -->
+	<script src="../js/jquery.min.js"></script>
+    <script src="../js/kube.min.js"></script>
+	<script src="../js/beautiful.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</body>
+</html>
