@@ -25,6 +25,15 @@ li img.aligncenter {
   margin-right: auto;
 }
 
+aside, .aside {
+  display: inline;
+  float: right;
+  position: relative;
+  width: 20vw;
+  margin-right: -22vw;
+  /* font-size: 16px; */
+}
+
 .btn-group button {
   font-family: "Open Sans", sans-serif;
   border: 1px solid #ff9e00; /* Yellow border */
@@ -45,14 +54,14 @@ li img.aligncenter {
 /* Add a background color on hover */
 .btn-group button.unpressed:hover {
   background-color: #915a00;
-  color: #1a1110FFF;
+  color: #a1110FFF;
 }
 .btn-group button.unpressed {
-  background-color: #1a1110FFF;
+  background-color: #a1110FFF;
 }
 .btn-group button.pressed {
-  background-color: #3fa644; // light #ff9e00
-  color: #1a1110FFF;
+  background-color: #3fa644;
+  color: #a1110FFF;
 }
 
 .navbar li.active a, .navbar span {
