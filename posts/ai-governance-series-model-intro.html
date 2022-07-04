@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Que vivas bien</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="goodness, truth, and summer rainstorms">
+    <meta name="author" content="Mckay D Jensen">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../css/kube.min.css" />
+    <link rel="stylesheet" href="../css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../css/custom.css" />
+    <link rel="shortcut icon" href="../img/favicon.png" />
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<!-- Navigation -->
+	<div class="main-nav">
+		<div class="container">
+			<header class="group top-nav">
+				<nav class="navbar logo-w navbar-left" >
+					<a class="logo" href="../index.html">Que vivas bien</a>
+				</nav>
+				<div class="navigation-toggle" data-tools="navigation-toggle" data-target="#navbar-1">
+				    <span class="logo">Que vivas bien</span>
+				</div>
+			    <nav id="navbar-1" class="navbar item-nav navbar-right">
+				    <ul>
+				        <li><a href="../index.html">Home</a></li>
+				        <li><a href="../about.html">About</a></li>
+				        <li><a href="../archive.html">Archive</a></li>
+				        <!--<li><a href="#">Contact</a></li>-->
+				    </ul>
+				</nav>
+			</header>
+		</div>
+	</div>
+
+	<!-- Introduction -->
+	<div class="intro">
+		<div class="container">
+			<div class="units-row">
+			    <div class="unit-100">
+			    	<p id="tagline" class="p-intro">goodness, truth, and summer rainstorms</p>
+			    </div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Content -->
+	<div class="content">
+		<div class="container">
+			<!-- Post -->
+			<div class="post">
+				<!-- Heading -->
+				<h1 id="an-economic-model-for-ai-governance">An economic model for AI governance</h1>
+
+				<div class="in-content">
+
+                <p>The goal here is to formulate a basic economic framework for thinking about problems in AI governance. This framework should be general enough to cover the most concerning ways in which AI could be harmful. The emphasis here will be on the <em>governance</em> of AI technology, rather than on the technical aspects of AI safety – that is, the goal is to think about how the organizations developing AI should be regulated/incentivized, rather than the specifics of what those organizations should be doing.</p>
+                <h2 id="the-model">The model</h2>
+                <p>A model for AI governance should encapsulate the relationship between the public, the organizations creating the AI (the “managers”), and the AI itself. To be able to capture the ways in which things could go awry from the perspective of the public, we need to allow the AI’s objective to be imperfectly aligned with the managers’ objective, which itself may be imperfectly aligned with the public’s objective. One way to formalize this is with a model like the following.</p>
+                <p>Suppose that the AI is programmed to maximize some objective <span class="math inline">\(\hat x\)</span>. If the manager’s alignment problem is not perfectly solved, this objective is a <em>proxy</em> for the manager’s true objective, which we’ll call <span class="math inline">\(x\)</span>. We’ll say that the true and proxy objectives are related by an “alignment function” <span class="math inline">\(\xi\)</span>, so <span class="math inline">\(x = \xi(\hat x)\)</span>. If the manager and AI are perfectly aligned, then <span class="math inline">\(\xi\)</span> is just the identity function. Otherwise, we want to allow for the proxy goal to differ from the true goal in some parts of its support. We can allow for <span class="math inline">\(\xi\)</span> to be stochastic to capture the idea that the manager may not fully understand the AI, and the AI may sometimes behave unpredictably.</p>
+                <p>We’ll assume that the manager faces a net cost <span class="math inline">\(c(\hat x)\)</span> to achieve a given level of the proxy goal; this includes the expenses associated with training and running the AI minus any direct benefit the manager receives. We could also let <span class="math inline">\(c\)</span> depend on the alignment function <span class="math inline">\(\xi\)</span> and assume that the manager can choose both the desired level of proxy output and alignment, with costs associated with each.</p>
+                <p>We’ll also assume that the manager receives a transfer <span class="math inline">\(t(x)\)</span> from the public. The public, on its end, receives a benefit <span class="math inline">\(u(x)\)</span>. It may be the case that <span class="math inline">\(u(\xi(\hat x))\)</span> and <span class="math inline">\(-c(\hat x)\)</span> have different maxima, creating the incentive to have nonzero transfers between the public and the manager(s). The way in which the transfers are decided is relevant, of course: if transfers are set by the public or determined via market competition between managers, we should expect the public to derive more surplus than if transfers were set by a monopolistic manager.</p>
+                <p>Putting this all together, the public’s payoff is <span class="math display">\[u(x) - t(x)\]</span> and the manager’s payoff is <span class="math display">\[t(x) - c(\hat x; \xi),\]</span> with <span class="math inline">\(x = \xi(x)\)</span>.</p>
+                <p>The details of which variables/functions are fixed and how the others are chosen will vary based on the specific application. The important features are that (1) we have two parties – the public and the manager(s) – who have different incentives and each want to maximize their payoffs and (2) the manager has direct control only over a proxy objective, and the way in which that objective translates into the manager’s true objective may be uncertain. Note that without the second feature, this would be a relatively standard control theory problem. As we’ll see, an important subset of this problem is essentially just the mechanism design problem where the public chooses <span class="math inline">\(t\)</span> to maximize <span class="math inline">\(u(x) - t(x)\)</span> given the manager’s choice of <span class="math inline">\(x\)</span>.</p>
+
+                <hr />
+
+                <p>In the <a href="./ai-governance-series-simple-harms.html">next section</a>, we’ll see how this model may be applied to potential near-term harms of AI.</p>
+
+        </div>
+
+				<div class="foot-post">
+					<!-- place footer here -->
+				</div>
+			</div>
+			<!-- /post -->
+
+		</div>
+	</div>
+
+  <footer>
+		<div class="container">
+			<a href="../index.html"><img class="aligncenter" src="../img/logo.png" title="Back to home page"></a>
+			<p class="text-centered foot-cp">
+	    		<a href="../about.html">created by mckay jensen</a>
+	    </p>
+      <p class="text-centered" style="font-size: 24px;">
+        <a href="mailto:jensenm@uchicago.edu"><i class="fa fa-send"></i></a>
+        <a href="https://github.com/quevivasbien"><i class="fa fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/mckaydjensen/"><i class="fa fa-linkedin"></i></a>
+      </p>
+		</div>
+	</footer>
+
+	<!-- Javascript -->
+	<script src="../js/jquery.min.js"></script>
+    <script src="../js/kube.min.js"></script>
+	<script src="../js/beautiful.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</body>
+</html>
