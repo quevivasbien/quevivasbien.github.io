@@ -26,6 +26,7 @@ def main(filename, *tags):
         to_include = first_p.group(1)
     else:
         to_include = post_content
+    to_include = re.sub(r'<a href="./', '<a href="./posts/', to_include)
     topic_str = ' '.join(f'topic-{t}' for t in tags)
     # update index
     to_insert = f"""
