@@ -281,6 +281,12 @@ img.img-intro {
     position: relative;
 }
 
+.in-content .tag-list {
+  margin-top: 10px;
+  font-style: italic;
+  color: #646464;
+}
+
 /* Created by @flamekaizar */
 .content .post a h1:hover{
 	color: #911d03;

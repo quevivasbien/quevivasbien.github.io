@@ -61,50 +61,64 @@
           <br><br>
           <button class="expand-button">Filter posts by tag</button>
           <div class="expandable" id="checkboxes">
-            <label for="math">
-            <input type="checkbox" id="math" name="math" value="math" onclick="filterPosts()">
-             Math</label>
-            <label for="programming">
-            <input type="checkbox" id="programming" name="programming" value="programming" onclick="filterPosts()">
-             Programming</label>
-            <label for="econ">
-            <input type="checkbox" id="econ" name="econ" value="econ" onclick="filterPosts()">
-             Econ</label>
-            <label for="ethics">
-            <input type="checkbox" id="ethics" name="ethics" value="ethics" onclick="filterPosts()">
-             Ethics</label>
-            <label for="epistemology">
-            <input type="checkbox" id="epistemology" name="epistemology" value="epistemology" onclick="filterPosts()">
-             Epistemology</label>
-            <label for="fiction">
-            <input type="checkbox" id="fiction" name="fiction" value="fiction" onclick="filterPosts()">
-             Fiction</label>
-            <label for="data">
-            <input type="checkbox" id="data" name="data" value="data" onclick="filterPosts()">
-             Data</label>
+            <label for="topic-ai">
+              <input type="checkbox" id="topic-ai" name="topic-ai" value="topic-ai" onclick="filterPosts()">
+              AI
+            </label>
+            <label for="topic-math">
+              <input type="checkbox" id="topic-math" name="topic-math" value="topic-math" onclick="filterPosts()">
+              Math
+            </label>
+            <label for="topic-programming">
+              <input type="checkbox" id="topic-programming" name="topic-programming" value="topic-programming" onclick="filterPosts()">
+              Programming
+            </label>
+            <label for="topic-econ">
+              <input type="checkbox" id="topic-econ" name="topic-econ" value="topic-econ" onclick="filterPosts()">
+              Econ
+            </label>
+            <label for="topic-ethics">
+              <input type="checkbox" id="topic-ethics" name="topic-ethics" value="topic-ethics" onclick="filterPosts()">
+              Ethics
+            </label>
+            <label for="topic-epistemology">
+              <input type="checkbox" id="topic-epistemology" name="topic-epistemology" value="topic-epistemology" onclick="filterPosts()">
+              Epistemology
+            </label>
+            <label for="topic-fiction">
+              <input type="checkbox" id="topic-fiction" name="topic-fiction" value="topic-fiction" onclick="filterPosts()">
+              Fiction
+            </label>
+            <label for="topic-data">
+              <input type="checkbox" id="topic-data" name="topic-data" value="topic-data" onclick="filterPosts()">
+              Data
+            </label>
           </div>
           <br>
           <ul id="post-list">
-            <li><a href="./posts/information-theory-for-ai.html">Information theory for machine learning</a> (December 2021)</li>
-            <li><a href="./posts/redundant-ai-alignment.html">“Redundant” AI alignment</a> (October 2021)</li>
-            <li class="programming math"><a href="./posts/js-raytracing.html">Raytracing in JavaScript</a> (July 2021)</li>
-            <li class="programming math"><a href="./posts/fractal-explorer.html">Fractal explorer</a> (July 2021)</li>
-            <li class="fiction"><a href="./posts/ensign.html">Ensign</a> (January 2021)</li>
-            <li class="fiction"><a href="./posts/the_garden_of_epicurus.html">The Garden of Epicurus</a> (December 2020)</li>
-            <li class="programming econ"><a href="./posts/soybean_nation.html">Soybean Nation</a> (September 2020)</li>
-            <li class="fiction ethics"><a href="./posts/heretic.html">Heretic</a> (September 2020)</li>
-            <li class="econ ethics"><a href="./posts/derailed_new_world.html">Derailed new world</a> (September 2020)</li>
-            <li class="econ data"><a href="./posts/chicago_groceries.html">Chicago grocery stores and food deserts</a> (September 2020)</li>
-            <li class="data"><a href="./posts/chicago_crime_2020.html">Crime in Chicago, so far in 2020</a> (September 2020)</li>
-            <li class="data"><a href="./posts/hyde_park_crime_map.html">Hyde Park crime map</a> (September 2020)</li>
-            <li class="math"><a href="./posts/non-euclidean_gravity.html">Non-Euclidean gravity</a> (September 2020)</li>
-            <li class="fiction ethics"><a href="./posts/the_god_of_wisdom.html">The god of wisdom</a> (August 2020)</li>
-            <li class="econ ethics"><a href="./posts/building_utopia.html">Building utopia</a> (July 2020)</li>
-            <li class="ethics"><a href="./posts/a_very_rough_moral_theory_of_everything.html">A very rough moral theory of everything</a> (June 2020)</li>
-            <li class="epistemology"><a href="./posts/hitting_epistemological_rock_bottom.html">Hitting epistemological rock bottom</a> (August 2019)</li>
-            <li class="ethics"><a href="./posts/diving_deeper_with_axiom_m.html">Diving deeper with axiom M</a> (July 2019)</li>
-            <li class="epistemology"><a href="./posts/a_rationalist_manifesto.html">A rationalist manifesto</a> (July 2019)</li>
-            <li class="ethics"><a href="./posts/my_passionate_and_complicated_relationship_with_ea.html">My passionate and complicated relationship with effective altruism</a> (July 2019)</li>
+            <li class="topic-ai topic-econ"><a href="./posts/ai-governance-series-safety-performance.html">A model with a safety/performance tradeoff</a> (July 2022)</li>
+            <li class="topic-ai topic-econ"><a href="./posts/ai-governance-series-simple-harms.html">Modelling some failure modes of AI</a> (July 2022)</li>
+            <li class="topic-ai topic-econ"><a href="./posts/ai-governance-series-model-intro.html">An economic model for AI governance</a> (July 2022)</li>
+            <li class="topic-ai topic-math topic-programming"><a href="./posts/information-theory-for-ai.html">Information theory for machine learning</a> (December 2021)</li>
+            <li class="topic-ai topic-econ"><a href="./posts/redundant-ai-alignment.html">“Redundant” AI alignment</a> (October 2021)</li>
+            <li class="topic-programming topic-math"><a href="./posts/js-raytracing.html">Raytracing in JavaScript</a> (July 2021)</li>
+            <li class="topic-programming topic-math"><a href="./posts/fractal-explorer.html">Fractal explorer</a> (July 2021)</li>
+            <li class="topic-fiction"><a href="./posts/ensign.html">Ensign</a> (January 2021)</li>
+            <li class="topic-fiction"><a href="./posts/the_garden_of_epicurus.html">The Garden of Epicurus</a> (December 2020)</li>
+            <li class="topic-programming topic-econ"><a href="./posts/soybean_nation.html">Soybean Nation</a> (September 2020)</li>
+            <li class="topic-fiction topic-ethics"><a href="./posts/heretic.html">Heretic</a> (September 2020)</li>
+            <li class="topic-econ topic-ethics topic-ai"><a href="./posts/derailed_new_world.html">Derailed new world</a> (September 2020)</li>
+            <li class="topic-econ topic-data"><a href="./posts/chicago_groceries.html">Chicago grocery stores and food deserts</a> (September 2020)</li>
+            <li class="topic-data"><a href="./posts/chicago_crime_2020.html">Crime in Chicago, so far in 2020</a> (September 2020)</li>
+            <li class="topic-data"><a href="./posts/hyde_park_crime_map.html">Hyde Park crime map</a> (September 2020)</li>
+            <li class="topic-math"><a href="./posts/non-euclidean_gravity.html">Non-Euclidean gravity</a> (September 2020)</li>
+            <li class="topic-fiction topic-ethics"><a href="./posts/the_god_of_wisdom.html">The god of wisdom</a> (August 2020)</li>
+            <li class="topic-econ topic-ethics"><a href="./posts/building_utopia.html">Building utopia</a> (July 2020)</li>
+            <li class="topic-ethics"><a href="./posts/a_very_rough_moral_theory_of_everything.html">A very rough moral theory of everything</a> (June 2020)</li>
+            <li class="topic-epistemology"><a href="./posts/hitting_epistemological_rock_bottom.html">Hitting epistemological rock bottom</a> (August 2019)</li>
+            <li class="topic-ethics"><a href="./posts/diving_deeper_with_axiom_m.html">Diving deeper with axiom M</a> (July 2019)</li>
+            <li class="topic-epistemology"><a href="./posts/a_rationalist_manifesto.html">A rationalist manifesto</a> (July 2019)</li>
+            <li class="topic-ethics"><a href="./posts/my_passionate_and_complicated_relationship_with_ea.html">My passionate and complicated relationship with effective altruism</a> (July 2019)</li>
           </ul>
         </div>
       </div>
