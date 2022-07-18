@@ -16,7 +16,7 @@ def main(filename, *tags):
     with open(os.path.join('../posts', filename), 'r') as fh:
         file_content = fh.read()
     post_content = re.search(
-        r'<div class="in-content">\n(.+)</div>\s+<div class="foot-post">',
+        r'<div class="in-content">\n(.+)</div>\s+<script ',
         file_content,
         flags=re.DOTALL
     ).group(1)

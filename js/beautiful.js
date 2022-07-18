@@ -1,4 +1,4 @@
-const beautifulThings = [
+const beautiful_things = [
   "summer rainstorms",
   "Euler's number",
   "alpine mornings",
@@ -19,10 +19,15 @@ const beautifulThings = [
   "desert skies at night",
   "mountain vistas",
   "quiet, snowy mornings",
-  "la lengua hispana",
   "math on a whiteboard",
-  "mi amorcita"
+  "mi amorcita",
+  "clicky keyboards"
 ];
-var randomIndex = Math.floor(Math.random() * beautifulThings.length);
-var tagline = document.getElementById("tagline");
-tagline.innerHTML = "goodness, truth, and " + beautifulThings[randomIndex];
+
+function run_beautiful() {
+  let randomIndex = Math.floor(Math.random() * beautiful_things.length);
+  let tagline = document.getElementById("tagline");
+  tagline.innerHTML = "goodness, truth, and " + beautiful_things[randomIndex];
+}
+
+run_beautiful();
