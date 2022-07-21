@@ -1,158 +1,28 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-	<title>Que vivas bien</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="goodness, truth, and summer rainstorms">
-	<meta name="author" content="Mckay D Jensen">
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link rel="stylesheet" href="../css/kube.min.css" />
-	<link rel="stylesheet" href="../css/font-awesome.min.css" />
 	<link rel="stylesheet" href="../css/custom.css" />
-	<link rel="shortcut icon" href="../img/favicon.png" />
-	<link href="http://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" type="text/css">
-	<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
 </head>
-
 <body>
-	<!-- Navigation -->
-	<div class="main-nav">
-		<div class="container">
-			<header class="group top-nav">
-				<nav class="navbar logo-w navbar-left">
-					<a class="logo" href="../index.html">Que vivas bien</a>
-				</nav>
-				<div class="navigation-toggle" data-tools="navigation-toggle" data-target="#navbar-1">
-					<span class="logo">Que vivas bien</span>
-				</div>
-				<nav id="navbar-1" class="navbar item-nav navbar-right">
-					<ul>
-						<li><a href="../index.html">Home</a></li>
-						<li><a href="../about.html">About</a></li>
-						<li><a href="../archive.html">Archive</a></li>
-						<!--<li><a href="#">Contact</a></li>-->
-					</ul>
-				</nav>
-			</header>
-		</div>
+	<h1 id="post-title">An economic model for AI governance</h1>
+	<div id="post-content" class="in-content">
+		<p><em>This is the first section in a series on modeling AI governance.</em></p>
+		<p>The goal here is to formulate a basic economic framework for thinking about problems in AI governance. This framework should be general enough to cover the most concerning ways in which AI could be harmful. The emphasis here will be on the <em>governance</em> of AI technology, rather than on the technical aspects of AI safety – that is, the goal is to think about how the organizations developing AI should be regulated/incentivized, rather than the specifics of what those organizations should be doing.</p>
+		<p>A model for AI governance should encapsulate the relationship between the public, the organizations creating the AI (the <q>managers</q>), and the AI itself. To be able to capture the ways in which things could go awry from the perspective of the public, we need to allow the AI’s objective to be imperfectly aligned with the managers’ objective, which itself may be imperfectly aligned with the public’s objective – problems can arise due to misalignment on either of these levels. One way to formalize this is with the model presented here.</p>
+		<h2 id="interactions-between-managers-and-the-ai">Interactions between managers and the AI</h2>
+		<p>We suppose that the AI is programmed to create some good <span class="math inline">\(x\)</span>, which we call the <q>true objective.</q> If the AI is not perfectly aligned, then we suppose that the manager can only specify a <q>proxy objective</q> <span class="math inline">\(\hat x\)</span> for the AI, which is related to <span class="math inline">\(x\)</span> via an <q>alignment distribution</q> <span class="math display">\[x \sim \xi(\hat x).\]</span> In the general case, the outcome <span class="math inline">\(x\)</span> is a random variable, reflecting the manager’s uncertainty about what the AI will do given some instructions – this captures the idea that the manager may not fully understand the AI or may be unable to exactly specify the true objective. In some cases, we might assume that <span class="math inline">\(x\)</span> is a deterministic function of <span class="math inline">\(\hat x\)</span>, in which cases we may write <span class="math inline">\(x = \xi(\hat x)\)</span>. In the case of perfect alignment, we have <span class="math inline">\(\xi(\hat x) = x\)</span>.</p>
+		<p>We assume that the manager receives a benefit <span class="math inline">\(\rho(x)\)</span> from a given level of realized <span class="math inline">\(x\)</span> and faces a cost <span class="math inline">\(c(\hat x)\)</span> for training/hosting the AI with proxy objective <span class="math inline">\(\hat x\)</span>. The manager’s goal is therefore to choose <span class="math inline">\(\hat x\)</span> to maximize <span class="math display">\[\mathbb E[\rho(x) | \hat x] - c(\hat x).\]</span></p>
+		<h2 id="interactions-between-managers-and-the-public">Interactions between managers and the public</h2>
+		<p>Sometimes, we will be interested in considering just the manager’s problem; however, to analyze many questions relevant to AI governance, we will also want to consider the public’s well-being. To do this, we’ll suppose that the public gains a utility <span class="math inline">\(u(x)\)</span> from a realized value <span class="math inline">\(x\)</span>.</p>
+		<p>We’ll frequently be interested in cases where the public (or a representative for the public) pays the manager for <span class="math inline">\(x\)</span> according to a transfer schedule <span class="math inline">\(t(x)\)</span>. In these cases, we’ll generally suppose that <span class="math inline">\(\rho(x) = t(x)\)</span>; i.e., the public’s payment to the manager is what incentivizes the manager to produce <span class="math inline">\(x\)</span>. If the public chooses <span class="math inline">\(t\)</span>, then the public’s problem is to choose the <span class="math inline">\(t\)</span> that maximizes <span class="math display">\[\mathbb E[u(x) - t(x) | \hat x]\]</span> subject to <span class="math display">\[\hat x = \text{argmax}_{\hat x} \left\{ \mathbb E[t(x)| \hat x] - c(\hat x) \right\}.\]</span> (We’ve implicitly assumed here that the public and manager have the same beliefs/information about <span class="math inline">\(\xi\)</span>, which is clearly not true in some important cases. We’ll consider this in more depth later.)</p>
+		<p>If the manager chooses <span class="math inline">\(t\)</span>, then they simply choose it along with <span class="math inline">\(\hat x\)</span> to maximize their payoff subject to some constraint on the minimum payoff that the public is willing to accept.</p>
+		<h2 id="key-features">Key features</h2>
+		<p>There are, of course, a lot of specific assumptions we could make to specialize the model for specific scenarios, but even the basic structure here gets us a long way. The important features are that (1) we have two parties – the public and the manager(s) – who have different incentives and each want to maximize their payoffs and (2) the manager has direct control only over a proxy objective, and the way in which that objective translates into the manager’s true objective may be uncertain. Note that without the second feature, this would be a relatively standard control theory problem.</p>
+		<hr />
+		<p>In the <a href="./ai-governance-series-simple-harms.html">next section</a>, we’ll see how this model may be applied to some potential harms of AI.</p>
 	</div>
 
-	<!-- Introduction -->
-	<div class="intro">
-		<div class="container">
-			<div class="units-row">
-				<div class="unit-100">
-					<p id="tagline" class="p-intro">goodness, truth, and summer rainstorms</p>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<!-- Content -->
-	<div class="content">
-		<div class="container">
-			<!-- Post -->
-			<div class="post">
-				<!-- Heading -->
-				<h1 id="an-economic-model-for-ai-governance">An economic model for AI governance</h1>
-
-				<div class="in-content">
-
-					<p>The goal here is to formulate a basic economic framework for thinking about problems in AI
-						governance. This framework should be general enough to cover the most concerning ways in which
-						AI could be harmful. The emphasis here will be on the <em>governance</em> of AI technology,
-						rather than on the technical aspects of AI safety – that is, the goal is to think about how the
-						organizations developing AI should be regulated/incentivized, rather than the specifics of what
-						those organizations should be doing.</p>
-					<p>A model for AI governance should encapsulate the relationship between the public, the
-						organizations creating the AI (the “managers”), and the AI itself. To be able to capture the
-						ways in which things could go awry from the perspective of the public, we need to allow the AI’s
-						objective to be imperfectly aligned with the managers’ objective, which itself may be
-						imperfectly aligned with the public’s objective – problems can arise due to misalignment on
-						either of these levels. One way to formalize this is with the model presented here.</p>
-					<h2 id="the-model">The model</h2>
-					<p>Suppose that the AI is programmed to maximize some objective <span class="math inline">\(\hat
-							x\)</span>. If the manager’s alignment problem is not perfectly solved, this objective is a
-						<em>proxy</em> for the manager’s true objective, which we’ll call <span
-							class="math inline">\(x\)</span>. We’ll say that the true and proxy objectives are related
-						by an “alignment function” <span class="math inline">\(\xi\)</span>, so <span
-							class="math inline">\(x = \xi(\hat x)\)</span>. If the manager and AI are perfectly aligned,
-						then <span class="math inline">\(\xi\)</span> is just the identity function. Otherwise, we want
-						to allow for the proxy goal to differ from the true goal in some parts of its support. We can
-						allow for <span class="math inline">\(\xi\)</span> to be stochastic to capture the idea that the
-						manager may not fully understand the AI and that the AI may sometimes behave unpredictably.</p>
-					<p>We’ll assume that the manager faces a net cost <span class="math inline">\(c(\hat x)\)</span> to
-						achieve a given level of the proxy goal; this includes the expenses associated with training and
-						running the AI minus any direct benefit the manager receives. We could also let <span
-							class="math inline">\(c\)</span> depend on the alignment function <span
-							class="math inline">\(\xi\)</span> and assume that the manager can choose both the desired
-						level of proxy output and alignment, with costs associated with each.</p>
-					<p>We’ll also assume that the manager receives a transfer <span class="math inline">\(t(x)\)</span>
-						from the public. The public, on its end, receives a benefit <span
-							class="math inline">\(u(x)\)</span>. It may be the case that <span
-							class="math inline">\(u(\xi(\hat x))\)</span> and <span class="math inline">\(-c(\hat
-							x)\)</span> have different maxima, creating the incentive to have nonzero transfers between
-						the public and the manager(s). The way in which the transfers are decided is relevant, of
-						course: if transfers are set by the public or determined via market competition between
-						managers, we should expect the public to derive more surplus than if transfers were set by a
-						monopolistic manager.</p>
-					<p>Putting this all together, the public’s payoff is <span class="math display">\[u(x) -
-							t(x)\]</span> and the manager’s payoff is <span class="math display">\[t(x) - c(\hat
-							x),\]</span> with <span class="math inline">\(x = \xi(x)\)</span>.</p>
-					<p>The details of which variables/functions are fixed and how the others are chosen will vary based
-						on the specific application. There are, of course, lots of features we could add to the model to
-						specialize it for specific scenarios, but even the basic structure here gets us a long way. The
-						important features are that (1) we have two parties – the public and the manager(s) – who have
-						different incentives and each want to maximize their payoffs and (2) the manager has direct
-						control only over a proxy objective, and the way in which that objective translates into the
-						manager’s true objective may be uncertain. Note that without the second feature, this would be a
-						relatively standard control theory problem.</p>
-					<p>An important subclass of this setup is the mechanism design problem where the public chooses
-						<span class="math inline">\(t\)</span> to maximize <span class="math inline">\(u(x) -
-							t(x)\)</span> given the manager’s choice of <span class="math inline">\(x\)</span>.
-						Formally, the public solves <span class="math display">\[\max_t \mathbb E[u(x) - t(x) | \mathcal
-							I_P]\]</span> subject to the alignment function <span class="math inline">\(x = \xi(\hat
-							x)\)</span> and the manager’s incentive-compatibility condition <span
-							class="math display">\[\hat x = \text{argmax}_{\hat x} \mathbb E[t(x) - c(\hat x) | \mathcal
-							I_M].\]</span> Here, <span class="math inline">\(\mathcal I_P\)</span> and <span
-							class="math inline">\(\mathcal I_M\)</span> denote the information that the public and
-						manager, respectively, have about <span class="math inline">\(\xi\)</span>.</p>
-					<hr />
-					<p>In the <a href="./ai-governance-series-simple-harms.html">next section</a>, we’ll see how this
-						model may be applied to some potential harms of AI.</p>
-
-				</div>
-
-				<div class="foot-post">
-					<!-- place footer here -->
-				</div>
-			</div>
-			<!-- /post -->
-
-		</div>
-	</div>
-
-	<footer>
-		<div class="container">
-			<a href="../index.html"><img class="aligncenter" src="../img/logo.png" title="Back to home page"></a>
-			<p class="text-centered foot-cp">
-				<a href="../about.html">created by mckay jensen</a>
-			</p>
-			<p class="text-centered" style="font-size: 24px;">
-				<a href="mailto:jensenm@uchicago.edu"><i class="fa fa-send"></i></a>
-				<a href="https://github.com/quevivasbien"><i class="fa fa-github"></i></a>
-				<a href="https://www.linkedin.com/in/mckaydjensen/"><i class="fa fa-linkedin"></i></a>
-			</p>
-		</div>
-	</footer>
-
-	<!-- Javascript -->
-	<script src="../js/jquery.min.js"></script>
-	<script src="../js/kube.min.js"></script>
-	<script src="../js/beautiful.js"></script>
-	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+	<script src="../js/setup-page.js"></script>
 	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </body>
 
