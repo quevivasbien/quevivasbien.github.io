@@ -16,7 +16,7 @@ def main(filename, *tags):
     with open(os.path.join('../posts', filename), 'r') as fh:
         file_content = fh.read()
     post_content = re.search(
-        r'<div class="in-content">\n(.+)</div>\s+<script ',
+        r'class="in-content">\n(.+?)</div>\s+<script ',
         file_content,
         flags=re.DOTALL
     ).group(1)
@@ -42,14 +42,12 @@ def main(filename, *tags):
     """
     with open('../index.html', 'r') as fh:
         index_content = fh.read()
-    # if front:
-    #     regex = r'<!-- Content -->\s*<div class="content">\s*<div class="container">\s*<!-- Post -->'
-    #     x = re.search(regex, index_content).group()
-    #     index_content = index_content.replace(x, x + to_insert + '<!-- /post -->\n\n\n\t<!-- Post -->')
-    # else:
-    regex = r'<!-- /post -->\s+</div>\s*</div>\s*<footer>'
+    regex = r'<!-- Content -->\s*<div class="content">\s*<div class="container">\s*<!-- Post -->'
     x = re.search(regex, index_content).group()
-    index_content = index_content.replace(x, '<!-- /post -->\n\n\n\t<!-- Post -->' + to_insert + x)
+    index_content = index_content.replace(x, x + to_insert + '<!-- /post -->\n\n\n\t<!-- Post -->')
+    # regex = r'<!-- /post -->\s+</div>\s*</div>\s*<footer>'
+    # x = re.search(regex, index_content).group()
+    # index_content = index_content.replace(x, '<!-- /post -->\n\n\n\t<!-- Post -->' + to_insert + x)
     with open('../index.html', 'w') as fh:
         fh.write(index_content)
     # update archive
@@ -69,4 +67,4 @@ if __name__ == '__main__':
     if len(sys.argv) < 2:
         print('Usage: python3 post.py [file] [tag1 tag2 ...]')
     else:
-        main(sys.argv)
+        main(sys.argv[1], *sys.argv[2:])

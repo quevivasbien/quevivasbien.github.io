@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<link rel="stylesheet" href="../css/custom.css" />
 </head>
+
 <body>
 	<h1 id="post-title">A model with a safety/performance tradeoff</h1>
 	<div id="post-content" class="in-content">
-		<p><em>This is the second section in a series on modeling AI governance. You might want to start at the <a href="./ai-governance-series-model-intro.html">beginning</a>.</em></p>
+		<p><em>This is the third section in a series on modeling AI governance. You might want to start at the <a
+					href="./ai-governance-series-model-intro.html">beginning</a>.</em></p>
 
 		<p>Building from our <a href="./ai-governance-series-model-intro.html">AI governance model</a>,
 			let’s make some assumptions that allow us to describe a scenario in which we have an explicit
@@ -18,24 +21,25 @@
 		<p>Let’s first assume that <span class="math inline">\(\hat x\)</span> consists of two inputs, <span
 				class="math inline">\(s\)</span> and <span class="math inline">\(p\)</span>, which
 			represent effort put into safety and performance, respectively. We’ll then write the net cost as
-			<span class="math display">\[c(s, p) = r(s + p),\]</span> where <span
-				class="math inline">\(r\)</span> is a scalar per-unit factor cost. We'll assume for now that <span
-				class="math inline">\(\rho\)</span> is a concave, increasing function on <span
-				class="math inline">\(\mathbb R\)</span>.</p>
-		<p>We now want to define <span class="math inline">\(\xi\)</span> so that <span
-				class="math inline">\(x\)</span> is a random variable that tends to be higher when <span
-				class="math inline">\(p\)</span> is greater (it tends upward with increasing performance),
+			<span class="math display">\[c(s, p) = r(s + p),\]</span> where <span class="math inline">\(r\)</span> is a
+			scalar per-unit factor cost. We'll assume for now that <span class="math inline">\(\rho\)</span> is a
+			concave, increasing function on <span class="math inline">\(\mathbb R\)</span>.
+		</p>
+		<p>We now want to define <span class="math inline">\(\xi\)</span> so that <span class="math inline">\(x\)</span>
+			is a random variable that tends to be higher when <span class="math inline">\(p\)</span> is greater (it
+			tends upward with increasing performance),
 			and has lower variance when <span class="math inline">\(s\)</span> is greater (it becomes more
-			predictable with increasing safety). One way to do this is simply to let <span
-				class="math display">\[x \sim \mathcal N(p, s^{-2}),\]</span> although that is somewhat
-			arbitrary; really any random function where the mean increases in <span
-				class="math inline">\(p\)</span> and the variance increases in <span
-				class="math inline">\(s\)</span> will work (though some might be more appropriate).</p>
-		<p>If we do this, then, because we assumed <span class="math inline">\(\rho\)</span> to be concave, the manager is
+			predictable with increasing safety). One way to do this is simply to let <span class="math display">\[x \sim
+				\mathcal N(p, s^{-2}),\]</span> although that is somewhat
+			arbitrary; really any random function where the mean increases in <span class="math inline">\(p\)</span> and
+			the variance increases in <span class="math inline">\(s\)</span> will work (though some might be more
+			appropriate).</p>
+		<p>If we do this, then, because we assumed <span class="math inline">\(\rho\)</span> to be concave, the manager
+			is
 			risk-averse and thus has an incentive to increase <span class="math inline">\(s\)</span>.</p>
 		<p>Let’s assume for now that there aren’t any transfers from the public to the manager, assuming
-			instead that the manager receives only the intrinsic benefit <span
-				class="math inline">\(\rho(x)\)</span>, and look more closely at the manager’s optimization
+			instead that the manager receives only the intrinsic benefit <span class="math inline">\(\rho(x)\)</span>,
+			and look more closely at the manager’s optimization
 			problem: the manager chooses <span class="math inline">\(s, p\)</span> to maximize <span
 				class="math display">\[\mathbb E[\rho(\xi(s, p)) - r(s + p)].\]</span> We can write
 			the above expectation as an integral, <span class="math display">\[\int f(x; s, p) \rho(x)
@@ -69,10 +73,17 @@
 			<span class="math display">\[\text P\{x = p\} = \frac{s}{1 + s}, \quad \text P\{x = -p\}
 				= \frac{1}{1 + s}\]</span> Notice that in this example, increasing performance without
 			also increasing safety is bad for a risk-neutral manager, since doing so increases the severity
-			of a bad outcome.</p>
+			of a bad outcome.
+		</p>
+		<p>A quick note: why are we using <span class="math display">\(s / (1 + s)\)</span> for the probability of a
+			good outcome? Why not just use <span class="math display">\(s\)</span>? This is just because we want <span
+				class="math display">\(s\)</span> to be able to any positive number, but the probability needs to be
+			between 0 and 1. <span class="math display">\(s\)</span> therefore represents the <em>odds</em> of a good outcome
+			rather than the probability.
+		</p>
 		<p>Let’s suppose that manager’s intrinsic payoff is <span class="math inline">\(\rho(x) =
-				x-e^{-x}\)</span>. The <em>expected</em> intrinsic payoff is <span
-				class="math display">\[\mathbb E[\rho(x)] = \rho(p) \cdot \frac{s}{1+s} + \rho(-p)
+				x-e^{-x}\)</span>. The <em>expected</em> intrinsic payoff is <span class="math display">\[\mathbb
+				E[\rho(x)] = \rho(p) \cdot \frac{s}{1+s} + \rho(-p)
 				\cdot \frac{1}{1 + s}.\]</span></p>
 		<p>To hone our intuition, we can take a look at what this payoff is for a range of values of <span
 				class="math inline">\(s\)</span> and <span class="math inline">\(p\)</span>:</p>
@@ -101,8 +112,8 @@
 			social planner wants to choose some transfer rule <span class="math inline">\(t\)</span> to
 			maximize public welfare <span class="math display">\[\mathbb E[u(x) - t(x)]\]</span> subject to
 			the manager’s optimization, as discussed above, but with the transfers added to the manager’s
-			payoff: <span class="math display">\[x \sim \xi(s^*, p^*)\]</span> <span
-				class="math display">\[s^*, p^* = \text{argmax}_{s, p} \mathbb E[t(x) + \rho(x) -
+			payoff: <span class="math display">\[x \sim \xi(s^*, p^*)\]</span> <span class="math display">\[s^*, p^* =
+				\text{argmax}_{s, p} \mathbb E[t(x) + \rho(x) -
 				r(s + p)].\]</span></p>
 		<p>Typically, we also set some “individual rationality” condition that stipulates that the manager
 			must be able to achieve some minimum expected payoff under a proposed scheme of transfers. This
@@ -142,7 +153,8 @@
 			expressed through transfers) for a variety of scenarios seems like a useful area of inquiry.</p>
 		<h2 id="whats-next">What’s next</h2>
 		<p>The examples given here are only meant to give an idea of how this all works; there are lots of
-			other interesting assumptions we could make. In the next part, we’ll examine what happens in
+			other interesting assumptions we could make. In the <a
+				href="./ai-governance-series-safety-performance2.html">next section</a>, we’ll examine what happens in
 			this model when we have multiple, competing managers.</p>
 
 	</div>
