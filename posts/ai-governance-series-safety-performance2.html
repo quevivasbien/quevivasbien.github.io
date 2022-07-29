@@ -39,7 +39,7 @@
 		</table>
 		<p>It’s best for both ShallowMind and DeepAI to act safely, but in the [Nash] equlibrium, both act riskily.</p>
 		<h2 id="looking-at-a-concrete-model">Looking at a concrete model</h2>
-		<p>As part of an ongoing project, I’ve analyzed quite extensively a specific version of the competing-managers model, which we’ll now consider. Let’s assume the following form for the reward function: <span class="math display">\[\rho_i(p) = \begin{cases}
+		<p>As part of an ongoing project, I’ve analyzed a specific version of the competing-managers model, which we’ll now consider. Let’s assume the following form for the reward function: <span class="math display">\[\rho_i(p) = \begin{cases}
 		\frac{p_i}{\sum_{j=1}^n p_j} &amp; p &gt; 0 \\
 		-d_i &amp; \text{otherwise}
 		\end{cases}\]</span> We can think of this as describing a scenario where, if there is no disaster, the managers’ payoffs are determined in a contest where each manager’s chance of winning is equal to their share of the total performance, and if there is a disaster, each manager pays a fixed cost <span class="math inline">\(d_i\)</span>.</p>
@@ -90,7 +90,8 @@
 		<p>A useful way to think about this is in terms of costs of scaling. As mentioned previously, <span class="math inline">\(\alpha\)</span> measures how well safety can scale, while <span class="math inline">\(\beta\)</span> measures how well performance can scale. <span class="math inline">\(\theta\)</span> determines how the scaling of performance impacts the scaling of safety – if <span class="math inline">\(\alpha &gt; \theta \beta\)</span>, then safety can <q>out-scale</q> performance (or, put in terms of cost, safety costs <em>won’t</em> out-scale performance costs); otherwise, increases in performance must come at the expense of reduced safety.</p>
 		<p>This has important implications for AI governance. If we’re safety-conscious and think that safety costs will out-scale performance costs (i.e., we suspect that <span class="math inline">\(\alpha &lt; \theta \beta\)</span> in the long run) then we may be inclined to limit performance (e.g., by increasing factor prices as measured by our <span class="math inline">\(r\)</span> parameter) until we can figure out other ways to incentivize safety. The model, unfortunately, doesn’t tell us what values of scaling parameters are accurate, but it does at least allow us a structured way to play around with various assumptions and get a feeling for the scenarios we ought to watch out for.</p>
 		<hr />
-		<p>We may return to this model later, but for now we’ll move on, with the next section covering some models with imperfect information.</p>
+		<p>In the <a href="./ai-governance-series-safety-performance3.html">next section</a>, we'll investigate what happens in this model when we play around with the disaster cost (<span class="math-inline">\(d\)</span>) parameter.</p>
+		<!-- <p>We may return to this model later, but for now we’ll move on, with the next section covering some models with imperfect information.</p> -->
 	</div>
 
 	<script src="../js/setup-page.js"></script>

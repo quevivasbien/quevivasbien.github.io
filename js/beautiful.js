@@ -20,8 +20,9 @@ const beautiful_things = [
   "mountain vistas",
   "quiet, snowy mornings",
   "math on a whiteboard",
-  "mi amorcita",
-  "clicky keyboards"
+  "my lobster geezerfriend",
+  "clicky keyboards",
+  "the eye of the beekeeper"
 ];
 
 function run_beautiful() {

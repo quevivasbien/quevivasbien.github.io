@@ -56,10 +56,23 @@
             <!-- Post -->
     <div class="post">
         <!-- Heading -->
+        <a href="./posts/ai-governance-series-safety-performance3.html"><h1 class="topic-ai topic-econ">Subsidies/taxes for safety-conscious actors</h1></a>
+
+        <div class="in-content">
+            <p>In this post, we’ll use the <a href="./posts/ai-governance-series-safety-performance2.html">safety-performance model</a> to explore the question of whether we should give higher or lower factor prices to agents that are more concerned about safety. Recall that an agent’s net payoff is <span class="math display">\[\left( \prod_{j=1}^n \frac{s_j}{1 + s_j} \right) \left( \frac{p_i}{\sum_{j=1}^n p_j} \right) - \left(1 - \prod_{j=1}^n \frac{s_j}{1+s_j} \right) d_i - r(X_s + X_p).\]</span> Here, we want to figure out how we should tweak <span class="math inline">\(r\)</span> in cases where <span class="math inline">\(d_i\)</span> is higher for one of the competitors relative to the others. The parameter <span class="math inline">\(d_i\)</span> is the cost that an agent will face (or thinks they will face) in the event of a disaster, so we can think of an agent with a higher <span class="math inline">\(d_i\)</span> as being more safety conscious.</p>
+            <a class="read-more" href="./posts/ai-governance-series-safety-performance3.html">Read more</a>
+        </div>
+    </div>
+    <!-- /post -->
+
+
+	<!-- Post -->
+    <div class="post">
+        <!-- Heading -->
         <a href="./posts/ai-governance-series-safety-performance2.html"><h1 class="topic-ai topic-econ">Safety and performance with competing managers</h1></a>
 
         <div class="in-content">
-            <p>In the <a href="./posts/ai-governance-series-safety-performance.html">last section</a>, we considered a specialized version of the AI governance model that captures a tradeoff between safety and performance. To recap, we assume that our manager chooses <span class="math inline">\(s\)</span> and <span class="math inline">\(p\)</span> to maximize <span class="math display">\[\mathbb E[\rho(x) - c(s, p)],\]</span> where <span class="math inline">\(x \sim \xi(s, p)\)</span>.</p>
+            <p>In the <a href="./posts/ai-governance-series-safety-performance.html">last section</a>, we considered a specialized version of the AI governance model that captures a tradeoff between safety and performance. To recap, we assume that our manager chooses <span class="math inline">\(s\)</span> and <span class="math inline">\(p\)</span> to maximize <span class="math display">\[\mathbb E[\rho(x)] - c(s, p),\]</span> where <span class="math inline">\(x \sim \xi(s, p)\)</span>.</p>
             <p>We showed that this can sometimes lead to an inefficient outcome from the perspective of the public, but there’s good reason to suspect that a lot of bad outcomes may be the result of competition between managers, which this version of the model doesn’t capture.</p>
             <a class="read-more" href="./posts/ai-governance-series-safety-performance2.html">Read more</a>
         </div>
