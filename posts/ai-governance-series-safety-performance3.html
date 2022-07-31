@@ -6,7 +6,7 @@
 <body>
 	<h1 id="post-title">Subsidies/taxes for safety-conscious actors</h1>
 	<div id="post-content" class="in-content">
-		<p><em>This is the fourth section in a series on modeling AI governance. You might want to start at the <a href="./ai-governance-series-model-intro.html">beginning</a>.</em></p>
+		<p><em>This is the fifth section in a series on modeling AI governance. You might want to start at the <a href="./ai-governance-series-model-intro.html">beginning</a>.</em></p>
 
 		<p>In this post, we’ll use the <a href="./ai-governance-series-safety-performance2.html">safety-performance model</a> to explore the question of whether we should give higher or lower factor prices to agents that are more concerned about safety. Recall that an agent’s net payoff is <span class="math display">\[\left( \prod_{j=1}^n \frac{s_j}{1 + s_j} \right) \left( \frac{p_i}{\sum_{j=1}^n p_j} \right) - \left(1 - \prod_{j=1}^n \frac{s_j}{1+s_j} \right) d_i - r(X_s + X_p).\]</span> Here, we want to figure out how we should tweak <span class="math inline">\(r\)</span> in cases where <span class="math inline">\(d_i\)</span> is higher for one of the competitors relative to the others. The parameter <span class="math inline">\(d_i\)</span> is the cost that an agent will face (or thinks they will face) in the event of a disaster, so we can think of an agent with a higher <span class="math inline">\(d_i\)</span> as being more safety conscious.</p>
 		<h2 id="changes-in-d">Changes in <span class="math inline">\(d\)</span></h2>
