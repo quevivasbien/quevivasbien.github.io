@@ -22,7 +22,8 @@ const beautiful_things = [
   "math on a whiteboard",
   "my lobster geezerfriend",
   "clicky keyboards",
-  "the eye of the beekeeper"
+  "the eye of the beekeeper",
+  "the Rust programming language",
 ];
 
 function run_beautiful() {
