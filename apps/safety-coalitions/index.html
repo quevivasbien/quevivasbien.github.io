@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <title>Safety coalitions in risky innovation</title>
+    <link rel="stylesheet" href="index.css" type="text/css" />
+    <link rel="shortcut icon" href="/img/favicon.png" />
+  </head>
+  <body>
+    <h1>Safety coalitions in risky innovation</h1>
+
+    <p id="what-is">What is this? <button id="expand-explanation" class="button-depressed">[hide]</button></p>
+    <div id="explanation">
+      <p>
+        This applet simulates a game where two or more players compete to develop a risky technology. The players want to be the first to create the technology but have to make a tradeoff between speed and safety. Each player has two strategies available:
+      </p>
+      <ul>
+        <li>Baseline strategy: The player focuses on creating the technology as soon as possible.</li>
+        <li>Safe strategy: The player proceeds more carefully, reducing risk but potentially taking longer to create the technology.</li>
+      </ul>
+      <p>
+        In short, the baseline strategy is high performance but high risk, while the safe strategy is low performance but low risk.
+      </p>
+      <p>
+        The first player to create the technology gets a payoff of 1. However, depending on their strategy, they may cause a disaster that hurts all the players.
+      </p>
+      <p>
+        Finally, the players who play the safe strategy can form a coalition: they agree to share resources (e.g. intellectual property) which boasts their performance. The performance boast scales with the number of players who play the safe strategy.
+      </p>
+      <p>
+        You can adjust the parameters of the game and run the simulation to see how the players' strategies affect the outcome. The result shown is the best possible <a href="https://en.wikipedia.org/wiki/Correlated_equilibrium">correlated equilibrium</a> for the game.
+      </p>
+    </div>
+
+    <br>
+    <div id="controls"></div>
+
+    <button id="run">Run</button>
+
+    <h2>Result:</h2>
+    <div id="result">
+      <p>Player payoffs: <span class="result-inner" id="values">--</span></p>
+      <p>Strategies: <span class="result-inner" id="probas">--</span></p>
+      <p>Proba. of disaster: <span class="result-inner" id="proba_d">--</span></p>
+    </div>
+
+    <script type="module" src="index.js"></script>
+  </body>
+</html>
