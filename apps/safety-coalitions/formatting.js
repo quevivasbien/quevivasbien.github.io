@@ -1,6 +1,5 @@
 export function fill_blocks(values, parent, color0 = "#C6000D", color1 = "#6CC600") {
     parent.replaceChildren();
-    console.log(values);
     for (let v of values) {
         v = Math.max(0, Math.min(1, v));
         let block = document.createElement("span");

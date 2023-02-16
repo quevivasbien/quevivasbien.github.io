@@ -2,15 +2,25 @@
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
-    <title>Safety coalitions in risky innovation</title>
+    <title>Safety coalitions in risky innovation races</title>
     <link rel="stylesheet" href="index.css" type="text/css" />
-    <link rel="shortcut icon" href="/img/favicon.png" />
+
+    <!-- katex for math -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" integrity="sha384-vKruj+a13U8yHIkAyGgK1J3ArTLzrFGBbBc0tDp4ad/EyewESeXE/Iv67Aj8gKZ0" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js" integrity="sha384-PwRUT/YqbnEjkZO0zZxNqcxACrXe+j766U2amXcgMg5457rve2Y7I6ZJSm2A0mS4" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
   </head>
   <body>
-    <h1>Safety coalitions in risky innovation</h1>
+    <h1>Safety coalitions in risky innovation races</h1>
 
-    <p id="what-is">What is this? <button id="expand-explanation" class="button-depressed">[hide]</button></p>
+    <nav>
+      <button id="show-explanation" class="button-depressed">Explanation</button>
+      <button id="show-solver">Solver</button>
+    </nav>
+
     <div id="explanation">
+      <h2>Model</h2>
       <p>
         This applet simulates a game where two or more players compete to develop a risky technology. The players want to be the first to create the technology but have to make a tradeoff between speed and safety. Each player has two strategies available:
       </p>
@@ -25,23 +35,70 @@
         The first player to create the technology gets a payoff of 1. However, depending on their strategy, they may cause a disaster that hurts all the players.
       </p>
       <p>
-        Finally, the players who play the safe strategy can form a coalition: they agree to share resources (e.g. intellectual property) which boasts their performance. The performance boast scales with the number of players who play the safe strategy.
+        Finally, the players who play the safe strategy can form a coalition: they agree to share resources (e.g. intellectual property) which boosts their performance. The performance boast scales with the number of players who play the safe strategy.
       </p>
       <p>
-        You can adjust the parameters of the game and run the simulation to see how the players' strategies affect the outcome. The result shown is the best possible <a href="https://en.wikipedia.org/wiki/Correlated_equilibrium">correlated equilibrium</a> for the game.
+        On the solver page, you can adjust the parameters of the game and run the simulation to see how the players' strategies affect the outcome. The result shown is the best possible <a href="https://en.wikipedia.org/wiki/Correlated_equilibrium">correlated equilibrium</a> for the game.
       </p>
-    </div>
 
-    <br>
-    <div id="controls"></div>
+      <h2>Parameters</h2>
+      <p>
+        On the solver page, you can adjust each of the following parameters:
+        <ul>
+          <li><b>Number of players:</b> hopefully self-explanatory</li>
+          <li><b>Base risk:</b> the probability that a player who wins with the baseline (risky) strategy will cause a disaster</li>
+          <li<b>Risk reduction:</b> the amount by which the base risk is reduced when a player plays the safe strategy. 0 means that the safe strategy is equally risky, while 1 means that the safe strategy eliminates all risk.</li>
+          <li><b>Performance penalty:</b> the amount by which a player's performance is reduced by playing the safe strategy. The baseline (risky) strategy has a performance of 1, so the performance of the safe strategy (with zero coalition scaling) will be 1 minus this penalty.</li>
+          <li><b>Disaster cost:</b> The cost that all players must pay if the winner causes a disaster</li>
+          <li><b>Coalition scaling:</b> How the performance scales for the safe strategy as more players play the safe strategy. The performance of the safe strategy is the base performance (after applying the penalty), times the number of safe players to the power of this scaling parameter.</li>
+        </ul>
 
-    <button id="run">Run</button>
+        Note that most of these parameters can be adjusted individually for each player by ticking the "toggle individual sliders" box.
+      </p>
 
-    <h2>Result:</h2>
-    <div id="result">
-      <p>Player payoffs: <span class="result-inner" id="values">--</span></p>
-      <p>Strategies: <span class="result-inner" id="probas">--</span></p>
-      <p>Proba. of disaster: <span class="result-inner" id="proba_d">--</span></p>
+      <h2>Result</h2>
+      <p>
+        The result shows the expected payoff for each player, the probability that they will play the safe strategy, and the probability that the winner will cause a disaster.
+      </p>
+      <p>
+        The probability that each player plays the safe strategy is shown with a colored block: red means that they will always play the risky strategy, and green means that they will always play the safe strategy.
+      </p>
+
+    <h2>Math</h2>
+    <p>
+      The game is modeled as a <a href="https://en.wikipedia.org/wiki/Normal_form_game">normal form game</a> with \(n\) players. Each player chooses either the baseline (risky) strategy \(r\), or the safe strategy \(s\). The risky strategy has associated performance \(p_r\) and risk \(q_r\), while the safe strategy has associated performance \(p_s\) and risk \(q_s\). We assume that
+      \[p_r > p_s \text{ and } q_r > q_s.\]
+      In the applet, \(p_r\) is fixed as 1, and \(p_s\) is determined based on the performance penalty:
+      \[p_s = 1 - \text{performance penalty}\]
+      \(q_r\) is set as the base risk, and \(q_s\) is determined based on \(q_r\) and the risk reduction:
+      \[q_s = q_r \cdot (1 - \text{risk reduction}).\]
+      If the coalition scaling factor \(c\) is greater than 0, then the performance of the safe strategy is boosted by the number of players who play the safe strategy:
+      \[p_s^* = p_s \cdot n_s^c\]
+      where \(n_s\) is the number of players who play the safe strategy.
+    </p>
+    <p>
+      The expected payoff for player \(i\) is:
+      \[\Pr\{i \text{ wins}\} - d_i \Pr\{\text{winner causes disaster}\}\]
+      where
+      \[\Pr\{i \text{ wins}\} = \frac{p_i}{\sum_{j=1}^n p_j}\]
+      and
+      \[\Pr\{\text{winner causes disaster}\} = \frac{\sum_{j=1}^n p_j q_j}{\sum_{j=1}^n p_j}. \]
+      Notice that the probability of each player winning is a simple contest success function, and the probability of a disaster is simply each player's risk multiplied by the probability of them winning.
+    </p>
+  </div>
+
+
+    <div id="solver" style="display: none">
+      <div id="controls"></div>
+
+      <button id="run">Run</button>
+
+      <h2>Result:</h2>
+      <div id="result">
+        <p>Player payoffs: <span class="result-inner" id="values">--</span></p>
+        <p>Strategies: <span class="result-inner" id="probas">--</span></p>
+        <p>Proba. of disaster: <span class="result-inner" id="proba_d">--</span></p>
+      </div>
     </div>
 
     <script type="module" src="index.js"></script>

@@ -6,8 +6,10 @@ init().then(() => {
   setup();
 });
 
-const explain_button = document.getElementById("expand-explanation");
+const explain_button = document.getElementById("show-explanation");
 const explanation = document.getElementById("explanation");
+const solver_button = document.getElementById("show-solver");
+const solver = document.getElementById("solver");
 const run_button = document.getElementById("run");
 
 function setup() {
@@ -15,7 +17,22 @@ function setup() {
 
   explain_button.addEventListener(
     "click",
-    toggle_explanation
+    () => {
+      explain_button.className = "button-depressed";
+      solver_button.classList = [];
+      explanation.style.display = "block";
+      solver.style.display = "none";
+    }
+  );
+
+  solver_button.addEventListener(
+    "click",
+    () => {
+      solver_button.className = "button-depressed";
+      explain_button.classList = [];
+      solver.style.display = "block";
+      explanation.style.display = "none";
+    }
   );
   
   run_button.addEventListener(
@@ -49,17 +66,4 @@ function view_result(returnObj) {
   document.getElementById("values").innerHTML = returnObj.values().map(x => round_to(x, 2));
   fill_blocks(returnObj.probas(), document.getElementById("probas"));
   document.getElementById("proba_d").innerHTML = round_to(returnObj.proba_d(), 2);
-}
-
-function toggle_explanation() {
-  if (explanation.style.display == "none") {
-    explanation.style.display = "block";
-    explain_button.innerHTML = "[hide]";
-    explain_button.className = "button-depressed";
-  }
-  else {
-    explanation.style.display = "none";
-    explain_button.innerHTML = "[expand]";
-    explain_button.classList = [];
-  }
 }

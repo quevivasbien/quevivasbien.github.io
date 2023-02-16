@@ -15,24 +15,16 @@ button {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    padding: 10px;
+    font-size: 1em;
+    margin: 10px;
+    min-width: 100px;
 }
 
 button.button-depressed {
     background-color: #f1f1f1;
     color: black;
-}
-
-#what-is {
-    font-size: 1em;
-    color: #5a5a5af5;
-    border-radius: 10px;
-}
-
-#what-is button {
-    font-size: 0.8em;
-    padding: 10px;
-    margin: 5px;
-    min-width: 75px;
+    font-style: italic;
 }
 
 #explanation {
@@ -64,53 +56,6 @@ label {
     color: #5a5a5af5;
 }
 
-input[type="range"] {
-    -webkit-appearance: none;
-    appearance: none;
-    background: inherit;
-}
-
-input[type="range"]:focus {
-    outline: none;
-}
-
-input[type="range"]::-webkit-slider-runnable-track {
-    height: 5px;
-    cursor: pointer;
-    background: white;
-    border-radius: 2px;
-}
-
-input[type="range"]::-moz-range-track {
-    height: 5px;
-    cursor: pointer;
-    background: white;
-    border-radius: 2px;
-}
-
-input[type="range"]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-    border: 1px solid #000000;
-    height: 15px;
-    width: 15px;
-    border-radius: 50%;
-    background: #3071a9;
-    cursor: pointer;
-    margin-top: -5px;
-}
-
-input[type="range"]::-moz-range-thumb {
-    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-    border: 1px solid #000000;
-    height: 15px;
-    width: 15px;
-    border-radius: 50%;
-    background: #3071a9;
-    cursor: pointer;
-    margin-top: -5px;
-}
-
 .slider-label {
     display: inline-block;
     width: 2em;
@@ -126,15 +71,7 @@ input[type="range"]::-moz-range-thumb {
     cursor: help;
 }
 
-#run {
-    padding: 10px;
-    font-size: 1em;
-    margin: 10px;
-    min-width: 100px;
-}
-
 #result {
-    /* font-size: 1.2em; */
     color: #2c4469f5;
     padding: 10px;
     background-color: #fbfdff;
