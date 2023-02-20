@@ -1,39 +1,51 @@
 import init, { run_sim } from './pkg/wasm_coop_vis.js';
 import { setup_controls, params } from './controls.js';
-import { fill_blocks, round_to } from './formatting.js';
+import { fill_blocks, round_to } from './utils.js';
+import { setup_scenarios } from './scenarios.js';
 
 init().then(() => {
   setup();
 });
 
-const explain_button = document.getElementById("show-explanation");
-const explanation = document.getElementById("explanation");
-const solver_button = document.getElementById("show-solver");
-const solver = document.getElementById("solver");
 const run_button = document.getElementById("run");
+
+const pages = {
+  explanation: {
+    button: document.getElementById("show-explanation"),
+    div: document.getElementById("explanation")
+  },
+  solver: {
+    button: document.getElementById("show-solver"),
+    div: document.getElementById("solver")
+  },
+  scenarios: {
+    button: document.getElementById("show-scenarios"),
+    div: document.getElementById("scenarios")
+  },
+};
+
+export function set_page(page) {
+  for (let p in pages) {
+    if (p == page) {
+      pages[p].button.className = "button-depressed";
+      pages[p].div.style.display = "block";
+    }
+    else {
+      pages[p].button.className = "";
+      pages[p].div.style.display = "none";
+    }
+  }
+}
 
 function setup() {
   setup_controls();
 
-  explain_button.addEventListener(
-    "click",
-    () => {
-      explain_button.className = "button-depressed";
-      solver_button.classList = [];
-      explanation.style.display = "block";
-      solver.style.display = "none";
-    }
-  );
-
-  solver_button.addEventListener(
-    "click",
-    () => {
-      solver_button.className = "button-depressed";
-      explain_button.classList = [];
-      solver.style.display = "block";
-      explanation.style.display = "none";
-    }
-  );
+  for (let p in pages) {
+    pages[p].button.addEventListener(
+      "click",
+      () => set_page(p)
+    );
+  }
   
   run_button.addEventListener(
     "click",
@@ -47,9 +59,11 @@ function setup() {
       }
     }
   );
+
+  setup_scenarios();
 }
 
-function run() {
+export function run() {
   let pr = Array(parseInt(params.num_players)).fill(1);
   let ps = params.penalty.map(x => 1 - x);
   let qs = params.base_r.map((qr, i) => qr * (1 - params.reduce_r[i]));

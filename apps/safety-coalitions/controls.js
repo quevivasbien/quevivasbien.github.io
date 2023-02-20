@@ -1,13 +1,45 @@
+import { expand_scalar } from "./utils.js";
+
 // defines initial param values
-// values are modified by sliders
-export const params = {
+const DEFAULT_PARAMS = {
     num_players: 2,
-    penalty: [0.1, 0.1],
-    base_r: [0.2, 0.2],
-    reduce_r: [1., 1.],
-    d: [1., 1.],
+    penalty: 0.1,
+    base_r: 0.2,
+    reduce_r: 1.,
+    d: 1.,
     scaling: 0.,
 };
+
+export class Params {
+    constructor(num_players, base_r, reduce_r, penalty, d, scaling) {
+        this.num_players = num_players;
+        this.base_r = expand_scalar(base_r, num_players);
+        this.reduce_r = expand_scalar(reduce_r, num_players);
+        this.penalty = expand_scalar(penalty, num_players);
+        this.d = expand_scalar(d, num_players);
+        this.scaling = scaling;
+    }
+
+    set_from(other) {
+        this.num_players = other.num_players;
+        this.base_r = other.base_r.slice();
+        this.reduce_r = other.reduce_r.slice();
+        this.penalty = other.penalty.slice();
+        this.d = other.d.slice();
+        this.scaling = other.scaling;
+    }
+}
+
+// param object is used to store current param values
+// values are modified by sliders
+export const params = new Params(
+    DEFAULT_PARAMS.num_players,
+    DEFAULT_PARAMS.base_r,
+    DEFAULT_PARAMS.reduce_r,
+    DEFAULT_PARAMS.penalty,
+    DEFAULT_PARAMS.d,
+    DEFAULT_PARAMS.scaling
+);
 
 const SLIDER_ATTRS = {
     num_players: {
@@ -47,7 +79,7 @@ const SLIDER_ATTRS = {
     },
     scaling: {
         name: "Coalition scaling",
-        description: "Performance multiplier for each player who plays safe strategy.",
+        description: "Performance multiplier for each additional player who plays the safe strategy",
         min: 0,
         max: 1,
         step: 0.05,
@@ -250,7 +282,7 @@ function setup_control(id, multicontrol = false) {
     ctrl_div.appendChild(slider_div);
 }
 
-function update_multi_controls() {
+export function update_multi_controls() {
     // create or update sliders with option to control players individually
     resize_params();
     for (let id of ["base_r", "reduce_r", "penalty", "d"]) {

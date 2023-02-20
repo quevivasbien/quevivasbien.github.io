@@ -27,8 +27,8 @@ button.button-depressed {
     font-style: italic;
 }
 
-#explanation {
-    font-size: 0.8em;
+.pale-box {
+    font-size: 0.9em;
     color: #5a5a5af5;
     padding: 10px;
     background-color: #fbfdff;

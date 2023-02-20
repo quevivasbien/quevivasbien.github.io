@@ -33,3 +33,15 @@ function rgb_to_color(rgb) {
 export function round_to(x, n) {
     return Math.round(x * 10 ** n) / 10 ** n;
 }
+
+export function expand_scalar(x, n) {
+    if (Array.isArray(x)) {
+        if (x.length != n) {
+            throw "array must have length equal to n";
+        }
+        return x;
+    }
+    else {
+        return Array(n).fill(x);
+    }
+}
