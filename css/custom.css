@@ -39,7 +39,7 @@ figcaption {
 }
 
 .btn-group button {
-  font-family: "Fira Sans", sans-serif;
+  font-family: "Atkinson Hyperlegible", sans-serif;
   border: 1px solid #ff9e00; /* Yellow border */
   padding: 10px 24px; /* Some padding */
   cursor: pointer; /* Pointer/hand icon */
@@ -208,7 +208,7 @@ figcaption {
 /* Created by @flamekaizar */
 .top-nav a.logo,
 .logo {
-    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Atkinson Hyperlegible', sans-serif;
     font-weight: 700;
     font-size: 27px;
     color: #f0f0f0;
@@ -223,7 +223,7 @@ figcaption {
     text-transform: capitalize;
 }
 .top-nav .item-nav {
-    font-family: "Lato", sans-serif;
+    font-family: "Atkinson Hyperlegible", sans-serif;
     font-size: 15px;
     font-weight: 1000;
     color: #A4A4A4;
@@ -237,7 +237,7 @@ figcaption {
 }
 p.p-intro {
     color: #f64d1c;
-    font-family: "Fira Sans", sans-serif;
+    font-family: "Atkinson Hyperlegible", sans-serif;
     font-size: 13px;
     letter-spacing: 2px;
     font-weight: 700;
@@ -272,14 +272,14 @@ img.img-intro {
 .post { margin-bottom: 80px }
 .content .post {
     color: #adadad;
-    font-family: "Fira Sans", sans-serif;
+    font-family: "Atkinson Hyperlegible", sans-serif;
     font-size: 15px;
     font-weight: 400;
 }
 .content .post a { text-decoration: none }
 .content .post h1 {
     color: #f0f0f0;
-    font-family: "Lato", sans-serif;
+    font-family: "Atkinson Hyperlegible", sans-serif;
     font-size: 22px;
     font-weight: 400;
     position: relative;
@@ -348,7 +348,7 @@ a.read-more:hover {
     position: relative;
     margin-top: 60px;
     color: #adadad;
-    font-family: "Fira Sans", sans-serif;
+    font-family: "Atkinson Hyperlegible", sans-serif;
     font-size: 12px;
     font-weight: 700;
     text-transform: uppercase;
@@ -371,7 +371,7 @@ a.read-more:hover {
 footer .btn {
     color: #1a1110;
     font-size: 13px;
-    font-family: "Fira Sans";
+    font-family: "Atkinson Hyperlegible";
     font-weight: 700;
     letter-spacing: 2px;
 }
@@ -387,7 +387,7 @@ footer .social li a:hover {
 .foot-cp { padding-top: 40px }
 .foot-cp a {
     color: #A5A5A5;
-    font-family: "Lato", sans-serif;
+    font-family: "Atkinson Hyperlegible", sans-serif;
     font-size: 15px;
     font-weight: 400;
     text-transform: uppercase;
