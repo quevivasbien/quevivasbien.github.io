@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="../../favicon.png" />
+		<meta name="viewport" content="width=device-width" />
+		<title>Que vivas bien</title>
+    
+		<!-- Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+		<!-- Font Awesome -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+		<!-- Katex stylesheet -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" integrity="sha384-vKruj+a13U8yHIkAyGgK1J3ArTLzrFGBbBc0tDp4ad/EyewESeXE/Iv67Aj8gKZ0" crossorigin="anonymous">
+		<style>
+		</style>
+
+		<meta http-equiv="content-security-policy" content="">
+		<link href="../../_app/immutable/assets/_layout.0e4a89f2.css" rel="stylesheet">
+		<link rel="modulepreload" href="../../_app/immutable/entry/start.1b9205ad.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/index.12bdb194.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/singletons.5759d5a3.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/paths.93e8174e.js">
+		<link rel="modulepreload" href="../../_app/immutable/entry/app.83c6adf6.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/preload-helper.41c905a7.js">
+		<link rel="modulepreload" href="../../_app/immutable/entry/_layout.svelte.c653bda0.js">
+		<link rel="modulepreload" href="../../_app/immutable/entry/_layout.ts.822e9be0.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/_layout.79cb23d1.js">
+		<link rel="modulepreload" href="../../_app/immutable/entry/posts-layout.svelte.0785baf6.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/TextContent.7e86015a.js">
+		<link rel="modulepreload" href="../../_app/immutable/entry/posts-non-euclidean-gravity-page.svelte.md.5837e806.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/Figure.ea279e8a.js">
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents">
+
+
+<div class="max-w-xl mx-auto sticky top-0 z-10"><nav class="bg-red-400 sm:rounded-b-md shadow-md"><div class="mx-auto px-2 sm:px-6 lg:px-8"><div class="relative flex h-16 items-center justify-between"><div class="flex flex-1 items-center sm:items-stretch justify-start"><div class="flex flex-shrink-0 items-center">
+                <a href="/" class="text-white font-bold text-2xl hover:text-white">Que vivas bien</a></div></div>
+            
+            <div class="absolute inset-y-0 right-0 flex items-center sm:hidden">
+                <button type="button" class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false"><span class="sr-only">Open main menu</span>
+                  
+                  <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path></svg>
+                  
+                  <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg></button></div>
+            
+            <div class="absolute inset-y-0 right-0 hidden sm:flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"><a href="/" class="text-white hover:bg-rose-100 hover:text-gray-600 px-2 py-2 rounded-md text-sm font-medium">Home</a>
+                <a href="/about/" class="text-white hover:bg-rose-100 hover:text-gray-600 px-2 py-2 rounded-md text-sm font-medium">About</a>
+                <a href="/archive/" class="text-white hover:bg-rose-100 hover:text-gray-600 px-2 py-2 rounded-md text-sm font-medium">Archive</a></div></div></div>
+      
+        
+        </nav></div>
+
+<div class="max-w-3xl mx-auto px-2 sm:px-6 lg:px-8 pt-2"><div class="bg-white rounded-md shadow-md p-4 space-y-3">
+
+<h1>Non-euclidean gravity</h1>
+<p>So I was reviewing linear algebra today and found myself asking the
+question, “How would gravity work in a space with a different notion of
+distance?”</p>
+
+<p>In normal (Euclidean) space, distance is measured with the Euclidean
+norm</p>
+<div class="math math-display"><!-- HTML_TAG_START --><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi mathvariant="normal">∥</mi><mi>x</mi><mi mathvariant="normal">∥</mi><mo>=</mo><msup><mrow><mo fence="true">(</mo><mo>∑</mo><msubsup><mi>x</mi><mi>i</mi><mn>2</mn></msubsup><mo fence="true">)</mo></mrow><mrow><mn>1</mn><mi mathvariant="normal">/</mi><mn>2</mn></mrow></msup></mrow><annotation encoding="application/x-tex">\| x \| = \left( \sum x_i^2
+\right)^{1/2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">∥</span><span class="mord mathnormal">x</span><span class="mord">∥</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.0779em;vertical-align:-0.65em;"></span><span class="minner"><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size2">(</span></span><span class="mop op-symbol large-op" style="position:relative;top:0em;">∑</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-2.453em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size2">)</span></span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:1.4279em;"><span style="top:-3.6029em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1/2</span></span></span></span></span></span></span></span></span></span></span></span></span><!-- HTML_TAG_END --></div>
+<p>so the distance between vectors <em>x</em> and <em>y</em> is</p>
+<div class="math math-display"><!-- HTML_TAG_START --><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>d</mi><mo stretchy="false">(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo stretchy="false">)</mo><mo stretchy="false">)</mo><mo>=</mo><mi mathvariant="normal">∥</mi><mi>x</mi><mo>−</mo><mi>y</mi><mi mathvariant="normal">∥</mi><mo>=</mo><msup><mrow><mo fence="true">(</mo><mo>∑</mo><mo stretchy="false">(</mo><msub><mi>x</mi><mi>i</mi></msub><mo>−</mo><msub><mi>y</mi><mi>i</mi></msub><msup><mo stretchy="false">)</mo><mn>2</mn></msup><mo fence="true">)</mo></mrow><mrow><mn>1</mn><mi mathvariant="normal">/</mi><mn>2</mn></mrow></msup></mrow><annotation encoding="application/x-tex">d(x, y)) = \| x - y \| = \left( \sum
+(x_i - y_i)^2 \right)^{1/2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">d</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mclose">))</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">∥</span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mord">∥</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.0779em;vertical-align:-0.65em;"></span><span class="minner"><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size2">(</span></span><span class="mop op-symbol large-op" style="position:relative;top:0em;">∑</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size2">)</span></span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:1.4279em;"><span style="top:-3.6029em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1/2</span></span></span></span></span></span></span></span></span></span></span></span></span><!-- HTML_TAG_END --></div>
+<p>If the points at <em>x</em> and <em>y</em> have mass <em>m<sub>x</sub></em> and
+<em>m<sub>y</sub></em>, respectively, then Newton’s law of gravity tells us
+that the gravitational force with which <em>x</em> pulls on <em>y</em> is</p>
+<div class="math math-display"><!-- HTML_TAG_START --><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mfrac><mrow><mi>G</mi><mo stretchy="false">(</mo><mi>x</mi><mo>−</mo><mi>y</mi><mo stretchy="false">)</mo><msub><mi>m</mi><mi>x</mi></msub><msub><mi>m</mi><mi>y</mi></msub></mrow><mrow><mi mathvariant="normal">∥</mi><mi>x</mi><mo>−</mo><mi>y</mi><msup><mi mathvariant="normal">∥</mi><mn>3</mn></msup></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{G(x-y)m_x
+m_y}{\|x-y\|^3}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.363em;vertical-align:-0.936em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.427em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">∥</span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mord"><span class="mord">∥</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7401em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">G</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mclose">)</span><span class="mord"><span class="mord mathnormal">m</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">x</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal">m</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">y</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.936em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span><!-- HTML_TAG_END --></div>
+<p>where <em>G</em> is a special “gravitational constant.”</p>
+<p>I programmed in Python a basic simulation that calculated the force
+acting on a particle moving near a much larger mass and then
+experimented with changing the norm used to calculate the gravitational
+force.</p>
+<p>You can see the normal case below. The particle orbits the central mass
+in an ellipse with the central mass at one of the foci just like we see
+in the real world (hats off to Kepler). I’ve added in the background a
+gradient that indicates where the central mass’s gravitational force is
+strongest (keep in mind that all force vectors point toward the center).
+I’ve also added coloration to the path that the orbiting particle
+traces, so it is more yellowish when it is moving quickly.</p>
+<figure class="p-4 items-center border-x-2 rounded-lg"><img class="mx-auto" src="/_app/immutable/assets/l2.efed0497.gif" alt="" id="">
+    </figure>
+<p>The first thing I tried was to use a different norm from the class of
+p-norms. A p-norm has the form</p>
+<div class="math math-display"><!-- HTML_TAG_START --><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi mathvariant="normal">∥</mi><mi>x</mi><msub><mi mathvariant="normal">∥</mi><mi>p</mi></msub><mo>=</mo><msup><mrow><mo fence="true">(</mo><mo>∑</mo><msubsup><mi>x</mi><mi>i</mi><mi>p</mi></msubsup><mo fence="true">)</mo></mrow><mrow><mn>1</mn><mi mathvariant="normal">/</mi><mi>p</mi></mrow></msup></mrow><annotation encoding="application/x-tex">\|x\|_p = \left( \sum x_i^p
+\right)^{1/p}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0361em;vertical-align:-0.2861em;"></span><span class="mord">∥</span><span class="mord mathnormal">x</span><span class="mord"><span class="mord">∥</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">p</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.0779em;vertical-align:-0.65em;"></span><span class="minner"><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size2">(</span></span><span class="mop op-symbol large-op" style="position:relative;top:0em;">∑</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.7823em;"><span style="top:-2.4231em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span><span style="top:-3.1809em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">p</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2769em;"><span></span></span></span></span></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size2">)</span></span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:1.4279em;"><span style="top:-3.6029em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1/</span><span class="mord mathnormal mtight">p</span></span></span></span></span></span></span></span></span></span></span></span></span><!-- HTML_TAG_END --></div>
+<p>for a given <em>p</em>. (You technically only get a
+proper norm for <em>p ≥ 1</em>.) Notice that that Euclidean norm is just the
+p-norm when <em>p = 2</em>. Below I’ve shown the same simulation with various
+other values of <em>p</em>.</p>
+<figure class="p-4 items-center border-x-2 rounded-lg"><img class="mx-auto" src="/_app/immutable/assets/l05.9c3b2e02.gif" alt="p = 0.5" id="">
+    <figcaption class="text-sm text-gray-600 text-center" aria-hidden="true">p = 0.5</figcaption></figure>
+<figure class="p-4 items-center border-x-2 rounded-lg"><img class="mx-auto" src="/_app/immutable/assets/l1.f178add6.gif" alt="p = 1" id="">
+    <figcaption class="text-sm text-gray-600 text-center" aria-hidden="true">p = 1</figcaption></figure>
+<figure class="p-4 items-center border-x-2 rounded-lg"><img class="mx-auto" src="/_app/immutable/assets/linf.ba63911c.gif" alt="p = ∞" id="">
+    <figcaption class="text-sm text-gray-600 text-center" aria-hidden="true">p = ∞</figcaption></figure>
+<p>You can see that each of these behave strangely, since the gravitational
+forces are concentrated in a sort of X-shaped pattern in each. This can
+lead to some unstable behavior like the chaos that’s going on in the
+last image (I don’t think that this was particular to <em>p = ∞</em>; I
+probably could get something similar to happen in the first two by
+changing the particle’s initial position and velocity and the central
+mass.)</p>
+<hr>
+<p>The next thing I tried was to experiment with norms induced by inner
+products. The norm induced by an inner product is</p>
+<div class="math math-display"><!-- HTML_TAG_START --><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi mathvariant="normal">∥</mi><mi>x</mi><msub><mi mathvariant="normal">∥</mi><mrow><mo stretchy="false">⟨</mo><mo stretchy="false">⟩</mo></mrow></msub><mo>=</mo><msqrt><mrow><mo stretchy="false">⟨</mo><mi>x</mi><mo separator="true">,</mo><mi>x</mi><mo stretchy="false">⟩</mo></mrow></msqrt></mrow><annotation encoding="application/x-tex">\|x\|_{\langle \rangle} =
+\sqrt{\langle x, x \rangle}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.1052em;vertical-align:-0.3552em;"></span><span class="mord">∥</span><span class="mord mathnormal">x</span><span class="mord"><span class="mord">∥</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3448em;"><span style="top:-2.5198em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">⟨</span><span class="mclose mtight">⟩</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3552em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.24em;vertical-align:-0.2561em;"></span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9839em;"><span class="svg-align" style="top:-3.2em;"><span class="pstrut" style="height:3.2em;"></span><span class="mord" style="padding-left:1em;"><span class="mopen">⟨</span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">x</span><span class="mclose">⟩</span></span></span><span style="top:-2.9439em;"><span class="pstrut" style="height:3.2em;"></span><span class="hide-tail" style="min-width:1.02em;height:1.28em;"><svg xmlns="http://www.w3.org/2000/svg" width='400em' height='1.28em' viewBox='0 0 400000 1296' preserveAspectRatio='xMinYMin slice'><path d='M263,681c0.7,0,18,39.7,52,119
+c34,79.3,68.167,158.7,102.5,238c34.3,79.3,51.8,119.3,52.5,120
+c340,-704.7,510.7,-1060.3,512,-1067
+l0 -0
+c4.7,-7.3,11,-11,19,-11
+H40000v40H1012.3
+s-271.3,567,-271.3,567c-38.7,80.7,-84,175,-136,283c-52,108,-89.167,185.3,-111.5,232
+c-22.3,46.7,-33.8,70.3,-34.5,71c-4.7,4.7,-12.3,7,-23,7s-12,-1,-12,-1
+s-109,-253,-109,-253c-72.7,-168,-109.3,-252,-110,-252c-10.7,8,-22,16.7,-34,26
+c-22,17.3,-33.3,26,-34,26s-26,-26,-26,-26s76,-59,76,-59s76,-60,76,-60z
+M1001 80h400000v40h-400000z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2561em;"><span></span></span></span></span></span></span></span></span></span><!-- HTML_TAG_END --></div>
+<p>and the Euclidean norm is induced by the Euclidean inner product, or
+“dot product,”</p>
+<div class="math math-display"><!-- HTML_TAG_START --><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mo stretchy="false">⟨</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo stretchy="false">⟩</mo><mo>=</mo><mi>x</mi><mo>⋅</mo><mi>y</mi><mo>=</mo><mo>∑</mo><msub><mi>x</mi><mi>i</mi></msub><msub><mi>y</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">\langle x, y \rangle = x \cdot y =
+\sum x_i y_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">⟨</span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mclose">⟩</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.4445em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.6em;vertical-align:-0.55em;"></span><span class="mop op-symbol large-op" style="position:relative;top:0em;">∑</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span><!-- HTML_TAG_END --></div>
+<p>For any positive-definite matrix <em>M</em>,</p>
+<div class="math math-display"><!-- HTML_TAG_START --><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mo stretchy="false">⟨</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><msub><mo stretchy="false">⟩</mo><mi>M</mi></msub><mo>=</mo><msup><mi>x</mi><mi>T</mi></msup><mi>M</mi><mi>y</mi></mrow><annotation encoding="application/x-tex">\langle x, y \rangle_M = x^T M
+y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">⟨</span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mclose"><span class="mclose">⟩</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">M</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.0858em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8913em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span></span></span></span></span></span></span></span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span></span></span></span></span><!-- HTML_TAG_END --></div>
+<p>is a valid inner product. With this in mind, I was able to run my
+simulation with norms induced by inner products generated from various
+positive-definite matrices. You can see the results below.</p>
+<figure class="p-4 items-center border-x-2 rounded-lg"><img class="mx-auto" src="/_app/immutable/assets/1-110.b4c8bebe.gif" alt="M = [ 2 -1 ; -1 1 ]" id="">
+    <figcaption class="text-sm text-gray-600 text-center" aria-hidden="true">M = [ 2 -1 ; -1 1 ]</figcaption></figure>
+<figure class="p-4 items-center border-x-2 rounded-lg"><img class="mx-auto" src="/_app/immutable/assets/1110.0afbc1b7.gif" alt="M = [ 2 1 ; 1 1 ]" id="">
+    <figcaption class="text-sm text-gray-600 text-center" aria-hidden="true">M = [ 2 1 ; 1 1 ]</figcaption></figure>
+<figure class="p-4 items-center border-x-2 rounded-lg"><img class="mx-auto" src="/_app/immutable/assets/2001.93f51c81.gif" alt="M = [ 4 0 ; 0 1 ]" id="">
+    <figcaption class="text-sm text-gray-600 text-center" aria-hidden="true">M = [ 4 0 ; 0 1 ]</figcaption></figure>
+<p>These didn’t turn out to be quite as exciting as I thought they might
+be, although they are still reasonably interesting: it looks like the
+force field is simply transformed linearly, with the given
+transformation having something to do with the matrix used to generate
+the norm. The particles’ orbits still appear to be ellipses, although
+the center mass is no longer positioned at a focus of the ellipse. I can
+see myself spending a lot of time figuring out what exactly is going on
+here, but I’ve already spent way too much time on this for now, so that
+will have to wait for another time.</p></div></div>
+<div class="max-w-xs mx-auto py-4"><footer class="bg-red-400 rounded-lg shadow-md">
+        <div class="flex flex-row justify-center"><a class="flex mx-4 my-2 text-2xl text-white" href="https://github.com/quevivasbien/"><i class="fab fa-github"></i></a>
+                <a class="flex mx-4 my-2 text-2xl text-white" href="mailto:jensenm@uchicago.edu"><i class="fa fa-envelope"></i></a>
+                <a class="flex mx-4 my-2 text-2xl text-white" href="https://www.linkedin.com/in/mckaydjensen/"><i class="fab fa-linkedin"></i></a></div></footer></div>
+<div class="flex flex-col items-center justify-center pb-3"><div>goodness, truth, and <span>galaxies</span></div></div>
+
+
+			
+			<script>
+				{
+					__sveltekit_zf7j76 = {
+						env: {},
+						base: new URL("../..", location).pathname.slice(0, -1),
+						element: document.currentScript.parentElement
+					};
+
+					const data = [null,null,null];
+
+					Promise.all([
+						import("../../_app/immutable/entry/start.1b9205ad.js"),
+						import("../../_app/immutable/entry/app.83c6adf6.js")
+					]).then(([kit, app]) => {
+						kit.start(app, __sveltekit_zf7j76.element, {
+							node_ids: [0, 2, 22],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>

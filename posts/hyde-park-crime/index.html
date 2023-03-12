@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="../../favicon.png" />
+		<meta name="viewport" content="width=device-width" />
+		<title>Que vivas bien</title>
+    
+		<!-- Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+		<!-- Font Awesome -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+		<!-- Katex stylesheet -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" integrity="sha384-vKruj+a13U8yHIkAyGgK1J3ArTLzrFGBbBc0tDp4ad/EyewESeXE/Iv67Aj8gKZ0" crossorigin="anonymous">
+		<style>
+		</style>
+
+		<meta http-equiv="content-security-policy" content="">
+		<link href="../../_app/immutable/assets/_layout.0e4a89f2.css" rel="stylesheet">
+		<link rel="modulepreload" href="../../_app/immutable/entry/start.1b9205ad.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/index.12bdb194.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/singletons.5759d5a3.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/paths.93e8174e.js">
+		<link rel="modulepreload" href="../../_app/immutable/entry/app.83c6adf6.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/preload-helper.41c905a7.js">
+		<link rel="modulepreload" href="../../_app/immutable/entry/_layout.svelte.c653bda0.js">
+		<link rel="modulepreload" href="../../_app/immutable/entry/_layout.ts.822e9be0.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/_layout.79cb23d1.js">
+		<link rel="modulepreload" href="../../_app/immutable/entry/posts-layout.svelte.0785baf6.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/TextContent.7e86015a.js">
+		<link rel="modulepreload" href="../../_app/immutable/entry/posts-hyde-park-crime-page.svelte.61480b19.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/Figure.ea279e8a.js">
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents">
+
+
+<div class="max-w-xl mx-auto sticky top-0 z-10"><nav class="bg-red-400 sm:rounded-b-md shadow-md"><div class="mx-auto px-2 sm:px-6 lg:px-8"><div class="relative flex h-16 items-center justify-between"><div class="flex flex-1 items-center sm:items-stretch justify-start"><div class="flex flex-shrink-0 items-center">
+                <a href="/" class="text-white font-bold text-2xl hover:text-white">Que vivas bien</a></div></div>
+            
+            <div class="absolute inset-y-0 right-0 flex items-center sm:hidden">
+                <button type="button" class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false"><span class="sr-only">Open main menu</span>
+                  
+                  <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path></svg>
+                  
+                  <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg></button></div>
+            
+            <div class="absolute inset-y-0 right-0 hidden sm:flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"><a href="/" class="text-white hover:bg-rose-100 hover:text-gray-600 px-2 py-2 rounded-md text-sm font-medium">Home</a>
+                <a href="/about/" class="text-white hover:bg-rose-100 hover:text-gray-600 px-2 py-2 rounded-md text-sm font-medium">About</a>
+                <a href="/archive/" class="text-white hover:bg-rose-100 hover:text-gray-600 px-2 py-2 rounded-md text-sm font-medium">Archive</a></div></div></div>
+      
+        
+        </nav></div>
+
+<div class="max-w-3xl mx-auto px-2 sm:px-6 lg:px-8 pt-2"><div class="bg-white rounded-md shadow-md p-4 space-y-3">
+
+<h1>Hyde Park crime map</h1>
+
+<p>The University of Chicago Police Department has <a href="https://incidentreports.uchicago.edu/incidentReportArchive.php">a site</a> where you can see the various incidents reported to the department each day.
+    I wanted to be able to visualize where these incidents were concentrated, and
+    since each event is labeled with an address, I figured I could create a map to
+    do that.
+</p>
+
+
+
+<figure class="p-4 items-center border-x-2 rounded-lg"><img class="mx-auto" src="/_app/immutable/assets/ucpd_map2.9aa7f174.png" alt="" id="">
+    </figure>
+<p>To create this, I used Python&#39;s Requests and Beautiful Soup libraries to
+    scrape the incident report archives, gathering all incidents from 1
+    September 2019 to 1 September 2020. I then cleaned up the data and used the <a href="https://pypi.org/project/geocoder/">Geocoder</a>
+    Python library to get GPS coordinates for each incident address. (I wasn&#39;t
+    able to get coordinates for some events that didn&#39;t occur at proper numeric
+    addresses.) The final product is just a Matplotlib scatterplot of those
+    coordinates overlaid on an
+    <a href="https://www.openstreetmap.org/">OpenStreetMap</a> view of Hyde Park.
+</p>
+<p>You can see that most incidents are concentrated at the University of
+    Chicago hospital, with a few on the university campus, and most of the rest
+    around the main stores and other businesses in the area. There are, of
+    course, a significant number of incidents in residential areas as well.
+</p>
+<hr>
+<p>The incidents also have information about when they were reported, so I
+    generated plots of the days and times of day that they were generally
+    reported:
+</p>
+<figure class="p-4 items-center border-x-2 rounded-lg"><img class="mx-auto" src="/_app/immutable/assets/hyde_park_daily_incidents.653580c4.png" alt="" id="">
+    </figure>
+<figure class="p-4 items-center border-x-2 rounded-lg"><img class="mx-auto" src="/_app/immutable/assets/hyde_park_hourly_incidents.21f417b7.png" alt="" id="">
+    </figure>
+<p>The daily counts are interesting -- you can clearly see a sizable decrease
+    in crimes during the holidays, and the unrest in May/June shows up as well.
+    The hourly counts are not quite what I expected; I found it odd that most
+    crimes were committed in the middle of the day, although I guess that is
+    when most people are out and about.
+</p>
+<p>I also broke down the hourly counts by type of crime, as you can see below.
+</p>
+<figure class="p-4 items-center border-x-2 rounded-lg"><img class="mx-auto" src="/_app/immutable/assets/thefts_robberies_by_hour.6b334c62.png" alt="" id="">
+    </figure>
+<figure class="p-4 items-center border-x-2 rounded-lg"><img class="mx-auto" src="/_app/immutable/assets/violent_crimes_hourly.2554958e.png" alt="" id="">
+    </figure>
+<p>Overall, the data are interesting and worth perusing for anyone who lives in
+    Hyde Park. I&#39;m sure there are many more insights that could be extracted
+    from the data I collected.
+</p></div></div>
+<div class="max-w-xs mx-auto py-4"><footer class="bg-red-400 rounded-lg shadow-md">
+        <div class="flex flex-row justify-center"><a class="flex mx-4 my-2 text-2xl text-white" href="https://github.com/quevivasbien/"><i class="fab fa-github"></i></a>
+                <a class="flex mx-4 my-2 text-2xl text-white" href="mailto:jensenm@uchicago.edu"><i class="fa fa-envelope"></i></a>
+                <a class="flex mx-4 my-2 text-2xl text-white" href="https://www.linkedin.com/in/mckaydjensen/"><i class="fab fa-linkedin"></i></a></div></footer></div>
+<div class="flex flex-col items-center justify-center pb-3"><div>goodness, truth, and <span>neat handwriting</span></div></div>
+
+
+			
+			<script>
+				{
+					__sveltekit_zf7j76 = {
+						env: {},
+						base: new URL("../..", location).pathname.slice(0, -1),
+						element: document.currentScript.parentElement
+					};
+
+					const data = [null,null,null];
+
+					Promise.all([
+						import("../../_app/immutable/entry/start.1b9205ad.js"),
+						import("../../_app/immutable/entry/app.83c6adf6.js")
+					]).then(([kit, app]) => {
+						kit.start(app, __sveltekit_zf7j76.element, {
+							node_ids: [0, 2, 20],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>
