@@ -7,19 +7,19 @@
     <h1 class="m-8">Mckay Jensen</h1>
 
     <div class="space-y-4 pb-8">
-        <div class="flex flex-row p-4 bg-white rounded-lg">
-            <div class="flex-auto w-1/2">
+        <div class="flex flex-col sm:flex-row p-4 bg-white rounded-lg">
+            <div class="flex-auto sm:w-1/2">
                 <div class="m-3">
-                    <span class="font-bold">LinkedIn</span>: <a href="https://linkedin.com/in/mckaydjensen">linkedin.com/in/mckaydjensen</a>
+                    <span class="font-bold">LinkedIn</span>: <a class="block sm:inline-block" href="https://linkedin.com/in/mckaydjensen">linkedin.com/in/mckaydjensen</a>
                 </div>
                 <div class="m-3">
-                    <span class="font-bold">GitHub</span>: <a href="https://github.com/quevivasbien">github.com/quevivasbien</a>
+                    <span class="font-bold">GitHub</span>: <a class="block sm:inline-block"  href="https://github.com/quevivasbien">github.com/quevivasbien</a>
                 </div>
                 <div class="m-3">
-                    <span class="font-bold">Website</span>: <a href="https://quevivasbien.github.io">quevivasbien.github.io</a>
+                    <span class="font-bold">Website</span>: <a class="block sm:inline-block"  href="https://quevivasbien.github.io">quevivasbien.github.io</a>
                 </div>
             </div>
-            <div class="flex-auto w-1/2 text-right">
+            <div class="flex-auto sm:w-1/2 sm:text-right">
                 <div class="m-3">
                     Chicago, IL 60615
                 </div>
@@ -65,15 +65,15 @@
         <!-- skills -->
         <div class="p-4 bg-white rounded-lg space-y-4">
             <h2>Technical proficiency</h2>
-            <div class="flex flex-row space-x-4">
-                <div class="flex-auto w-1/2">
+            <div class="flex flex-col sm:flex-row sm:space-x-4">
+                <div class="flex-auto sm:w-1/2">
                     <h3>Well-versed with</h3>
                     <div class="m-2 pl-2 border-l border-zinc-500">
                         <Skill name="Python" details="incl. standard data science, ML, &amp; numeric packages" />
                         <Skill name="Julia" />
                     </div>
                 </div>
-                <div class="flex-auto w-1/2">
+                <div class="flex-auto sm:w-1/2">
                     <h3>Confident with</h3>
                     <div class="m-2 pl-2 border-l border-zinc-500">
                         <Skill name="Rust" details="incl. wasm-pack &amp; pymc3"/>
