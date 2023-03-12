@@ -1,0 +1,37 @@
+{
+  "name": "quevivasbien-site",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "vite dev",
+    "build": "python process_posts.py && vite build",
+    "preview": "python process_posts.py && vite preview",
+    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+    "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+    "gh-pages": "npm run build && touch build/.nojekyll && npx gh-pages -d build -t true"
+  },
+  "devDependencies": {
+    "@sveltejs/adapter-auto": "^2.0.0",
+    "@sveltejs/adapter-static": "^2.0.1",
+    "@sveltejs/kit": "^1.5.0",
+    "@types/katex": "^0.16.0",
+    "@types/plotly.js": "^2.12.18",
+    "autoprefixer": "^10.4.13",
+    "gh-pages": "^5.0.0",
+    "mdsvex": "^0.10.6",
+    "postcss": "^8.4.21",
+    "rehype-katex-svelte": "^1.1.2",
+    "remark-math": "^3.0.0",
+    "svelte": "^3.54.0",
+    "svelte-check": "^3.0.1",
+    "tailwindcss": "^3.2.7",
+    "tslib": "^2.4.1",
+    "typescript": "^4.9.3",
+    "vite": "^4.0.0"
+  },
+  "type": "module",
+  "dependencies": {
+    "katex": "^0.16.4",
+    "plotly.js-basic-dist": "^2.18.2"
+  }
+}

@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply bg-gray-100;
+        @apply text-gray-900;
+    }
+    a {
+        @apply text-red-500;
+        @apply font-bold;
+    }
+    a:hover {
+        @apply text-red-600;
+    }
+    h1 {
+        @apply text-3xl;
+        @apply font-bold;
+        @apply my-3;
+        @apply border-x-4;
+        @apply border-red-500;
+        @apply rounded-lg;
+        @apply px-3;
+        @apply py-2;
+        @apply text-center;
+    }
+    h2 {
+        @apply text-2xl;
+        @apply font-bold;
+        @apply my-2;
+    }
+    h3 {
+        @apply text-xl;
+        @apply font-bold;
+        @apply my-2;
+    }
+    h4 {
+        @apply text-lg;
+        @apply font-bold;
+        @apply my-2;
+    }
+    p {
+        @apply text-base;
+        @apply mb-1;
+    }
+    ul {
+        @apply text-base;
+        @apply mb-1;
+        @apply ml-4;
+        @apply list-inside;
+        @apply list-disc;
+    }
+    ol {
+        @apply text-base;
+        @apply mb-1;
+        @apply ml-4;
+        @apply list-inside;
+        @apply list-decimal;
+    }
+    blockquote {
+        @apply text-base;
+        @apply italic;
+        @apply border-l-4;
+        @apply border-red-500;
+        @apply pl-4;
+        @apply my-2;
+    }
+}
+
+/* want katex to be the same size as the rest of the text */
+/* for some reason doesn't work unless I don't put it in a @context block */
+.katex {
+    @apply text-base;
+}
+h3 .katex {
+    @apply text-3xl;
+}
+h2 .katex {
+    @apply text-2xl;
+}
+h3 .katex {
+    @apply text-xl;
+}
+
