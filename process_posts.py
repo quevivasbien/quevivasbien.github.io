@@ -3,7 +3,8 @@ import os
 import markdown
 import re
 
-POSTS_JSON = 'src/lib/data/posts.json'
+DATA_DIR = 'src/lib/data/'
+POSTS_JSON = os.path.join(DATA_DIR, 'posts.json')
 POSTS_DIR = 'src/routes/posts/'
 
 def remove_scripts(post_contents: str):
@@ -75,8 +76,10 @@ def process_posts():
         if os.path.isdir(POSTS_DIR + subdir):
             posts.append(process_post(subdir))
     posts.sort(key=lambda post: post['date'] + post['slug'], reverse=True)
+    if not os.path.exists(DATA_DIR):
+        os.makedirs(DATA_DIR)
     with open(POSTS_JSON, 'w') as f:
-        f.write(json.dumps(posts))
+        json.dump(posts, f)
 
 if __name__ == "__main__":
     process_posts()

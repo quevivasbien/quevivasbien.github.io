@@ -32,6 +32,18 @@
             </div>
         </div>
 
+        <!-- education -->
+        <div class="p-4 bg-white rounded-lg space-y-4">
+            <h2>
+                Education
+            </h2>
+            <Position title="PhD in Economics" org="University of Chicago" dates="2020 - current">
+            </Position>
+            <Position title="BS in Computational Mathematics &amp; Economics" org="University of Utah" dates="2015 - 2020">
+                Graduated with 4.0 GPA
+            </Position>
+        </div>
+
         <!-- list of employment -->
         <div class="p-4 bg-white rounded-lg space-y-4">
             <h2>Prior experience</h2>
@@ -49,25 +61,12 @@
             </div>
         </div>
 
-        <!-- education -->
-        <div class="p-4 bg-white rounded-lg space-y-4">
-            <h2>
-                Education
-            </h2>
-            <Position title="PhD in Economics*" org="University of Chicago" dates="2020 - current">
-                *Planned exit April 2023 with master's degree
-            </Position>
-            <Position title="BS in Computational Mathematics &amp; Economics" org="University of Utah" dates="2015-2020">
-                Graduated with 4.0 GPA
-            </Position>
-        </div>
-
         <!-- skills -->
         <div class="p-4 bg-white rounded-lg space-y-4">
             <h2>Technical proficiency</h2>
             <div class="flex flex-col sm:flex-row sm:space-x-4">
                 <div class="flex-auto sm:w-1/2">
-                    <h3>Well-versed with</h3>
+                    <h3>Well-versed in</h3>
                     <div class="m-2 pl-2 border-l border-zinc-500">
                         <Skill name="Python" details="incl. standard data science, ML, &amp; numeric packages" />
                         <Skill name="Julia" />
