@@ -23,7 +23,7 @@ def get_tags(post_contents: str, subdir: str):
     return [tag.strip() for tag in tags.group(1).split(',')] if tags else []
 
 def get_date(post_contents: str, subdir: str):
-    date = re.search(r'<!-- DATE: (\d{4}-\d\d) -->', post_contents)
+    date = re.search(r'<!-- DATE: (\d{4}-\d\d(?:-\d\d)?) -->', post_contents)
     if date is None:
         raise EnvironmentError("No date found for " + subdir)
     return date.group(1).strip()
@@ -70,12 +70,16 @@ def process_post(subdir: str):
     post["preview"] = get_preview(post_contents, post['title'], subdir)
     return post
 
+def _post_orderfn(post):
+    date = post['date'] + '-00' if len(post['date'].split('-')) < 3 else post['date']
+    return date + post['slug']
+
 def process_posts():
     posts = []
     for subdir in os.listdir(POSTS_DIR):
         if os.path.isdir(POSTS_DIR + subdir):
             posts.append(process_post(subdir))
-    posts.sort(key=lambda post: post['date'] + post['slug'], reverse=True)
+    posts.sort(key=_post_orderfn, reverse=True)
     if not os.path.exists(DATA_DIR):
         os.makedirs(DATA_DIR)
     with open(POSTS_JSON, 'w') as f:

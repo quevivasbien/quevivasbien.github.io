@@ -1,5 +1,5 @@
 <!-- DATE: 2023-03 -->
-<!-- TAGS: code, math -->
+<!-- TAGS: programming, math -->
 # Yet another Mandelbrot explorer
 
 I've made quite a few attempts at creating a visualizer for the Mandelbrot set. This has become something of a go-to project for me when learning a new programming language and has been a not-insignificant factor in motivating me to learn some new technologies.
@@ -8,6 +8,6 @@ I have made a few iterations on explorers making use of WebAssembly, starting wi
 
 <!-- ENDPREVIEW -->
 
-I ended up using plain JavaScript (no TypeScript and no web framework) for this, just because importing the wasm inside workers was giving me headaches otherwise. (I'm probably missing something, but as far as I can tell it is currently impossible to import scripts within a web worker in TypeScript. This seems bizarre to me, but it is generally in line with JS's general lack of support for multiprocessing features.)
+I ended up using plain JavaScript (no TypeScript and no web framework) for this, just because importing the wasm inside workers was giving me headaches otherwise. (I'm probably missing something, but as far as I can tell it is currently impossible to import scripts within a web worker in TypeScript, or at least this is still an experimental feature in some major browsers. This seems bizarre to me, but it is generally in line with JS's general lack of support for multiprocessing features.)
 
 You can check out the result [here](https://quevivasbien.github.io/mandelbrot-wasm/).
