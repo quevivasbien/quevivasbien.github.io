@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="../../favicon.png" />
+		<meta name="viewport" content="width=device-width" />
+		<title>Que vivas bien</title>
+    
+		<!-- Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+		<!-- Font Awesome -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+		<!-- Katex stylesheet -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" integrity="sha384-vKruj+a13U8yHIkAyGgK1J3ArTLzrFGBbBc0tDp4ad/EyewESeXE/Iv67Aj8gKZ0" crossorigin="anonymous">
+		<style>
+		</style>
+
+		<meta http-equiv="content-security-policy" content="">
+		<link href="../../_app/immutable/assets/_layout.1497f37d.css" rel="stylesheet">
+		<link rel="modulepreload" href="../../_app/immutable/entry/start.e0bf352c.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/index.d8bf866d.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/singletons.2d6da8f3.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/paths.99a9ccc7.js">
+		<link rel="modulepreload" href="../../_app/immutable/entry/app.1315ce58.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/preload-helper.41c905a7.js">
+		<link rel="modulepreload" href="../../_app/immutable/entry/_layout.svelte.9a03a28c.js">
+		<link rel="modulepreload" href="../../_app/immutable/entry/_layout.ts.822e9be0.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/_layout.79cb23d1.js">
+		<link rel="modulepreload" href="../../_app/immutable/entry/posts-layout.svelte.844151ff.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/TextContent.345ca51e.js">
+		<link rel="modulepreload" href="../../_app/immutable/entry/posts-wiggle-game-page.svelte.md.90916260.js">
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents">
+
+
+<div class="max-w-xl mx-auto sticky top-0 z-10"><nav class="bg-red-400 sm:rounded-b-md shadow-md"><div class="mx-auto px-2 sm:px-6 lg:px-8"><div class="relative flex h-16 items-center justify-between"><div class="flex flex-1 items-center sm:items-stretch justify-start"><div class="flex flex-shrink-0 items-center">
+                <a href="/" class="text-white font-bold text-2xl hover:text-white">Que vivas bien</a></div></div>
+            
+            <div class="absolute inset-y-0 right-0 flex items-center sm:hidden">
+                <button type="button" class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false"><span class="sr-only">Open main menu</span>
+                  
+                  <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path></svg>
+                  
+                  <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg></button></div>
+            
+            <div class="absolute inset-y-0 right-0 hidden sm:flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"><a href="/" class="text-white hover:bg-rose-100 hover:text-gray-600 px-2 py-2 rounded-md text-sm font-medium">Home</a>
+                <a href="/about/" class="text-white hover:bg-rose-100 hover:text-gray-600 px-2 py-2 rounded-md text-sm font-medium">About</a>
+                <a href="/archive/" class="text-white hover:bg-rose-100 hover:text-gray-600 px-2 py-2 rounded-md text-sm font-medium">Archive</a></div></div></div>
+      
+        
+        </nav></div>
+
+<div class="max-w-3xl mx-auto px-2 sm:px-6 lg:px-8 pt-2"><div class="bg-white rounded-md shadow-md p-4 space-y-3">
+
+<h1>Making a multiplayer game with SvelteKit &amp; Firebase</h1>
+<p>A few months back, I created a <a href="https://github.com/quevivasbien/boggle" rel="nofollow">CLI clone</a> of the Boggle word game. This was originally just a toy project I wrote on a weekend to try out some Rust crates for CLIs, but I wanted to return to this idea and see if I could make a browser-based version where multiple players could compete to find words.</p>
+<p>I chose to use SvelteKit for this, since I’ve found Svelte to be a very friendly web framework. I hadn’t previously made any non-static web apps with Svelte, so I also figured this would be good chance to try out some of SvelteKit’s server-side features. I originally intended to build the project with <a href="https://kit.svelte.dev/docs/adapter-node" rel="nofollow">SvelteKit’s Node adapter</a> and host it on an AWS server along with my own database, though after a great deal of fiddling I realized I could accomplish the same objective with much less hassle using Firebase’s <a href="https://firebase.google.com/docs/database" rel="nofollow">realtime database</a>. I also ended up hosting the app on Vercel, instead of GitHub Pages like I have in the past, in order to make use of some of SvelteKit’s SSR features (which are helpful for dynamic page routing).</p>
+
+<p>The latest version is playable <a href="https://wiggle-game.vercel.app" rel="nofollow">here</a>. You can check out the code on <a href="https://github.com/quevivasbien/wiggle" rel="nofollow">GitHub</a>.</p></div></div>
+<div class="max-w-xs mx-auto py-4"><footer class="bg-red-400 rounded-lg shadow-md">
+        <div class="flex flex-row justify-center"><a class="flex mx-4 my-2 text-2xl text-white" href="https://github.com/quevivasbien/"><i class="fab fa-github"></i></a>
+                <a class="flex mx-4 my-2 text-2xl text-white" href="mailto:jensenm@uchicago.edu"><i class="fa fa-envelope"></i></a>
+                <a class="flex mx-4 my-2 text-2xl text-white" href="https://www.linkedin.com/in/mckaydjensen/"><i class="fab fa-linkedin"></i></a></div></footer></div>
+<div class="flex flex-col items-center justify-center pb-3"><div>goodness, truth, and <span>alpine mornings</span></div></div>
+
+
+			
+			<script>
+				{
+					__sveltekit_2c7ln4 = {
+						env: {},
+						base: new URL("../..", location).pathname.slice(0, -1),
+						element: document.currentScript.parentElement
+					};
+
+					const data = [null,null,null];
+
+					Promise.all([
+						import("../../_app/immutable/entry/start.e0bf352c.js"),
+						import("../../_app/immutable/entry/app.1315ce58.js")
+					]).then(([kit, app]) => {
+						kit.start(app, __sveltekit_2c7ln4.element, {
+							node_ids: [0, 2, 31],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>
