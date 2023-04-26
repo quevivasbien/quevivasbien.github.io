@@ -2,7 +2,7 @@
 <!-- DATE: 2019-07 -->
 <h1>Diving deeper with Axiom M</h1>
 
-<p>I <a href="#">earlier</a> made some
+<p>I earlier made some
     rather dubitable statements that warrant a bit more careful consideration. Here’s the relevant
     text:</p>
 <blockquote>
