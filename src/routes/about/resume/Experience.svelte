@@ -4,10 +4,10 @@
 
 <div class="p-4 bg-white rounded-lg space-y-4">
     <h2>Prior experience</h2>
-    <Position title="Research scholar" org="Centre for the Governance of AI" dates="2022 - current">
-        Created and analyzed simulations of game-theoretic competition in AI innovation, mainly using the <em>Julia</em> and <em>Rust</em> programming languages (started as summer research fellow)
+    <Position title="Research scholar" org="Centre for the Governance of AI - Oxford, UK" dates="2022 - 2023">
+        Created and analyzed simulations of game-theoretic competition in AI innovation, mainly using the <em>Julia</em> and <em>Rust</em> programming languages
     </Position>
-    <Position title="Research assistant" org="Booth School of Business - University of Chicago" dates="2019 - 2020">
+    <Position title="Data analyst" org="Booth School of Business - University of Chicago" dates="2019 - 2020">
         Programmed <em>image processing</em>, <em>web scraping</em>, and <em>record-linking</em> tools for use in labor/education economics
     </Position>
     <Position title="Research assistant" org="Department of Economics - University of Utah" dates="2018 - 2020">

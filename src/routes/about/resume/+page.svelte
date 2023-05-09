@@ -37,7 +37,7 @@
             <h2>
                 Summary
             </h2>
-            I'm a researcher with a background in computational mathematics. I'm currently looking for a full-time role in software engineering or data science.
+            I have a background in computational mathematics, data science, &amp; economics. I'm currently looking for a full-time role in software engineering or data science.
         </div>
 
         <Skills />

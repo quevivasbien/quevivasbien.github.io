@@ -9,7 +9,7 @@
     <Position title="MS in Economics" org="University of Chicago" dates="2020 - 2023">
         Enrolled in PhD program; research involved economic applications of machine learning; left with master's degree in order to pursue applied roles
     </Position>
-    <Position title="BS in Computational Mathematics &amp; Economics" org="University of Utah" dates="2015 - 2020">
+    <Position title="BS in Computational Mathematics" org="University of Utah" dates="2015 - 2020">
         Graduated with 4.0 GPA
     </Position>
 </div>
