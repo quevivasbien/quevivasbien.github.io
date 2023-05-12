@@ -18,7 +18,7 @@
     <div class="space-y-10">
         {#each posts.slice(0, showNumPosts) as post}
             <div class="space-y-3" in:slide>
-                <a class="text-gray-800" href="{base}/posts/{post.slug}/"><h1>{post.title}</h1></a>
+                <a class="text-gray-800" href="{base}/posts/{post.slug}/"><h1>{@html post.title}</h1></a>
                 <div class="space-y-3">{@html post.preview}</div>
                 
                 <div class="relative h-6">

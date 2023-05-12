@@ -16,6 +16,10 @@ def strip_links(post_contents: str):
     # then look for html-style links
     return re.sub(r'(?:<\s*a.*?>|<\s*/\s*a\s*>)', '', post_contents, flags=re.DOTALL)
 
+def remove_hide(post_contents: str):
+    # remove contents between <!-- HIDE --> and <!-- ENDHIDE --> tags
+    return re.sub(r'<!-- HIDE -->(.*?)<!-- ENDHIDE -->', '', post_contents, flags=re.DOTALL)
+
 def get_tags(post_contents: str, subdir: str):
     tags = re.search(r'<!-- TAGS: (.*?) -->', post_contents)
     if tags is None:
@@ -59,6 +63,7 @@ def process_post(subdir: str):
     if post_contents == "":
         raise EnvironmentError("No post contents found for " + subdir)
     post_contents = remove_scripts(post_contents)
+    post_contents = remove_hide(post_contents)
     post_contents = strip_links(post_contents)
     # find tags in <!-- TAGS: tag1, tag2, ... -->
     post["tags"] = get_tags(post_contents, subdir)
