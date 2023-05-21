@@ -3,7 +3,7 @@
 
 <!-- DATE: 2023-05-12 -->
 <!-- TAGS: programming, math -->
-# Programming a linear program solver from scratch in C&#43;&#43;
+# Linear programming from scratch in C&#43;&#43;
 
 A linear programming problem is a type of problem commonly encountered in applied math. Roughly put, the goal is to maximize a linear function subject to linear constraints. <!-- HIDE --> In its canonical form, we want to choose a vector $x$ that maximizes the objective $c^T x$ (where $c$ is a given vector), subject to the constraints $A x \leq b$ ($A$ being a matrix, $b$ a vector, and the inequality being applied coordinatewise) and $x \geq 0$ (again, coordinatewise). <!-- ENDHIDE --> If you aren't familiar with this, it might be worth reading more about it on [Wikipedia](https://en.wikipedia.org/wiki/Linear_programming). Or not -- I don't know how you want to spend your time; maybe you should take a walk around your neighborhood instead.
 

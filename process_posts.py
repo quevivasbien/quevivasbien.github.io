@@ -42,7 +42,7 @@ def get_title(post_contents: str, subdir: str):
     return title.group(1).strip()
 
 def get_preview(post_contents: str, title: str, subdir: str):
-    preview = re.search(rf'{title}(.*)<!-- ENDPREVIEW -->', post_contents, flags=re.DOTALL)
+    preview = re.search(title + r'(.*)<!-- ENDPREVIEW -->', post_contents, flags=re.DOTALL)
     if preview is None:
         # try fallback
         preview = re.search(r'</h1>(.*)<!-- ENDPREVIEW -->', post_contents, flags=re.DOTALL)
