@@ -7,15 +7,27 @@
     <div class="flex flex-col sm:flex-row sm:space-x-4">
         <div class="flex-auto sm:w-1/2">
             <div class="m-2 pl-2 border-l border-zinc-500">
-                <Skill name="Python" details="numpy, pandas, SciPy, scikit-learn, PyTorch" />
+                <Skill name="Python" details="numpy, pandas, SciPy, scikit-learn, PyTorch, Django" />
                 <Skill name="Julia" />
             </div>
         </div>
         <div class="flex-auto sm:w-1/2">
             <div class="m-2 pl-2 border-l border-zinc-500">
-                <Skill name="Rust" details="wasm-pack, pymc3"/>
-                <Skill name="C++" details="including C++11 &amp; later standards" />
+                <Skill name="C++" details="including modern standards" />
+                <Skill name="Rust" />
                 <Skill name="Front-end web" details="JS, TS, React, Svelte" />
+            </div>
+        </div>
+    </div>
+    <div class="flex flex-col sm:flex-row sm:space-x-4">
+        <div class="flex-auto sm:w-1/2">
+            <div class="m-2 pl-2 border-l border-zinc-500">
+                <Skill name="Probability &amp; statistics" />
+            </div>
+        </div>
+        <div class="flex-auto sm:w-1/2">
+            <div class="m-2 pl-2 border-l border-zinc-500">
+                <Skill name="Numerical analysis" />
             </div>
         </div>
     </div>

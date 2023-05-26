@@ -5,7 +5,7 @@
 
 </script>
 <div class="mx-8 sm:max-w-3xl sm:mx-auto">
-    <h1 class="m-8">Mckay Jensen</h1>
+    <h1 class="mx-8 my-6">Mckay Jensen</h1>
 
     <div class="space-y-4 pb-8">
         <div class="flex flex-col sm:flex-row p-4 bg-white rounded-lg">
