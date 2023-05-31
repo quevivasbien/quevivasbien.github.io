@@ -1,4 +1,5 @@
 <script lang="ts">
+    import 'prism-themes/themes/prism-one-light.min.css';
 </script>
 
 <!-- TAGS: math, programming -->
@@ -6,6 +7,8 @@
 <!-- DATE: 2023-05-31 -->
 
 # Numerical integration from scratch in C&#43;&#43;
+
+A few days ago I wrote [some code](https://github.com/quevivasbien/Quadrature), meant to be run on an Arduino, for approximating integrals. This required me to delve deep into nearly-forgotten knowledge about numerical methods; I figured that while I still had this fresh on my mind I'd take the time to share a basic tutorial here.
 
 <!-- ENDPREVIEW -->
 
@@ -134,6 +137,7 @@ Here's a basic implementation in code:
 ```cpp
 // integrate function f on [a, b] with midpoint rule and adaptive step size
 // error param is desired global error bound
+template <typename Function>
 double integrate_adaptive(Function&& f, double a, double b, double error) {
     double result = 0;
     double x0 = a;
@@ -162,3 +166,5 @@ double integrate_adaptive(Function&& f, double a, double b, double error) {
     return result;
 }
 ```
+
+There are still a lot of clever things we can do to improve this (e.g., [my Arduino code](https://github.com/quevivasbien/Quadrature) also dynamically adjusts the order of approximation), but for a quick and dirty approach this does a good job.
