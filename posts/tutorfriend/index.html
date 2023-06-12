@@ -28,7 +28,7 @@
 		<link rel="modulepreload" href="../../_app/immutable/nodes/0.1eb135bd.js">
 		<link rel="modulepreload" href="../../_app/immutable/nodes/2.b55966f7.js">
 		<link rel="modulepreload" href="../../_app/immutable/chunks/TextContent.b1fd76d5.js">
-		<link rel="modulepreload" href="../../_app/immutable/nodes/34.9edb7171.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/32.1dded261.js">
 	</head>
 	<body data-sveltekit-preload-data="hover">
 		<div style="display: contents">
@@ -53,16 +53,21 @@
 
 <div class="max-w-3xl mx-auto my-2 bg-white rounded-md shadow-md py-4 px-4 sm:px-8 space-y-3">
 
-<h1>Making a multiplayer game with SvelteKit &amp; Firebase</h1>
-<p>A few months back, I created a <a href="https://github.com/quevivasbien/boggle" rel="nofollow">CLI clone</a> of the Boggle word game. This was originally just a toy project I wrote on a weekend to try out some Rust crates for CLIs, but I wanted to return to this idea and see if I could make a browser-based version where multiple players could compete to find words.</p>
-<p>I chose to use SvelteKit for this, since I’ve found Svelte to be a very friendly web framework. I hadn’t previously made any non-static web apps with Svelte, so I also figured this would be good chance to try out some of SvelteKit’s server-side features. I originally intended to build the project with <a href="https://kit.svelte.dev/docs/adapter-node" rel="nofollow">SvelteKit’s Node adapter</a> and host it on an AWS server along with my own database, though after a great deal of fiddling I realized I could accomplish the same objective with much less hassle using Firebase’s <a href="https://firebase.google.com/docs/database" rel="nofollow">realtime database</a>. I also ended up hosting the app on Vercel, instead of GitHub Pages like I have in the past, in order to make use of some of SvelteKit’s SSR features (which are helpful for dynamic page routing).</p>
 
-<p>The latest version is playable <a href="https://wiggle-game.vercel.app" rel="nofollow">here</a>. You can check out the code on <a href="https://github.com/quevivasbien/wiggle" rel="nofollow">GitHub</a>.</p></div>
+<h1>Using the OpenAI API for a math tutoring app</h1>
+
+<p>For anyone who hasn&#39;t been paying attention recently, OpenAI&#39;s latest LLMs have an impressive ability to explain solutions to questions, including programming and math problems. I wanted to explore using their API to create an application meant specifically for math training.</p>
+
+<p>There are two basic objectives here: first, I wanted an interface that can be used to create questions with mathematical syntax and that can be repeated with different variable values; second, I wanted students to be able to get an AI-generated explanation after attempting each problem. The idea is that teachers or tutors can create a set of questions for their students, which students can attempt and get feedback on, without teachers having to create detailed solutions for each problem.</p>
+
+
+
+<p>I created a demo of this concept, which you can access <a href="https://tutorfriend.vercel.app">here</a>.</p></div>
 <div class="max-w-xs mx-auto py-4"><footer class="bg-red-400 rounded-lg shadow-md">
         <div class="flex flex-row justify-center"><a class="flex mx-4 my-2 text-2xl text-white" href="https://github.com/quevivasbien/"><i class="fab fa-github"></i></a>
                 <a class="flex mx-4 my-2 text-2xl text-white" href="mailto:jensenm@uchicago.edu"><i class="fa fa-envelope"></i></a>
                 <a class="flex mx-4 my-2 text-2xl text-white" href="https://www.linkedin.com/in/mckaydjensen/"><i class="fab fa-linkedin"></i></a></div></footer></div>
-<div class="flex flex-col items-center justify-center pb-3"><div>goodness, truth, and <span>wordless music</span></div></div>
+<div class="flex flex-col items-center justify-center pb-3"><div>goodness, truth, and <span>butterflies</span></div></div>
 
 
 			
@@ -82,7 +87,7 @@
 						import("../../_app/immutable/entry/app.2e2ac651.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
-							node_ids: [0, 2, 34],
+							node_ids: [0, 2, 32],
 							data,
 							form: null,
 							error: null

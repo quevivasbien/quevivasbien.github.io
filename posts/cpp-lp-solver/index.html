@@ -18,16 +18,16 @@
 		</style>
 
 		
-		<link href="../../_app/immutable/assets/0.81f0aa6c.css" rel="stylesheet">
-		<link rel="modulepreload" href="../../_app/immutable/entry/start.e7abbd9d.js">
+		<link href="../../_app/immutable/assets/0.8fed060e.css" rel="stylesheet">
+		<link rel="modulepreload" href="../../_app/immutable/entry/start.d982a450.js">
 		<link rel="modulepreload" href="../../_app/immutable/chunks/index.cb9bf0be.js">
-		<link rel="modulepreload" href="../../_app/immutable/chunks/singletons.47516ef9.js">
-		<link rel="modulepreload" href="../../_app/immutable/chunks/paths.5912b99c.js">
-		<link rel="modulepreload" href="../../_app/immutable/entry/app.6de9baa2.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/singletons.47504720.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/paths.06902236.js">
+		<link rel="modulepreload" href="../../_app/immutable/entry/app.2e2ac651.js">
 		<link rel="modulepreload" href="../../_app/immutable/chunks/preload-helper.41c905a7.js">
-		<link rel="modulepreload" href="../../_app/immutable/nodes/0.a957b413.js">
-		<link rel="modulepreload" href="../../_app/immutable/nodes/2.a4cedfda.js">
-		<link rel="modulepreload" href="../../_app/immutable/chunks/TextContent.1c34d419.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/0.1eb135bd.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/2.b55966f7.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/TextContent.b1fd76d5.js">
 		<link rel="modulepreload" href="../../_app/immutable/nodes/17.3f858a0a.js">
 	</head>
 	<body data-sveltekit-preload-data="hover">
@@ -51,7 +51,7 @@
         
         </nav></div>
 
-<div class="max-w-3xl mx-auto px-2 sm:px-6 lg:px-8 pt-2"><div class="bg-white rounded-md shadow-md p-4 space-y-3">
+<div class="max-w-3xl mx-auto my-2 bg-white rounded-md shadow-md py-4 px-4 sm:px-8 space-y-3">
 
 <h1>Linear programming from scratch in C++</h1>
 <p>A linear programming problem is a type of problem commonly encountered in applied math. Roughly put, the goal is to maximize a linear function subject to linear constraints.  In its canonical form, we want to choose a vector <span class="math math-inline"><!-- HTML_TAG_START --><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">x</span></span></span></span><!-- HTML_TAG_END --></span> that maximizes the objective <span class="math math-inline"><!-- HTML_TAG_START --><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>c</mi><mi>T</mi></msup><mi>x</mi></mrow><annotation encoding="application/x-tex">c^T x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8413em;"></span><span class="mord"><span class="mord mathnormal">c</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8413em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span></span></span></span></span></span></span></span><span class="mord mathnormal">x</span></span></span></span><!-- HTML_TAG_END --></span> (where <span class="math math-inline"><!-- HTML_TAG_START --><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi></mrow><annotation encoding="application/x-tex">c</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">c</span></span></span></span><!-- HTML_TAG_END --></span> is a given vector), subject to the constraints <span class="math math-inline"><!-- HTML_TAG_START --><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>x</mi><mo>≤</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">A x \leq b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8193em;vertical-align:-0.136em;"></span><span class="mord mathnormal">A</span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">b</span></span></span></span><!-- HTML_TAG_END --></span> (<span class="math math-inline"><!-- HTML_TAG_START --><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span></span></span></span><!-- HTML_TAG_END --></span> being a matrix, <span class="math math-inline"><!-- HTML_TAG_START --><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi></mrow><annotation encoding="application/x-tex">b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">b</span></span></span></span><!-- HTML_TAG_END --></span> a vector, and the inequality being applied coordinatewise) and <span class="math math-inline"><!-- HTML_TAG_START --><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>≥</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">x \geq 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7719em;vertical-align:-0.136em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≥</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span><!-- HTML_TAG_END --></span> (again, coordinatewise).  If you aren’t familiar with this, it might be worth reading more about it on <a href="https://en.wikipedia.org/wiki/Linear_programming" rel="nofollow">Wikipedia</a>. Or not – I don’t know how you want to spend your time; maybe you should take a walk around your neighborhood instead.</p>
@@ -64,18 +64,18 @@
 <p>Naturally, I remember very little of what was taught in that class, though I do retain a disdain for inverting matrices, along with a confused fondness for Bezier curves. This amnesia extended also to the lesson we had on linear programming, leaving me only with the faint recollection that if I ever found myself in the situation where the Python package repository was not available, and I had to solve a linear programming problem, my best bet was something to do with a simplex.</p>
 <p>To this date I have not yet found myself in a situation where the Python package repository was not available when I had to solve a linear programming problem. I have, however, had occasion to do that latter, that is, solve a linear programming problem or two, the most recent event being when I created <a href="https://github.com/quevivasbien/CorrelatedEquilibria.jl" rel="nofollow">a nifty tool for finding correlated equilibria</a>. (A correlated equilibrium is a type of game-theoretic equilibrium – similar to Nash equilibrium – that happens to be efficiently solved as a linear program.)</p>
 <p>This refreshed for me my memory of the thereto-forgotten adventuring simplexer, so when I recently decided to refresh my knowledge of the arcane mysteries of Mr. Stroustrup and write me some good ol’ C++, I understandably decided to take a stab implementing the simplex method. And, for extra fun, I decided not to bother with C++‘s wonderful (read: horrid) package management ecosystem and write the underlying matrix library from scratch.</p>
-<p>So <a href="https://github.com/quevivasbien/simplexer" rel="nofollow">here is my tribute</a> to my German professor, to Bored George, and to the accursed Mr. Stroustrup. Is it elegant? Not particularly. Does it work? Barely. Have you really read this entire post? Apparently so – or you’ve just skipped to the bottom, in which case I’d call you a filthy cheater, but to be honest I really can’t blame you.</p></div></div>
+<p>So <a href="https://github.com/quevivasbien/simplexer" rel="nofollow">here is my tribute</a> to my German professor, to Bored George, and to the accursed Mr. Stroustrup. Is it elegant? Not particularly. Does it work? Barely. Have you really read this entire post? Apparently so – or you’ve just skipped to the bottom, in which case I’d call you a filthy cheater, but to be honest I really can’t blame you.</p></div>
 <div class="max-w-xs mx-auto py-4"><footer class="bg-red-400 rounded-lg shadow-md">
         <div class="flex flex-row justify-center"><a class="flex mx-4 my-2 text-2xl text-white" href="https://github.com/quevivasbien/"><i class="fab fa-github"></i></a>
                 <a class="flex mx-4 my-2 text-2xl text-white" href="mailto:jensenm@uchicago.edu"><i class="fa fa-envelope"></i></a>
                 <a class="flex mx-4 my-2 text-2xl text-white" href="https://www.linkedin.com/in/mckaydjensen/"><i class="fab fa-linkedin"></i></a></div></footer></div>
-<div class="flex flex-col items-center justify-center pb-3"><div>goodness, truth, and <span>galaxies</span></div></div>
+<div class="flex flex-col items-center justify-center pb-3"><div>goodness, truth, and <span>the eye of the beekeeper</span></div></div>
 
 
 			
 			<script>
 				{
-					__sveltekit_1jtjssb = {
+					__sveltekit_jkxtmf = {
 						base: new URL("../..", location).pathname.slice(0, -1),
 						env: {}
 					};
@@ -85,8 +85,8 @@
 					const data = [null,null,null];
 
 					Promise.all([
-						import("../../_app/immutable/entry/start.e7abbd9d.js"),
-						import("../../_app/immutable/entry/app.6de9baa2.js")
+						import("../../_app/immutable/entry/start.d982a450.js"),
+						import("../../_app/immutable/entry/app.2e2ac651.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 2, 17],
