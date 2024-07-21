@@ -1,6 +1,6 @@
 <script lang="ts">
     export let title: string;
-    export let org: string;
+    export let org: string | undefined = undefined;
     export let dates: string;
 </script>
 
@@ -13,9 +13,11 @@
             {dates}
         </div>
     </div>
-    <div class="text-zinc-500 pb-2">
-        {org}
-    </div>
+    {#if org}
+        <div class="text-zinc-500 pb-2">
+            {org}
+        </div>
+    {/if}
     <div>
         <slot />
     </div>

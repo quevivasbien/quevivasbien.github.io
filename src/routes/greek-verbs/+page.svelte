@@ -92,7 +92,7 @@
     }
 </script>
 
-<h1 class="text-4xl font-bold">The Verbinator</h1>
+<h1 class="text-4xl font-bold">The Participle-inator</h1>
 
 <div class="max-w-xl mx-auto m-2 p-4 bg-white rounded-lg flex flex-col text-center space-y-4">
     <h2>{verb}</h2>
