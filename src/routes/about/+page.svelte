@@ -9,7 +9,7 @@
 
 <TextContent>
     <h1>About</h1>
-    <p>I'm Mckay Jensen, currently a research scholar at the Centre for the Governance of AI and an economics PhD student at the University of Chicago. This is my site for posting some of my writing and updates on my projects. I'm interested in a lot of things, but most recently I've been focusing on problems in AI governance, so that will make up a lot of what you see here.</p>
+    <p>I'm Mckay Jensen, currently a senior data scientist on the AI Decisioning team at Braze. This is my site for posting some of my writing and updates on my projects.</p>
     <p>You can view my resume <a href="./resume">here</a>.</p>
 
     <h2>What does "Que vivas bien" mean?</h2>
