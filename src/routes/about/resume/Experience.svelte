@@ -4,15 +4,20 @@
 
 <div class="p-4 bg-white rounded-lg space-y-4">
     <h2>Professional experience</h2>
-    <Position title="Software developer - AI trainer" org="DataAnnotation Tech" dates="2024 - Present">
+    <Position title="Senior Data Scientist" org="Braze" dates="2026 - present">
         <ul>
-            <li>Helping improve generative AI programming assistants by testing and debugging AI-generated code</li>
-            <li>Covering many application domains but with an emphasis on Python and JavaScript code for data science and web development</li>
+            <li>Leading troubleshooting for underperforming machine learning implementations</li>
+            <li>Developing best practices for successful ML deployments</li>
         </ul>
     </Position>
-    <Position title="Private math and programming tutor" dates="2023 - Present">
+    <Position title="Machine Learning Engineer" org="Braze (formerly OfferFit)" dates="2024 - 2025">
         <ul>
-            <li>Tutoring university and high schools students in linear algebra, statistics, programming, and microeconomics</li>
+            <li>Implemented and analyzed impact of personalized marketing campaigns for major international clients</li>
+        </ul>
+    </Position>
+    <Position title="Private math and programming tutor" dates="2023 - 2024">
+        <ul>
+            <li>Tutored university and high schools students in statistics, linear algebra, programming, and microeconomics</li>
             <li>Top-rated (5 stars) on Wyzant tutoring platform</li>
         </ul>
     </Position>

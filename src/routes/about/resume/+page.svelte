@@ -37,7 +37,7 @@
             <h2>
                 Summary
             </h2>
-            I have a background in computational mathematics, data science, &amp; economics. I'm currently looking for a full-time role in software engineering or data science.
+            I am a data scientist working at the intersection of machine learning, applied statistics, and software engineering
         </div>
 
         <Skills />

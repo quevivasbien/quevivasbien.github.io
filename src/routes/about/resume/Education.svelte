@@ -9,8 +9,8 @@
     <Position title="MA in Economics" org="University of Chicago" dates="2020 - 2023">
         
         <ul>
-            <li>Enrolled in PhD program; research involved economic applications of machine learning; left with master's degree in order to pursue jobs in software</li>
-            <li>Created C++ toolkit for high-performance, parallelized, agent-based economic simulations</li>
+            <li>Enrolled in PhD program; research involved economic applications of machine learning; left with master's degree in order to pursue jobs in industry</li>
+            <li>Created C++ toolkit for high-performance, parallelized, agent-based economic simulations, using actor-critic models for reinforcement learning</li>
             <li>Designed and created Django web apps for online behavioral experiments; did statistical analysis of experimental results</li>
         </ul>
 
