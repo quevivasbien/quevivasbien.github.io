@@ -16,16 +16,10 @@
                 <div class="m-3">
                     <span class="font-bold">GitHub</span>: <a class="block sm:inline-block"  href="https://github.com/quevivasbien">github.com/quevivasbien</a>
                 </div>
-                <div class="m-3">
-                    <span class="font-bold">Website</span>: <a class="block sm:inline-block"  href="https://quevivasbien.github.io">quevivasbien.github.io</a>
-                </div>
             </div>
             <div class="flex-auto sm:w-1/2 sm:text-right">
                 <div class="m-3">
-                    Chicago, IL 60615
-                </div>
-                <div class="m-3">
-                    (312) 248 3184
+                    Pittsburgh, PA
                 </div>
                 <div class="m-3">
                     <a href="mailto:mckaydjensen@gmail.com">mckaydjensen@gmail.com</a>
