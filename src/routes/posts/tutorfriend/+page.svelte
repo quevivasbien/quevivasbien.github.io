@@ -13,3 +13,7 @@
 <!-- ENDPREVIEW -->
 
 <p>I created a demo of this concept, which you can access <a href="https://tutorfriend.vercel.app">here</a>.</p>
+
+<hr />
+
+<p><b>Note:</b> as of 2025, this demo may no longer work correctly, as the connection with the OpenAI API is no longer active. You may, however, be interested in <a href="https://github.com/leesjensen/masteryls">this related project</a> I have been involved in.</p>
